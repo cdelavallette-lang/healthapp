@@ -196,6 +196,7 @@ function setupEventListeners() {
     });
 
     // Planner actions
+    document.getElementById('auto-generate-plan').addEventListener('click', autoGeneratePlan);
     document.getElementById('clear-plan').addEventListener('click', clearPlan);
     document.getElementById('analyze-week').addEventListener('click', analyzeWeek);
     document.getElementById('save-plan').addEventListener('click', async () => {
@@ -560,6 +561,74 @@ function removeMealFromPlan(day, meal) {
     const dropZone = mealSlot.querySelector('.drop-zone');
     dropZone.classList.remove('filled');
     dropZone.innerHTML = 'Drop recipe here or click to select';
+}
+
+function autoGeneratePlan() {
+    if (recipes.length === 0) {
+        alert('Recipes are still loading. Please wait a moment.');
+        return;
+    }
+    
+    if (Object.keys(weeklyPlan).length > 0) {
+        if (!confirm('This will replace your current meal plan. Continue?')) return;
+    }
+    
+    // Clear existing plan
+    weeklyPlan = {};
+    
+    // Group recipes by meal type
+    const breakfasts = recipes.filter(r => r.mealType === 'breakfast');
+    const lunches = recipes.filter(r => r.mealType === 'lunch');
+    const dinners = recipes.filter(r => r.mealType === 'dinner');
+    const snacks = recipes.filter(r => r.mealType === 'snack');
+    
+    const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+    const usedRecipes = { breakfast: new Set(), lunch: new Set(), dinner: new Set(), snack: new Set() };
+    
+    // Generate plan for each day
+    days.forEach(day => {
+        weeklyPlan[day] = {};
+        
+        // Select breakfast (ensure variety)
+        const availableBreakfasts = breakfasts.filter(r => !usedRecipes.breakfast.has(r.mealId));
+        const breakfast = availableBreakfasts.length > 0 
+            ? availableBreakfasts[Math.floor(Math.random() * availableBreakfasts.length)]
+            : breakfasts[Math.floor(Math.random() * breakfasts.length)];
+        usedRecipes.breakfast.add(breakfast.mealId);
+        weeklyPlan[day].breakfast = { recipeId: breakfast.mealId, recipeName: breakfast.name, servings: currentServings };
+        
+        // Select lunch
+        const availableLunches = lunches.filter(r => !usedRecipes.lunch.has(r.mealId));
+        const lunch = availableLunches.length > 0
+            ? availableLunches[Math.floor(Math.random() * availableLunches.length)]
+            : lunches[Math.floor(Math.random() * lunches.length)];
+        usedRecipes.lunch.add(lunch.mealId);
+        weeklyPlan[day].lunch = { recipeId: lunch.mealId, recipeName: lunch.name, servings: currentServings };
+        
+        // Select dinner
+        const availableDinners = dinners.filter(r => !usedRecipes.dinner.has(r.mealId));
+        const dinner = availableDinners.length > 0
+            ? availableDinners[Math.floor(Math.random() * availableDinners.length)]
+            : dinners[Math.floor(Math.random() * dinners.length)];
+        usedRecipes.dinner.add(dinner.mealId);
+        weeklyPlan[day].dinner = { recipeId: dinner.mealId, recipeName: dinner.name, servings: currentServings };
+        
+        // Select snack
+        if (snacks.length > 0) {
+            const availableSnacks = snacks.filter(r => !usedRecipes.snack.has(r.mealId));
+            const snack = availableSnacks.length > 0
+                ? availableSnacks[Math.floor(Math.random() * availableSnacks.length)]
+                : snacks[Math.floor(Math.random() * snacks.length)];
+            usedRecipes.snack.add(snack.mealId);
+            weeklyPlan[day].snack = { recipeId: snack.mealId, recipeName: snack.name, servings: currentServings };
+        }
+    });
+    
+    // Render the generated plan
+    renderWeeklyPlan();
+    
+    // Show success message
+    alert(`✨ Weekly meal plan generated for ${currentServings} people! Click "Save Plan" to save to cloud.`);
 }
 
 function clearPlan() {
