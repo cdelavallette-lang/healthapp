@@ -198,12 +198,26 @@ function setupEventListeners() {
     // Planner actions
     document.getElementById('clear-plan').addEventListener('click', clearPlan);
     document.getElementById('analyze-week').addEventListener('click', analyzeWeek);
-    document.getElementById('save-plan').addEventListener('click', savePlan);
+    document.getElementById('save-plan').addEventListener('click', async () => {
+        try {
+            await savePlan();
+        } catch (error) {
+            console.error('Save error:', error);
+            alert('Failed to save meal plan. Please try again.');
+        }
+    });
 
     // Biomarker actions
     document.getElementById('analyze-biomarkers').addEventListener('click', analyzeBiomarkers);
     document.getElementById('clear-biomarkers').addEventListener('click', clearBiomarkers);
-    document.getElementById('save-biomarkers').addEventListener('click', saveBiomarkers);
+    document.getElementById('save-biomarkers').addEventListener('click', async () => {
+        try {
+            await saveBiomarkers();
+        } catch (error) {
+            console.error('Save error:', error);
+            alert('Failed to save biomarkers. Please try again.');
+        }
+    });
 
     // Modal close
     document.querySelector('.close').addEventListener('click', closeModal);
@@ -508,6 +522,19 @@ function addRecipeToPlan(day, meal, recipeId) {
     };
     
     renderMealInSlot(day, meal, recipe);
+}
+
+function renderWeeklyPlan() {
+    // Render all saved meals from weeklyPlan object
+    for (let day in weeklyPlan) {
+        for (let meal in weeklyPlan[day]) {
+            const planItem = weeklyPlan[day][meal];
+            const recipe = recipes.find(r => r.mealId === planItem.recipeId);
+            if (recipe) {
+                renderMealInSlot(day, meal, recipe);
+            }
+        }
+    }
 }
 
 function renderMealInSlot(day, meal, recipe) {
