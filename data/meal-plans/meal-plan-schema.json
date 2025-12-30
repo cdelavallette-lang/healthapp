@@ -1,0 +1,187 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Weekly Meal Plan Schema",
+  "description": "Schema for creating and validating weekly family meal plans with nutritional tracking",
+  "type": "object",
+  "properties": {
+    "planId": {
+      "type": "string",
+      "description": "Unique identifier for the meal plan"
+    },
+    "planName": {
+      "type": "string",
+      "description": "Name/title of the meal plan",
+      "examples": ["Winter Wellness Week", "High-Protein Family Plan"]
+    },
+    "targetDemographic": {
+      "type": "object",
+      "properties": {
+        "ageRange": {"type": "string", "examples": ["25-50", "6-12"]},
+        "gender": {"type": "string", "enum": ["male", "female", "general"]},
+        "activityLevel": {"type": "string", "enum": ["sedentary", "light", "moderate", "active", "very_active"]},
+        "specialNeeds": {"type": "array", "items": {"type": "string"}, "examples": [["pregnancy"], ["lactation"], ["athlete"]]}
+      }
+    },
+    "weeklyPlan": {
+      "type": "object",
+      "description": "Seven days of meals",
+      "properties": {
+        "monday": {"$ref": "#/definitions/dailyMeals"},
+        "tuesday": {"$ref": "#/definitions/dailyMeals"},
+        "wednesday": {"$ref": "#/definitions/dailyMeals"},
+        "thursday": {"$ref": "#/definitions/dailyMeals"},
+        "friday": {"$ref": "#/definitions/dailyMeals"},
+        "saturday": {"$ref": "#/definitions/dailyMeals"},
+        "sunday": {"$ref": "#/definitions/dailyMeals"}
+      },
+      "required": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    },
+    "nutritionalSummary": {
+      "type": "object",
+      "description": "Aggregated nutritional analysis for the week",
+      "properties": {
+        "dailyAverages": {"$ref": "#/definitions/nutrientTotals"},
+        "weeklyTotals": {"$ref": "#/definitions/nutrientTotals"},
+        "compliancePercentage": {
+          "type": "number",
+          "description": "Percentage of nutrients meeting optimal targets (0-100)",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "nutrientGaps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "nutrient": {"type": "string"},
+              "currentAverage": {"type": "number"},
+              "optimalTarget": {"type": "number"},
+              "percentOfTarget": {"type": "number"},
+              "suggestions": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["planId", "planName", "targetDemographic", "weeklyPlan"],
+  
+  "definitions": {
+    "dailyMeals": {
+      "type": "object",
+      "properties": {
+        "breakfast": {"$ref": "#/definitions/meal"},
+        "lunch": {"$ref": "#/definitions/meal"},
+        "dinner": {"$ref": "#/definitions/meal"},
+        "snacks": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/meal"},
+          "maxItems": 3
+        }
+      },
+      "required": ["breakfast", "lunch", "dinner"]
+    },
+    
+    "meal": {
+      "type": "object",
+      "properties": {
+        "mealId": {"type": "string"},
+        "name": {"type": "string", "description": "Name of the meal/recipe"},
+        "description": {"type": "string"},
+        "servings": {"type": "number", "minimum": 1, "description": "Number of servings this recipe makes"},
+        "prepTime": {"type": "string", "examples": ["15 min", "30 min"]},
+        "cookTime": {"type": "string", "examples": ["20 min", "45 min"]},
+        "ingredients": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/ingredient"}
+        },
+        "instructions": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Step-by-step cooking instructions"
+        },
+        "nutritionPerServing": {"$ref": "#/definitions/nutrientTotals"},
+        "tags": {
+          "type": "array",
+          "items": {"type": "string"},
+          "examples": [["breakfast", "high-protein", "quick"], ["dinner", "fish", "omega-3-rich"]]
+        }
+      },
+      "required": ["mealId", "name", "ingredients", "nutritionPerServing"]
+    },
+    
+    "ingredient": {
+      "type": "object",
+      "properties": {
+        "foodId": {"type": "string", "description": "Reference to food in whole-foods-database.json"},
+        "name": {"type": "string"},
+        "amount": {"type": "number"},
+        "unit": {"type": "string", "enum": ["g", "oz", "cup", "tbsp", "tsp", "whole", "ml", "l"]},
+        "notes": {"type": "string", "examples": ["chopped", "cooked", "raw", "organic grass-fed"]}
+      },
+      "required": ["foodId", "name", "amount", "unit"]
+    },
+    
+    "nutrientTotals": {
+      "type": "object",
+      "properties": {
+        "calories": {"type": "number"},
+        "macronutrients": {
+          "type": "object",
+          "properties": {
+            "protein_g": {"type": "number"},
+            "carbohydrates_g": {"type": "number"},
+            "fat_g": {"type": "number"},
+            "fiber_g": {"type": "number"},
+            "omega3_g": {"type": "number"},
+            "omega6_g": {"type": "number"}
+          }
+        },
+        "vitamins": {
+          "type": "object",
+          "properties": {
+            "vitaminA_mcg": {"type": "number"},
+            "vitaminD_IU": {"type": "number"},
+            "vitaminE_mg": {"type": "number"},
+            "vitaminK_mcg": {"type": "number"},
+            "vitaminK2_mcg": {"type": "number"},
+            "vitaminC_mg": {"type": "number"},
+            "thiamin_B1_mg": {"type": "number"},
+            "riboflavin_B2_mg": {"type": "number"},
+            "niacin_B3_mg": {"type": "number"},
+            "pantothenicAcid_B5_mg": {"type": "number"},
+            "pyridoxine_B6_mg": {"type": "number"},
+            "biotin_B7_mcg": {"type": "number"},
+            "folate_B9_mcg": {"type": "number"},
+            "cobalamin_B12_mcg": {"type": "number"}
+          }
+        },
+        "minerals": {
+          "type": "object",
+          "properties": {
+            "calcium_mg": {"type": "number"},
+            "iron_mg": {"type": "number"},
+            "magnesium_mg": {"type": "number"},
+            "phosphorus_mg": {"type": "number"},
+            "potassium_mg": {"type": "number"},
+            "sodium_mg": {"type": "number"},
+            "zinc_mg": {"type": "number"},
+            "copper_mg": {"type": "number"},
+            "manganese_mg": {"type": "number"},
+            "selenium_mcg": {"type": "number"},
+            "iodine_mcg": {"type": "number"},
+            "chromium_mcg": {"type": "number"},
+            "molybdenum_mcg": {"type": "number"}
+          }
+        },
+        "other": {
+          "type": "object",
+          "properties": {
+            "choline_mg": {"type": "number"},
+            "water_ml": {"type": "number"}
+          }
+        }
+      }
+    }
+  }
+}

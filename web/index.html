@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Meal Planner - Optimal Nutrition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🥗 Family Meal Planner</h1>
+            <p class="subtitle">Whole Foods • Optimal Nutrition • Science-Based</p>
+            <div class="serving-selector">
+                <label for="servings">Planning for:</label>
+                <select id="servings" class="serving-dropdown">
+                    <option value="1">1 person</option>
+                    <option value="2">2 people</option>
+                    <option value="3">3 people</option>
+                    <option value="4" selected>4 people</option>
+                    <option value="5">5 people</option>
+                    <option value="6">6 people</option>
+                </select>
+            </div>
+            <div class="user-menu">
+                <button id="user-menu-btn" class="user-menu-btn">
+                    <span id="user-email">Loading...</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div id="user-dropdown" class="user-dropdown" style="display: none;">
+                    <a href="#" id="profile-link">👤 Profile</a>
+                    <a href="#" id="logout-link">🚪 Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs">
+            <button class="tab active" data-tab="recipes">Recipe Library</button>
+            <button class="tab" data-tab="planner">Weekly Planner</button>
+            <button class="tab" data-tab="nutrition">Nutrition Analysis</button>
+            <button class="tab" data-tab="biomarkers">🔬 Biomarkers</button>
+        </nav>
+
+        <!-- Recipe Library Tab -->
+        <section id="recipes-tab" class="tab-content active">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Recipes</button>
+                <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+                <button class="filter-btn" data-filter="lunch">Lunch</button>
+                <button class="filter-btn" data-filter="dinner">Dinner</button>
+                <button class="filter-btn" data-filter="snack">Snacks</button>
+            </div>
+
+            <div id="recipe-grid" class="recipe-grid">
+                <!-- Recipes loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Weekly Planner Tab -->
+        <section id="planner-tab" class="tab-content">
+            <div class="planner-header">
+                <h2>Weekly Meal Plan</h2>
+                <button id="clear-plan" class="btn-secondary">Clear All</button>
+            </div>
+            
+            <div class="week-grid">
+                <div class="day-column" data-day="monday">
+                    <h3>Monday</h3>
+                    <div class="meal-slot" data-meal="breakfast">
+                        <div class="meal-label">Breakfast</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="lunch">
+                        <div class="meal-label">Lunch</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="dinner">
+                        <div class="meal-label">Dinner</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="snack">
+                        <div class="meal-label">Snack</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                </div>
+
+                <div class="day-column" data-day="tuesday">
+                    <h3>Tuesday</h3>
+                    <div class="meal-slot" data-meal="breakfast">
+                        <div class="meal-label">Breakfast</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="lunch">
+                        <div class="meal-label">Lunch</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="dinner">
+                        <div class="meal-label">Dinner</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="snack">
+                        <div class="meal-label">Snack</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                </div>
+
+                <div class="day-column" data-day="wednesday">
+                    <h3>Wednesday</h3>
+                    <div class="meal-slot" data-meal="breakfast">
+                        <div class="meal-label">Breakfast</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="lunch">
+                        <div class="meal-label">Lunch</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="dinner">
+                        <div class="meal-label">Dinner</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="snack">
+                        <div class="meal-label">Snack</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                </div>
+
+                <div class="day-column" data-day="thursday">
+                    <h3>Thursday</h3>
+                    <div class="meal-slot" data-meal="breakfast">
+                        <div class="meal-label">Breakfast</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="lunch">
+                        <div class="meal-label">Lunch</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="dinner">
+                        <div class="meal-label">Dinner</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="snack">
+                        <div class="meal-label">Snack</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                </div>
+
+                <div class="day-column" data-day="friday">
+                    <h3>Friday</h3>
+                    <div class="meal-slot" data-meal="breakfast">
+                        <div class="meal-label">Breakfast</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="lunch">
+                        <div class="meal-label">Lunch</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="dinner">
+                        <div class="meal-label">Dinner</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="snack">
+                        <div class="meal-label">Snack</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                </div>
+
+                <div class="day-column" data-day="saturday">
+                    <h3>Saturday</h3>
+                    <div class="meal-slot" data-meal="breakfast">
+                        <div class="meal-label">Breakfast</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="lunch">
+                        <div class="meal-label">Lunch</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="dinner">
+                        <div class="meal-label">Dinner</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="snack">
+                        <div class="meal-label">Snack</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                </div>
+
+                <div class="day-column" data-day="sunday">
+                    <h3>Sunday</h3>
+                    <div class="meal-slot" data-meal="breakfast">
+                        <div class="meal-label">Breakfast</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="lunch">
+                        <div class="meal-label">Lunch</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="dinner">
+                        <div class="meal-label">Dinner</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                    <div class="meal-slot" data-meal="snack">
+                        <div class="meal-label">Snack</div>
+                        <div class="drop-zone">Drop recipe here or click to select</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="planner-actions">
+                <button id="analyze-week" class="btn-primary">Analyze Weekly Nutrition</button>
+                <button id="save-plan" class="btn-secondary">Save Plan</button>
+            </div>
+        </section>
+
+        <!-- Nutrition Analysis Tab -->
+        <section id="nutrition-tab" class="tab-content">
+            <div class="nutrition-header">
+                <h2>Nutritional Analysis</h2>
+                <p class="info-text">Based on your weekly meal plan for <span id="analysis-servings">4</span> people</p>
+            </div>
+
+            <div class="nutrition-summary">
+                <div class="summary-card">
+                    <h3>Compliance Score</h3>
+                    <div id="compliance-score" class="score-display">--%</div>
+                    <p class="score-subtitle">of optimal targets met</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Daily Averages</h3>
+                    <div id="daily-calories" class="metric">-- kcal</div>
+                    <div id="daily-protein" class="metric">-- g protein</div>
+                    <div id="daily-fiber" class="metric">-- g fiber</div>
+                </div>
+            </div>
+
+            <div class="nutrient-details">
+                <h3>Nutrient Status</h3>
+                <div id="compliant-nutrients" class="nutrient-section">
+                    <h4>✅ Meeting Targets</h4>
+                    <div class="nutrient-list"></div>
+                </div>
+                <div id="deficient-nutrients" class="nutrient-section warning">
+                    <h4>⚠️ Below Optimal</h4>
+                    <div class="nutrient-list"></div>
+                </div>
+                <div id="excessive-nutrients" class="nutrient-section">
+                    <h4>📈 Above Range</h4>
+                    <div class="nutrient-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biomarkers Tab -->
+        <section id="biomarkers-tab" class="tab-content">
+            <div class="biomarkers-header">
+                <h2>🔬 Biomarker Tracking & Personalization</h2>
+                <p class="info-text">Enter your lab results to get personalized meal plan recommendations</p>
+                <div class="info-box">
+                    <strong>About Function Health:</strong> Comprehensive lab testing with 100+ biomarkers quarterly ($499/year). 
+                    <a href="https://functionhealth.com" target="_blank">Learn more →</a>
+                </div>
+            </div>
+
+            <div class="biomarkers-container">
+                <!-- Biomarker Input Form -->
+                <div class="biomarker-form-section">
+                    <h3>Enter Your Lab Results</h3>
+                    <p class="subtitle-text">All fields are optional - enter what you have available</p>
+                    
+                    <div class="form-section">
+                        <h4>📊 Nutrient Status</h4>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="vitaminD">Vitamin D (25-OH)</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="vitaminD" step="0.1" placeholder="e.g., 35">
+                                    <span class="unit">ng/mL</span>
+                                </div>
+                                <span class="range-hint">Optimal: 40-60 ng/mL</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="vitaminB12">Vitamin B12</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="vitaminB12" step="1" placeholder="e.g., 450">
+                                    <span class="unit">pg/mL</span>
+                                </div>
+                                <span class="range-hint">Optimal: >500 pg/mL</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="ferritin">Ferritin (Iron Storage)</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="ferritin" step="1" placeholder="e.g., 45">
+                                    <span class="unit">ng/mL</span>
+                                </div>
+                                <span class="range-hint">Optimal Women: 50-100 | Men: 100-200</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="magnesium">Magnesium (RBC)</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="magnesium" step="0.1" placeholder="e.g., 5.5">
+                                    <span class="unit">mg/dL</span>
+                                </div>
+                                <span class="range-hint">Optimal: 6.0-6.5 mg/dL</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="omega3Index">Omega-3 Index</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="omega3Index" step="0.1" placeholder="e.g., 5.2">
+                                    <span class="unit">%</span>
+                                </div>
+                                <span class="range-hint">Optimal: >8%</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="folate">Folate (B9)</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="folate" step="0.1" placeholder="e.g., 8">
+                                    <span class="unit">ng/mL</span>
+                                </div>
+                                <span class="range-hint">Optimal: >10 ng/mL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4>🩸 Metabolic Health</h4>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fastingGlucose">Fasting Glucose</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="fastingGlucose" step="1" placeholder="e.g., 88">
+                                    <span class="unit">mg/dL</span>
+                                </div>
+                                <span class="range-hint">Optimal: 70-85 mg/dL</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="hba1c">HbA1c</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="hba1c" step="0.1" placeholder="e.g., 5.4">
+                                    <span class="unit">%</span>
+                                </div>
+                                <span class="range-hint">Optimal: <5.3%</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fastingInsulin">Fasting Insulin</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="fastingInsulin" step="0.1" placeholder="e.g., 6">
+                                    <span class="unit">μIU/mL</span>
+                                </div>
+                                <span class="range-hint">Optimal: <5 μIU/mL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4>❤️ Cardiovascular Health</h4>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="apoB">ApoB</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="apoB" step="1" placeholder="e.g., 85">
+                                    <span class="unit">mg/dL</span>
+                                </div>
+                                <span class="range-hint">Optimal: <80 mg/dL</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="hsCRP">hs-CRP (Inflammation)</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="hsCRP" step="0.1" placeholder="e.g., 0.8">
+                                    <span class="unit">mg/L</span>
+                                </div>
+                                <span class="range-hint">Optimal: <0.5 mg/L</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="homocysteine">Homocysteine</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="homocysteine" step="0.1" placeholder="e.g., 9">
+                                    <span class="unit">μmol/L</span>
+                                </div>
+                                <span class="range-hint">Optimal: <7 μmol/L</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button id="analyze-biomarkers" class="btn-primary">Analyze & Get Recommendations</button>
+                        <button id="clear-biomarkers" class="btn-secondary">Clear All</button>
+                        <button id="save-biomarkers" class="btn-secondary">Save Results</button>
+                    </div>
+                </div>
+                
+                <!-- Results & Recommendations -->
+                <div id="biomarker-results" class="biomarker-results-section" style="display: none;">
+                    <h3>📋 Your Results & Personalized Recommendations</h3>
+                    
+                    <div id="biomarker-summary" class="biomarker-summary">
+                        <!-- Summary cards populated dynamically -->
+                    </div>
+                    
+                    <div id="biomarker-details" class="biomarker-details">
+                        <!-- Detailed recommendations populated dynamically -->
+                    </div>
+                    
+                    <div id="meal-plan-adjustments" class="meal-plan-adjustments">
+                        <h4>🍽️ Recommended Meal Plan Adjustments</h4>
+                        <div id="adjustment-list">
+                            <!-- Adjustments populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Recipe Detail Modal -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="recipe-detail">
+                <!-- Recipe details loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    
+    <!-- Firebase Config -->
+    <script src="firebase-config.js"></script>
+    
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+{
+  "demographic": {
+    "ageRange": "25-50",
+    "gender": "general",
+    "activityLevel": "moderate",
+    "notes": "Based on Linus Pauling Institute, peer-reviewed meta-analyses, Examine.com research, and functional medicine clinical outcomes for optimal health and longevity"
+  },
+  "macronutrients": {
+    "protein": {
+      "min_g": 100,
+      "optimal_g": 120,
+      "max_g": 150,
+      "notes": "Meta-analysis: 1.6g/kg body weight maximizes muscle protein synthesis; RDA 0.8g/kg only prevents deficiency. For 70kg person: 112g optimal vs RDA 56g. Higher protein supports muscle maintenance, metabolic rate, satiety, and healthy aging.",
+      "sources": "Animal proteins (complete amino acid profiles), legumes with grains"
+    },
+    "carbohydrates": {
+      "min_g": 100,
+      "optimal_g": 150,
+      "max_g": 250,
+      "notes": "Focus on complex carbs from whole sources; range varies by activity level",
+      "sources": "Root vegetables, ancient grains, fruits, legumes"
+    },
+    "fats": {
+      "min_g": 70,
+      "optimal_g": 90,
+      "max_g": 120,
+      "notes": "Evolutionary omega-6:omega-3 ratio: 1:1 to 4:1; modern Western diet: 15:1. Meta-analyses show 2-4g EPA+DHA reduces cardiovascular events, inflammation, supports brain health. Prioritize whole food sources.",
+      "omega3_min_g": 2.5,
+      "omega3_optimal_g": 4,
+      "sources": "Wild fish, pastured eggs, grass-fed meat, nuts, seeds, olives, avocados"
+    },
+    "fiber": {
+      "min_g": 30,
+      "optimal_g": 40,
+      "max_g": 50,
+      "sources": "Vegetables, fruits, legumes, ancient grains"
+    }
+  },
+  "vitamins": {
+    "vitaminA": {
+      "unit": "mcg_RAE",
+      "min": 900,
+      "optimal": 1200,
+      "notes": "Retinol from animal sources preferred over beta-carotene for bioavailability",
+      "sources": "Liver, pastured eggs, grass-fed dairy, orange vegetables (as provitamin)"
+    },
+    "vitaminD": {
+      "unit": "IU",
+      "min": 2000,
+      "optimal": 4000,
+      "max": 10000,
+      "notes": "Optimal serum 25(OH)D: 40-60 ng/mL requires 4,000 IU daily (RDA 600 IU only prevents rickets). Meta-analyses show reduced risk of respiratory infections, autoimmune disease, and cancer at optimal levels. Sun exposure contributes additional vitamin D.",
+      "sources": "Fatty fish (salmon, sardines), pastured egg yolks, mushrooms exposed to sunlight"
+    },
+    "vitaminE": {
+      "unit": "mg",
+      "min": 15,
+      "optimal": 20,
+      "notes": "Mixed tocopherols from whole food sources",
+      "sources": "Nuts, seeds, avocados, olive oil, leafy greens"
+    },
+    "vitaminK": {
+      "unit": "mcg",
+      "k1_min": 120,
+      "k2_optimal": 200,
+      "notes": "Rotterdam Study: High K2 intake (32mcg+/day) reduced cardiovascular mortality 50%. K2 activates proteins that direct calcium to bones, not arteries. MK-7 has longest half-life. Government RDAs only address K1 for clotting, ignore K2 for cardiovascular/bone health.",
+      "sources": "K1: leafy greens; K2: grass-fed dairy, pastured eggs, natto, organ meats"
+    },
+    "vitaminC": {
+      "unit": "mg",
+      "min": 200,
+      "optimal": 500,
+      "max": 2000,
+      "notes": "Linus Pauling Institute: 400mg for optimal health vs RDA 90mg. Supports immune function, collagen synthesis, antioxidant protection. Dose-response curve shows benefits up to 500mg from food sources.",
+      "sources": "Citrus, berries, peppers, cruciferous vegetables, kiwi"
+    },
+    "thiamin_B1": {
+      "unit": "mg",
+      "min": 1.2,
+      "optimal": 1.5,
+      "sources": "Pork, fish, seeds, nuts, legumes"
+    },
+    "riboflavin_B2": {
+      "unit": "mg",
+      "min": 1.3,
+      "optimal": 1.7,
+      "sources": "Organ meats, eggs, dairy, mushrooms, almonds"
+    },
+    "niacin_B3": {
+      "unit": "mg",
+      "min": 16,
+      "optimal": 20,
+      "sources": "Meat, fish, poultry, mushrooms, legumes"
+    },
+    "pantothenicAcid_B5": {
+      "unit": "mg",
+      "min": 5,
+      "optimal": 7,
+      "sources": "Organ meats, fish, eggs, mushrooms, avocados"
+    },
+    "pyridoxine_B6": {
+      "unit": "mg",
+      "min": 1.5,
+      "optimal": 2,
+      "sources": "Poultry, fish, potatoes, non-citrus fruits, organ meats"
+    },
+    "biotin_B7": {
+      "unit": "mcg",
+      "min": 30,
+      "optimal": 50,
+      "sources": "Eggs, nuts, seeds, organ meats, fish"
+    },
+    "folate_B9": {
+      "unit": "mcg_DFE",
+      "min": 400,
+      "optimal": 600,
+      "notes": "Natural folate preferred over synthetic folic acid",
+      "sources": "Leafy greens, legumes, liver, asparagus, Brussels sprouts"
+    },
+    "cobalamin_B12": {
+      "unit": "mcg",
+      "min": 2.4,
+      "optimal": 5,
+      "notes": "Only bioavailable from animal sources",
+      "sources": "Meat, fish, poultry, eggs, dairy, especially organ meats"
+    }
+  },
+  "minerals": {
+    "calcium": {
+      "unit": "mg",
+      "min": 1000,
+      "optimal": 1200,
+      "notes": "Balance with magnesium, vitamin D, and K2 for absorption",
+      "sources": "Dairy, sardines with bones, leafy greens, sesame seeds"
+    },
+    "magnesium": {
+      "unit": "mg",
+      "min": 400,
+      "optimal": 500,
+      "notes": "48% of US population deficient (NHANES data). Required for 300+ enzymatic reactions, ATP production, cardiovascular health. Modern agriculture depletes soil magnesium. Optimal intake 500-600mg vs RDA 420mg based on cardiovascular outcome studies.",
+      "sources": "Nuts, seeds, leafy greens, legumes, cacao, fish"
+    },
+    "phosphorus": {
+      "unit": "mg",
+      "min": 700,
+      "optimal": 900,
+      "sources": "Meat, fish, dairy, nuts, legumes"
+    },
+    "potassium": {
+      "unit": "mg",
+      "min": 3500,
+      "optimal": 4700,
+      "notes": "Crucial for blood pressure and cellular function",
+      "sources": "Potatoes, avocados, bananas, fish, leafy greens, winter squash"
+    },
+    "sodium": {
+      "unit": "mg",
+      "min": 1500,
+      "optimal": 2300,
+      "max": 3000,
+      "notes": "Unrefined sea salt or Himalayan salt for trace minerals",
+      "sources": "Natural salt, fish, celery"
+    },
+    "iron": {
+      "unit": "mg",
+      "min": 8,
+      "optimal": 18,
+      "notes": "Heme iron from animals more bioavailable than non-heme plant sources",
+      "sources": "Red meat, organ meats, shellfish, legumes, spinach"
+    },
+    "zinc": {
+      "unit": "mg",
+      "min": 11,
+      "optimal": 15,
+      "notes": "Critical for immune function; animal sources better absorbed",
+      "sources": "Oysters, red meat, poultry, pumpkin seeds, legumes"
+    },
+    "copper": {
+      "unit": "mg",
+      "min": 0.9,
+      "optimal": 1.5,
+      "notes": "Balance with zinc (10:1 zinc:copper ratio)",
+      "sources": "Organ meats, shellfish, nuts, seeds, cacao"
+    },
+    "selenium": {
+      "unit": "mcg",
+      "min": 55,
+      "optimal": 100,
+      "max": 400,
+      "notes": "Antioxidant, thyroid function",
+      "sources": "Brazil nuts (1-2 daily sufficient), fish, organ meats, eggs"
+    },
+    "iodine": {
+      "unit": "mcg",
+      "min": 150,
+      "optimal": 200,
+      "notes": "Essential for thyroid function",
+      "sources": "Seaweed, fish, eggs, dairy"
+    },
+    "manganese": {
+      "unit": "mg",
+      "min": 2.3,
+      "optimal": 3,
+      "sources": "Nuts, seeds, whole grains, leafy greens, tea"
+    },
+    "chromium": {
+      "unit": "mcg",
+      "min": 35,
+      "optimal": 50,
+      "notes": "Blood sugar regulation",
+      "sources": "Broccoli, eggs, meat, whole grains"
+    },
+    "molybdenum": {
+      "unit": "mcg",
+      "min": 45,
+      "optimal": 50,
+      "sources": "Legumes, grains, nuts, leafy greens"
+    }
+  },
+  "other_nutrients": {
+    "choline": {
+      "unit": "mg",
+      "min": 450,
+      "optimal": 550,
+      "notes": "90% of US population deficient (NHANES). Essential for neurotransmitter synthesis, cell membrane integrity, methylation, liver function. Not technically a vitamin but functionally essential. Eggs provide 147mg per egg; 3-4 eggs approach optimal intake.",
+      "sources": "Eggs (highest source), liver, fish, cruciferous vegetables"
+    },
+    "water": {
+      "unit": "liters",
+      "min": 2.5,
+      "optimal": 3.5,
+      "notes": "Varies by activity level and climate"
+    }
+  }
+}

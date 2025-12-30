@@ -1,0 +1,580 @@
+{
+  "categories": {
+    "proteins": {
+      "animal_proteins": [
+        {
+          "name": "Wild Salmon",
+          "category": "fatty_fish",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 25,
+            "fat_g": 13,
+            "omega3_g": 2.5,
+            "vitaminD_IU": 600,
+            "vitaminB12_mcg": 3.2,
+            "selenium_mcg": 45,
+            "potassium_mg": 490,
+            "notes": "Wild-caught preferred for cleaner omega-3 profile"
+          }
+        },
+        {
+          "name": "Sardines (with bones)",
+          "category": "small_fish",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 25,
+            "fat_g": 11,
+            "omega3_g": 2.0,
+            "calcium_mg": 382,
+            "vitaminD_IU": 480,
+            "vitaminB12_mcg": 8.9,
+            "selenium_mcg": 53,
+            "notes": "Excellent calcium source; low mercury"
+          }
+        },
+        {
+          "name": "Pasture-Raised Eggs",
+          "category": "eggs",
+          "serving_size": "1 large (50g)",
+          "nutrients": {
+            "protein_g": 6,
+            "fat_g": 5,
+            "omega3_g": 0.2,
+            "choline_mg": 147,
+            "vitaminA_mcg": 80,
+            "vitaminD_IU": 44,
+            "vitaminB12_mcg": 0.6,
+            "selenium_mcg": 15,
+            "notes": "Pasture-raised have 2x more omega-3, higher vitamin content"
+          }
+        },
+        {
+          "name": "Grass-Fed Beef Liver",
+          "category": "organ_meat",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 20,
+            "fat_g": 4,
+            "vitaminA_mcg": 9442,
+            "vitaminB12_mcg": 59,
+            "folate_mcg": 290,
+            "iron_mg": 5,
+            "copper_mg": 12,
+            "zinc_mg": 4,
+            "selenium_mcg": 40,
+            "notes": "Most nutrient-dense food; consume 100-200g weekly, not daily"
+          }
+        },
+        {
+          "name": "Grass-Fed Beef",
+          "category": "red_meat",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 26,
+            "fat_g": 15,
+            "omega3_g": 0.1,
+            "iron_mg": 2.6,
+            "zinc_mg": 4.8,
+            "vitaminB12_mcg": 2.1,
+            "selenium_mcg": 14,
+            "notes": "Grass-fed has better omega-3:6 ratio than grain-fed"
+          }
+        },
+        {
+          "name": "Pastured Chicken",
+          "category": "poultry",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 27,
+            "fat_g": 14,
+            "vitaminB6_mg": 0.5,
+            "niacin_mg": 10,
+            "selenium_mcg": 24,
+            "phosphorus_mg": 200,
+            "notes": "Dark meat has more nutrients than breast"
+          }
+        },
+        {
+          "name": "Oysters",
+          "category": "shellfish",
+          "serving_size": "100g (6 medium)",
+          "nutrients": {
+            "protein_g": 9,
+            "fat_g": 4,
+            "omega3_g": 0.6,
+            "zinc_mg": 78,
+            "copper_mg": 4,
+            "vitaminB12_mcg": 16,
+            "selenium_mcg": 64,
+            "iron_mg": 6,
+            "notes": "Highest zinc content of any food"
+          }
+        }
+      ],
+      "plant_proteins": [
+        {
+          "name": "Lentils (cooked)",
+          "category": "legume",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 9,
+            "carbs_g": 20,
+            "fiber_g": 8,
+            "folate_mcg": 181,
+            "iron_mg": 3.3,
+            "magnesium_mg": 36,
+            "potassium_mg": 369,
+            "notes": "Soak/ferment to reduce antinutrients; combine with grains for complete protein"
+          }
+        },
+        {
+          "name": "Chickpeas (cooked)",
+          "category": "legume",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 9,
+            "carbs_g": 27,
+            "fiber_g": 8,
+            "folate_mcg": 172,
+            "iron_mg": 2.9,
+            "magnesium_mg": 48,
+            "zinc_mg": 1.5,
+            "notes": "Traditional preparation: soak 24h, cook thoroughly"
+          }
+        }
+      ]
+    },
+    "vegetables": {
+      "leafy_greens": [
+        {
+          "name": "Kale",
+          "serving_size": "100g raw",
+          "nutrients": {
+            "protein_g": 4.3,
+            "carbs_g": 9,
+            "fiber_g": 3.6,
+            "vitaminA_mcg": 500,
+            "vitaminC_mg": 120,
+            "vitaminK_mcg": 705,
+            "calcium_mg": 150,
+            "magnesium_mg": 47,
+            "potassium_mg": 491,
+            "notes": "Massage or lightly cook to reduce oxalates"
+          }
+        },
+        {
+          "name": "Spinach",
+          "serving_size": "100g raw",
+          "nutrients": {
+            "protein_g": 2.9,
+            "carbs_g": 3.6,
+            "fiber_g": 2.2,
+            "vitaminA_mcg": 469,
+            "vitaminC_mg": 28,
+            "vitaminK_mcg": 483,
+            "folate_mcg": 194,
+            "iron_mg": 2.7,
+            "magnesium_mg": 79,
+            "notes": "High oxalates; cook to improve mineral absorption"
+          }
+        },
+        {
+          "name": "Swiss Chard",
+          "serving_size": "100g raw",
+          "nutrients": {
+            "protein_g": 1.8,
+            "carbs_g": 3.7,
+            "fiber_g": 1.6,
+            "vitaminA_mcg": 306,
+            "vitaminC_mg": 30,
+            "vitaminK_mcg": 830,
+            "magnesium_mg": 81,
+            "potassium_mg": 379,
+            "notes": "Rainbow chard provides additional phytonutrients"
+          }
+        }
+      ],
+      "cruciferous": [
+        {
+          "name": "Broccoli",
+          "serving_size": "100g cooked",
+          "nutrients": {
+            "protein_g": 2.4,
+            "carbs_g": 7,
+            "fiber_g": 3.3,
+            "vitaminC_mg": 65,
+            "vitaminK_mcg": 141,
+            "folate_mcg": 108,
+            "potassium_mg": 293,
+            "chromium_mcg": 16,
+            "notes": "Contains sulforaphane; light cooking optimal"
+          }
+        },
+        {
+          "name": "Brussels Sprouts",
+          "serving_size": "100g cooked",
+          "nutrients": {
+            "protein_g": 2.6,
+            "carbs_g": 9,
+            "fiber_g": 3.8,
+            "vitaminC_mg": 85,
+            "vitaminK_mcg": 177,
+            "folate_mcg": 61,
+            "potassium_mg": 317,
+            "notes": "High in antioxidants and fiber"
+          }
+        }
+      ],
+      "root_vegetables": [
+        {
+          "name": "Sweet Potato",
+          "serving_size": "100g cooked",
+          "nutrients": {
+            "protein_g": 2,
+            "carbs_g": 21,
+            "fiber_g": 3.3,
+            "vitaminA_mcg": 709,
+            "vitaminC_mg": 20,
+            "potassium_mg": 475,
+            "manganese_mg": 0.5,
+            "notes": "Excellent complex carb source; orange varieties highest in beta-carotene"
+          }
+        },
+        {
+          "name": "Carrots",
+          "serving_size": "100g raw",
+          "nutrients": {
+            "carbs_g": 10,
+            "fiber_g": 2.8,
+            "vitaminA_mcg": 835,
+            "vitaminK_mcg": 13,
+            "potassium_mg": 320,
+            "notes": "Fat needed for vitamin A absorption"
+          }
+        },
+        {
+          "name": "Beets",
+          "serving_size": "100g cooked",
+          "nutrients": {
+            "carbs_g": 10,
+            "fiber_g": 2,
+            "folate_mcg": 109,
+            "manganese_mg": 0.3,
+            "potassium_mg": 305,
+            "notes": "Contains nitrates for cardiovascular health"
+          }
+        }
+      ]
+    },
+    "fruits": {
+      "berries": [
+        {
+          "name": "Blueberries",
+          "serving_size": "100g",
+          "nutrients": {
+            "carbs_g": 14,
+            "fiber_g": 2.4,
+            "vitaminC_mg": 10,
+            "vitaminK_mcg": 19,
+            "manganese_mg": 0.3,
+            "notes": "High antioxidants; wild blueberries most nutrient-dense"
+          }
+        },
+        {
+          "name": "Strawberries",
+          "serving_size": "100g",
+          "nutrients": {
+            "carbs_g": 8,
+            "fiber_g": 2,
+            "vitaminC_mg": 59,
+            "manganese_mg": 0.4,
+            "folate_mcg": 24,
+            "notes": "Choose organic; high pesticide residue in conventional"
+          }
+        }
+      ],
+      "citrus": [
+        {
+          "name": "Orange",
+          "serving_size": "100g",
+          "nutrients": {
+            "carbs_g": 12,
+            "fiber_g": 2.4,
+            "vitaminC_mg": 53,
+            "folate_mcg": 30,
+            "potassium_mg": 181,
+            "notes": "Whole fruit preferred over juice"
+          }
+        }
+      ],
+      "tropical": [
+        {
+          "name": "Avocado",
+          "serving_size": "100g",
+          "nutrients": {
+            "fat_g": 15,
+            "carbs_g": 9,
+            "fiber_g": 7,
+            "potassium_mg": 485,
+            "vitaminE_mg": 2.1,
+            "vitaminK_mcg": 21,
+            "folate_mcg": 81,
+            "notes": "Nutrient-dense healthy fats; supports fat-soluble vitamin absorption"
+          }
+        },
+        {
+          "name": "Banana",
+          "serving_size": "100g",
+          "nutrients": {
+            "carbs_g": 23,
+            "fiber_g": 2.6,
+            "potassium_mg": 358,
+            "vitaminB6_mg": 0.4,
+            "vitaminC_mg": 9,
+            "notes": "Good pre/post activity; resistant starch when slightly green"
+          }
+        }
+      ]
+    },
+    "fats_oils": {
+      "whole_food_fats": [
+        {
+          "name": "Almonds",
+          "serving_size": "28g (23 almonds)",
+          "nutrients": {
+            "protein_g": 6,
+            "fat_g": 14,
+            "carbs_g": 6,
+            "fiber_g": 3.5,
+            "vitaminE_mg": 7.3,
+            "magnesium_mg": 76,
+            "calcium_mg": 76,
+            "notes": "Soak overnight to reduce phytic acid"
+          }
+        },
+        {
+          "name": "Walnuts",
+          "serving_size": "28g (14 halves)",
+          "nutrients": {
+            "protein_g": 4,
+            "fat_g": 18,
+            "omega3_g": 2.5,
+            "carbs_g": 4,
+            "fiber_g": 2,
+            "copper_mg": 0.5,
+            "manganese_mg": 1,
+            "notes": "Best plant source of omega-3 ALA"
+          }
+        },
+        {
+          "name": "Pumpkin Seeds",
+          "serving_size": "28g",
+          "nutrients": {
+            "protein_g": 7,
+            "fat_g": 13,
+            "magnesium_mg": 150,
+            "zinc_mg": 2.2,
+            "iron_mg": 2.5,
+            "notes": "High in minerals; roast lightly"
+          }
+        },
+        {
+          "name": "Extra Virgin Olive Oil",
+          "serving_size": "15ml (1 tbsp)",
+          "nutrients": {
+            "fat_g": 14,
+            "omega9_g": 10,
+            "vitaminE_mg": 2,
+            "vitaminK_mcg": 8,
+            "notes": "Cold-pressed; use raw or low-heat; high polyphenols"
+          }
+        },
+        {
+          "name": "Coconut (fresh meat)",
+          "serving_size": "28g",
+          "nutrients": {
+            "fat_g": 9,
+            "fiber_g": 2.5,
+            "manganese_mg": 0.4,
+            "copper_mg": 0.1,
+            "notes": "Medium-chain triglycerides; stable for cooking"
+          }
+        }
+      ]
+    },
+    "ancient_grains": {
+      "non_hybridized_grains": [
+        {
+          "name": "Einkorn (cooked)",
+          "category": "ancient_wheat",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 6,
+            "carbs_g": 26,
+            "fiber_g": 4,
+            "iron_mg": 1.5,
+            "magnesium_mg": 40,
+            "zinc_mg": 1.2,
+            "notes": "14 chromosomes vs modern wheat's 42; easier to digest; lower gluten"
+          }
+        },
+        {
+          "name": "Spelt (cooked)",
+          "category": "ancient_wheat",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 5.5,
+            "carbs_g": 26,
+            "fiber_g": 3.9,
+            "niacin_mg": 2.5,
+            "magnesium_mg": 54,
+            "phosphorus_mg": 170,
+            "notes": "Unhybridized; better mineral content than modern wheat"
+          }
+        },
+        {
+          "name": "Quinoa (cooked)",
+          "category": "pseudocereal",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 4.4,
+            "carbs_g": 21,
+            "fiber_g": 2.8,
+            "iron_mg": 1.5,
+            "magnesium_mg": 64,
+            "manganese_mg": 0.6,
+            "notes": "Complete protein; rinse well to remove saponins"
+          }
+        },
+        {
+          "name": "Buckwheat (cooked)",
+          "category": "pseudocereal",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 3.4,
+            "carbs_g": 20,
+            "fiber_g": 2.7,
+            "magnesium_mg": 51,
+            "manganese_mg": 0.4,
+            "copper_mg": 0.2,
+            "notes": "Gluten-free; not related to wheat; high in rutin"
+          }
+        },
+        {
+          "name": "Millet (cooked)",
+          "category": "ancient_grain",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 3.5,
+            "carbs_g": 23,
+            "fiber_g": 1.3,
+            "magnesium_mg": 44,
+            "phosphorus_mg": 100,
+            "notes": "Gluten-free; alkaline grain; soak before cooking"
+          }
+        }
+      ]
+    },
+    "fermented_foods": {
+      "probiotic_foods": [
+        {
+          "name": "Sauerkraut (raw)",
+          "serving_size": "100g",
+          "nutrients": {
+            "fiber_g": 4,
+            "vitaminC_mg": 15,
+            "vitaminK_mcg": 13,
+            "sodium_mg": 661,
+            "notes": "Must be raw/unpasteurized for probiotics; supports gut health"
+          }
+        },
+        {
+          "name": "Kimchi",
+          "serving_size": "100g",
+          "nutrients": {
+            "fiber_g": 2.4,
+            "vitaminA_mcg": 18,
+            "vitaminC_mg": 18,
+            "notes": "Probiotic-rich; supports digestion and immunity"
+          }
+        },
+        {
+          "name": "Full-Fat Grass-Fed Yogurt",
+          "serving_size": "100g",
+          "nutrients": {
+            "protein_g": 3.5,
+            "fat_g": 3.3,
+            "carbs_g": 4.7,
+            "calcium_mg": 110,
+            "vitaminB12_mcg": 0.4,
+            "probiotics": "active_cultures",
+            "notes": "Choose plain, unsweetened; grass-fed for better fat profile"
+          }
+        }
+      ]
+    },
+    "herbs_spices": {
+      "nutrient_dense_seasonings": [
+        {
+          "name": "Turmeric (ground)",
+          "serving_size": "1 tsp (3g)",
+          "nutrients": {
+            "curcumin_mg": 60,
+            "iron_mg": 1.7,
+            "manganese_mg": 0.3,
+            "notes": "Anti-inflammatory; combine with black pepper for absorption"
+          }
+        },
+        {
+          "name": "Ginger (fresh)",
+          "serving_size": "10g",
+          "nutrients": {
+            "potassium_mg": 41,
+            "magnesium_mg": 4,
+            "notes": "Anti-inflammatory; aids digestion"
+          }
+        },
+        {
+          "name": "Garlic (fresh)",
+          "serving_size": "3g (1 clove)",
+          "nutrients": {
+            "manganese_mg": 0.05,
+            "vitaminB6_mg": 0.04,
+            "allicin": "active_compound",
+            "notes": "Crush and wait 10 min before cooking to activate allicin"
+          }
+        }
+      ]
+    }
+  },
+  "excluded_foods": {
+    "reasoning": "Following principles of whole food, non-GMO, ancestral nutrition",
+    "categories": [
+      {
+        "category": "Modern Hybridized Wheat",
+        "items": ["Common wheat (Triticum aestivum)", "Modern bread flour", "Semolina (unless from ancient varieties)"],
+        "reason": "42 chromosomes; heavily hybridized since 1960s; higher gluten, lower minerals"
+      },
+      {
+        "category": "Processed Oils",
+        "items": ["Canola oil", "Vegetable oil", "Soybean oil", "Corn oil", "Safflower oil", "Sunflower oil (high oleic acceptable in moderation)"],
+        "reason": "High heat processing; high omega-6; often from GMO sources"
+      },
+      {
+        "category": "GMO Crops (unless organic)",
+        "items": ["Conventional soy", "Conventional corn", "Conventional canola", "Conventional sugar beets"],
+        "reason": "Genetically modified; pesticide residues"
+      },
+      {
+        "category": "Refined Sugars",
+        "items": ["White sugar", "High fructose corn syrup", "Artificial sweeteners"],
+        "reason": "Processed; nutrient-void; blood sugar disruption"
+      },
+      {
+        "category": "Factory-Farmed Animal Products",
+        "items": ["Grain-fed beef", "Conventional eggs", "Conventional dairy"],
+        "reason": "Poor omega-3:6 ratio; lower micronutrients; antibiotic/hormone concerns"
+      }
+    ]
+  }
+}

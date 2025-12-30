@@ -1,0 +1,464 @@
+{
+  "nutrientSynergies": {
+    "description": "Nutrients that work together and should be consumed together for optimal absorption and function",
+    "synergies": [
+      {
+        "name": "Bone Health Trio",
+        "nutrients": ["calcium", "vitaminD", "vitaminK2", "magnesium"],
+        "mechanism": "Vitamin D increases calcium absorption. Vitamin K2 directs calcium to bones (not arteries). Magnesium activates vitamin D and supports bone mineralization.",
+        "optimalRatios": {
+          "calcium_to_magnesium": "2:1 to 1:1",
+          "vitaminD_IU_per_calcium_mg": "10 IU per 100mg calcium"
+        },
+        "recommendations": [
+          "Take vitamin D with calcium-rich meal",
+          "Ensure K2 intake when supplementing calcium/D",
+          "Adequate magnesium prevents calcium from depositing in soft tissues"
+        ]
+      },
+      {
+        "name": "Iron Absorption Complex",
+        "nutrients": ["iron", "vitaminC", "copper"],
+        "mechanism": "Vitamin C converts non-heme iron to more absorbable form. Copper is required for iron metabolism and hemoglobin synthesis.",
+        "enhancers": [
+          "Vitamin C (25mg+ per meal with iron)",
+          "Meat/fish/poultry factor (even small amounts enhance plant iron)",
+          "Fermented foods (lactic acid improves absorption)"
+        ],
+        "inhibitors": [
+          "Calcium (>300mg blocks iron absorption)",
+          "Tannins (tea, coffee - wait 1-2 hours after meals)",
+          "Phytates (grains, legumes - soak/ferment to reduce)",
+          "Oxalates (spinach - cooking reduces)"
+        ],
+        "recommendations": [
+          "Pair plant iron sources with vitamin C foods",
+          "Avoid calcium supplements with iron-rich meals",
+          "Cook in cast iron for additional iron",
+          "Don't drink tea/coffee with meals"
+        ]
+      },
+      {
+        "name": "Fat-Soluble Vitamin Complex",
+        "nutrients": ["vitaminA", "vitaminD", "vitaminE", "vitaminK", "fats"],
+        "mechanism": "Vitamins A, D, E, K require dietary fat for absorption. They also work synergistically - excess of one can deplete others.",
+        "optimalRatios": {
+          "vitaminA_to_D": "1000-2000 IU vitamin A per 1000 IU vitamin D",
+          "vitaminE_to_K": "Maintain both in optimal range; no fixed ratio"
+        },
+        "recommendations": [
+          "Consume fat-soluble vitamins with healthy fats (15g+ per meal)",
+          "Don't mega-dose single fat-soluble vitamin without others",
+          "Best sources provide multiple: liver (A, D, K), egg yolks (A, D, E, K)"
+        ]
+      },
+      {
+        "name": "B-Complex Synergy",
+        "nutrients": ["thiamin_B1", "riboflavin_B2", "niacin_B3", "pantothenicAcid_B5", "pyridoxine_B6", "biotin_B7", "folate_B9", "cobalamin_B12"],
+        "mechanism": "B vitamins work together in energy metabolism, neurotransmitter synthesis, and DNA methylation. Isolated B vitamins can create imbalances.",
+        "recommendations": [
+          "Consume whole food sources providing full B-complex (eggs, meat, fish)",
+          "Folate and B12 work together in methylation - both needed",
+          "B6 enhances magnesium absorption"
+        ]
+      },
+      {
+        "name": "Antioxidant Network",
+        "nutrients": ["vitaminC", "vitaminE", "selenium", "zinc"],
+        "mechanism": "Antioxidants regenerate each other. Vitamin C recycles vitamin E. Selenium is cofactor for glutathione peroxidase. Zinc supports SOD enzyme.",
+        "recommendations": [
+          "Consume variety of antioxidants from whole foods",
+          "Vitamin C regenerates oxidized vitamin E",
+          "Don't mega-dose single antioxidant"
+        ]
+      },
+      {
+        "name": "Zinc-Copper Balance",
+        "nutrients": ["zinc", "copper"],
+        "mechanism": "Zinc and copper compete for absorption. High zinc can deplete copper and vice versa.",
+        "optimalRatio": "10:1 (zinc:copper)",
+        "recommendations": [
+          "Aim for 15mg zinc to 1.5mg copper",
+          "Oysters high in both zinc and copper (balanced)",
+          "Long-term zinc supplementation requires copper monitoring"
+        ]
+      },
+      {
+        "name": "Omega Balance",
+        "nutrients": ["omega3", "omega6"],
+        "mechanism": "Omega-6 and omega-3 compete for same enzymes. High omega-6 is inflammatory; omega-3 is anti-inflammatory.",
+        "optimalRatio": "1:1 to 4:1 (omega-6:omega-3)",
+        "currentProblem": "Modern diet typically 15:1 to 20:1 (highly inflammatory)",
+        "recommendations": [
+          "Reduce omega-6 sources (seed oils, grain-fed meat)",
+          "Increase omega-3 from fish, grass-fed meat, walnuts",
+          "Wild salmon provides ~2g omega-3 with minimal omega-6"
+        ]
+      },
+      {
+        "name": "Methylation Pathway",
+        "nutrients": ["folate_B9", "cobalamin_B12", "pyridoxine_B6", "choline"],
+        "mechanism": "Critical for DNA repair, neurotransmitter synthesis, detoxification. Requires activated forms of nutrients.",
+        "recommendations": [
+          "Natural folate (not synthetic folic acid) from leafy greens, liver",
+          "B12 from animal sources only (vegans must supplement)",
+          "Choline from eggs (3-4 eggs provides optimal intake)",
+          "Those with MTHFR variants need extra methylated B vitamins"
+        ]
+      }
+    ]
+  },
+  "bioavailabilityFactors": {
+    "description": "Factors affecting how well nutrients are absorbed and utilized",
+    "factors": [
+      {
+        "nutrient": "iron",
+        "heme_vs_nonheme": {
+          "heme_sources": ["red meat", "poultry", "fish"],
+          "heme_absorption": "15-35%",
+          "nonheme_sources": ["plant foods", "fortified foods"],
+          "nonheme_absorption": "2-20%",
+          "implication": "Need 3-5x more plant iron than animal iron to meet requirements"
+        },
+        "enhancers": ["vitamin C", "meat/fish/poultry", "fermented foods"],
+        "inhibitors": ["calcium", "phytates", "tannins", "oxalates"],
+        "cooking_tip": "Cast iron cookware can triple iron content in acidic foods"
+      },
+      {
+        "nutrient": "calcium",
+        "absorption_percentage": "25-35% from dairy, 50% from low-oxalate greens",
+        "enhancers": ["vitamin D", "vitamin K2", "magnesium", "acidic environment"],
+        "inhibitors": ["phytates", "oxalates", "excess sodium", "excess protein"],
+        "best_sources": {
+          "high_bioavailability": ["dairy", "sardines with bones", "kale", "bok choy"],
+          "low_bioavailability": ["spinach (high oxalates)", "fortified foods"]
+        },
+        "timing": "Spread throughout day - body can only absorb ~500mg at once"
+      },
+      {
+        "nutrient": "zinc",
+        "animal_vs_plant": {
+          "animal_absorption": "40-60%",
+          "plant_absorption": "10-30%",
+          "reason": "Phytates in plants bind zinc"
+        },
+        "enhancers": ["animal protein", "citric acid"],
+        "inhibitors": ["phytates", "calcium", "iron supplements", "copper"],
+        "best_sources": ["oysters (78mg/100g - highest)", "red meat", "poultry", "pumpkin seeds (soaked)"]
+      },
+      {
+        "nutrient": "magnesium",
+        "absorption_percentage": "30-40% from food",
+        "enhancers": ["vitamin D", "vitamin B6"],
+        "inhibitors": ["high calcium intake", "alcohol", "phytates"],
+        "depletion_factors": ["stress", "caffeine", "alcohol", "sugar", "medications"],
+        "note": "Modern agriculture has depleted soil magnesium - even whole foods may be lower than historical values"
+      },
+      {
+        "nutrient": "vitamin_D",
+        "food_vs_sun": {
+          "sun_production": "10,000-25,000 IU in 20 min full-body sun exposure",
+          "food_sources_limited": "Few foods naturally high (fatty fish, egg yolks)",
+          "skin_synthesis_factors": ["latitude", "season", "skin pigmentation", "age", "sunscreen"]
+        },
+        "requires": "Dietary fat for absorption (fat-soluble)",
+        "activation": "Requires magnesium to convert to active form"
+      },
+      {
+        "nutrient": "vitamin_K2",
+        "K1_vs_K2": {
+          "K1_sources": "Leafy greens (for clotting)",
+          "K1_absorption": "Poor (10-15%)",
+          "K2_sources": "Fermented foods, grass-fed dairy, egg yolks, organ meats",
+          "K2_absorption": "Better, especially MK-7 form (natto)",
+          "K2_unique_function": "Calcium regulation (not addressed by K1)"
+        },
+        "note": "Government RDAs only address K1 for clotting, ignore K2 for cardiovascular/bone health"
+      },
+      {
+        "nutrient": "vitamin_A",
+        "retinol_vs_carotene": {
+          "retinol": {
+            "sources": "Animal foods (liver, eggs, dairy)",
+            "bioavailability": "Immediate, no conversion needed",
+            "absorption": "High"
+          },
+          "beta_carotene": {
+            "sources": "Plant foods (carrots, sweet potato)",
+            "bioavailability": "Requires conversion to retinol",
+            "conversion_rate": "12:1 to 28:1 (highly variable by genetics)",
+            "note": "Many people are poor converters of beta-carotene"
+          }
+        },
+        "recommendation": "Include preformed vitamin A from animal sources, don't rely solely on plant carotenoids"
+      },
+      {
+        "nutrient": "omega3_fatty_acids",
+        "ALA_vs_EPA_DHA": {
+          "ALA": {
+            "sources": "Plant sources (walnuts, flax, chia)",
+            "conversion_to_EPA_DHA": "1-10% conversion rate (very poor)",
+            "note": "Cannot rely on plant omega-3 for EPA/DHA needs"
+          },
+          "EPA_DHA": {
+            "sources": "Fish, seafood (especially fatty fish)",
+            "bioavailability": "Direct use, no conversion needed",
+            "recommendation": "3-4g combined EPA+DHA daily from whole food sources"
+          }
+        }
+      },
+      {
+        "nutrient": "folate_B9",
+        "natural_vs_synthetic": {
+          "natural_folate": {
+            "sources": "Leafy greens, legumes, liver",
+            "form": "5-MTHF (methylfolate) and other natural forms",
+            "absorption": "Well absorbed and utilized"
+          },
+          "synthetic_folic_acid": {
+            "sources": "Fortified foods, supplements",
+            "concerns": "May accumulate unmetabolized, can mask B12 deficiency",
+            "MTHFR_issue": "40% of population has MTHFR gene variant - poor folic acid metabolism"
+          }
+        },
+        "recommendation": "Obtain from whole foods; avoid fortified products with synthetic folic acid"
+      }
+    ]
+  },
+  "antinutrients": {
+    "description": "Compounds in foods that can interfere with nutrient absorption. Many can be reduced through proper preparation.",
+    "compounds": [
+      {
+        "name": "Phytic Acid (Phytates)",
+        "found_in": ["whole grains", "legumes", "nuts", "seeds"],
+        "effect": "Binds to minerals (iron, zinc, calcium, magnesium) preventing absorption",
+        "reduction_methods": [
+          {
+            "method": "Soaking",
+            "duration": "12-24 hours in warm water with acidic medium (lemon juice, whey)",
+            "effectiveness": "Reduces 20-50%"
+          },
+          {
+            "method": "Fermentation",
+            "examples": "Sourdough bread, fermented legumes, miso, tempeh",
+            "effectiveness": "Reduces 60-90%"
+          },
+          {
+            "method": "Sprouting",
+            "duration": "2-5 days",
+            "effectiveness": "Reduces 40-80%, also increases vitamin C and B vitamins"
+          },
+          {
+            "method": "Cooking",
+            "effectiveness": "Minimal reduction (10-20%)"
+          }
+        ],
+        "recommendations": [
+          "Always soak grains and legumes before cooking",
+          "Choose fermented forms when possible (sourdough > regular bread)",
+          "Combine plant iron/zinc sources with animal sources for better absorption",
+          "Consume vitamin C with plant-based meals to counteract phytate effect on iron"
+        ]
+      },
+      {
+        "name": "Oxalates (Oxalic Acid)",
+        "found_in": ["spinach", "swiss chard", "beet greens", "rhubarb", "almonds", "sweet potatoes"],
+        "effect": "Binds calcium and iron, can contribute to kidney stones in susceptible individuals",
+        "high_oxalate_foods": {
+          "spinach": "750mg oxalates per 100g cooked",
+          "swiss_chard": "645mg per 100g cooked",
+          "for_comparison": "kale only 2mg per 100g"
+        },
+        "reduction_methods": [
+          {
+            "method": "Boiling and discarding water",
+            "effectiveness": "Reduces 30-87% (oxalates leach into water)"
+          },
+          {
+            "method": "Steaming",
+            "effectiveness": "Reduces 5-15% (less effective)"
+          },
+          {
+            "method": "Pairing with calcium",
+            "mechanism": "Calcium binds oxalates in gut before absorption",
+            "example": "Eat spinach with cheese or yogurt"
+          }
+        ],
+        "recommendations": [
+          "Rotate greens - use kale, bok choy, collards (low oxalate) not just spinach",
+          "Boil high-oxalate greens and discard cooking water",
+          "Pair with calcium-rich foods",
+          "Limit if prone to kidney stones"
+        ]
+      },
+      {
+        "name": "Lectins",
+        "found_in": ["legumes (especially kidney beans)", "grains", "nightshades", "peanuts"],
+        "effect": "Can damage gut lining, reduce nutrient absorption, cause digestive distress",
+        "highest_sources": ["raw or undercooked kidney beans", "wheat germ"],
+        "reduction_methods": [
+          {
+            "method": "Soaking + Pressure cooking",
+            "effectiveness": "Reduces 95-100%"
+          },
+          {
+            "method": "Soaking + Boiling 30+ min",
+            "effectiveness": "Reduces 80-95%"
+          },
+          {
+            "method": "Fermentation",
+            "effectiveness": "Reduces significantly"
+          }
+        ],
+        "critical_safety": "NEVER eat raw or undercooked kidney beans - extremely high lectin content can cause severe poisoning",
+        "recommendations": [
+          "Always soak legumes 12-24 hours, discard water",
+          "Pressure cook for maximum lectin reduction",
+          "Fermentation also effective (tempeh, miso)"
+        ]
+      },
+      {
+        "name": "Tannins",
+        "found_in": ["tea", "coffee", "wine", "some berries", "cocoa"],
+        "effect": "Inhibits iron absorption significantly",
+        "mechanism": "Binds to non-heme iron, making it unavailable",
+        "impact": "Cup of tea with meal can reduce iron absorption by 60-70%",
+        "recommendations": [
+          "Don't drink tea or coffee within 1-2 hours of iron-rich meals",
+          "If anemic, avoid tannin-rich beverages with meals",
+          "Herbal teas (chamomile, peppermint) have lower tannins"
+        ]
+      },
+      {
+        "name": "Goitrogens",
+        "found_in": ["cruciferous vegetables (broccoli, cauliflower, kale, cabbage)", "soy", "cassava"],
+        "effect": "Interfere with thyroid hormone production by blocking iodine uptake",
+        "reduction_methods": [
+          {
+            "method": "Cooking",
+            "effectiveness": "Reduces goitrogens significantly",
+            "note": "Heat inactivates enzyme that forms goitrogenic compounds"
+          },
+          {
+            "method": "Fermentation",
+            "effectiveness": "Reduces goitrogens in soy"
+          }
+        ],
+        "risk_assessment": {
+          "low_risk": "Normal consumption of cooked cruciferous vegetables by people with adequate iodine",
+          "moderate_risk": "Large amounts of raw cruciferous (e.g., daily green smoothies) + low iodine",
+          "high_risk": "Hypothyroid patients consuming large amounts of raw goitrogens"
+        },
+        "recommendations": [
+          "Cook cruciferous vegetables (reduces goitrogens)",
+          "Ensure adequate iodine intake (fish, seaweed, eggs)",
+          "Moderate raw cruciferous intake",
+          "Those with thyroid issues should monitor intake"
+        ]
+      },
+      {
+        "name": "Protease Inhibitors",
+        "found_in": ["raw legumes", "grains", "egg whites (raw)"],
+        "effect": "Interfere with protein digestion",
+        "reduction_methods": [
+          "Cooking (heat denatures protease inhibitors)",
+          "Soaking and fermentation for grains/legumes"
+        ],
+        "note": "This is why raw egg whites are poorly digested vs cooked"
+      }
+    ]
+  },
+  "foodCombinations": {
+    "description": "Strategic food pairings to maximize nutrient absorption",
+    "optimal_combinations": [
+      {
+        "combination": "Tomatoes + Olive Oil",
+        "benefit": "Lycopene absorption increased 4-fold with fat",
+        "mechanism": "Lycopene is fat-soluble"
+      },
+      {
+        "combination": "Turmeric + Black Pepper",
+        "benefit": "Curcumin absorption increased 2000%",
+        "mechanism": "Piperine in black pepper inhibits curcumin metabolism"
+      },
+      {
+        "combination": "Leafy Greens + Avocado/Nuts",
+        "benefit": "Carotenoid absorption increased 15-fold",
+        "mechanism": "Fat-soluble carotenoids need fat for absorption"
+      },
+      {
+        "combination": "Lentils + Tomatoes/Peppers",
+        "benefit": "Iron absorption tripled",
+        "mechanism": "Vitamin C counteracts phytates, enhances non-heme iron"
+      },
+      {
+        "combination": "Fish + Leafy Greens",
+        "benefit": "Complete omega-3 and vitamin K synergy",
+        "mechanism": "EPA/DHA from fish supports cardiovascular health, K2 directs calcium"
+      },
+      {
+        "combination": "Liver + Sauerkraut",
+        "benefit": "Enhanced nutrient absorption from most nutrient-dense food",
+        "mechanism": "Fermented foods improve gut health and nutrient uptake"
+      }
+    ],
+    "combinations_to_avoid": [
+      {
+        "combination": "Calcium-Rich Foods + Iron-Rich Foods",
+        "problem": "Calcium inhibits iron absorption",
+        "recommendation": "Separate by 2+ hours (e.g., don't take calcium supplement with iron-rich meal)"
+      },
+      {
+        "combination": "Tea/Coffee + Iron-Rich Meal",
+        "problem": "Tannins reduce iron absorption by 60-70%",
+        "recommendation": "Wait 1-2 hours after meal before drinking tea/coffee"
+      },
+      {
+        "combination": "High-Fiber Meal + Fat-Soluble Vitamins",
+        "problem": "Excess fiber can speed transit time, reducing absorption",
+        "recommendation": "Don't take fat-soluble vitamin supplements with high-fiber bran cereal"
+      }
+    ]
+  },
+  "circadianTiming": {
+    "description": "Optimal timing of nutrients based on circadian rhythms and metabolic processes",
+    "timing_recommendations": [
+      {
+        "nutrient": "Protein",
+        "optimal_timing": "Distributed throughout day, especially morning and post-activity",
+        "reasoning": "Muscle protein synthesis occurs throughout day; 25-40g per meal maximizes synthesis",
+        "breakfast_importance": "Morning protein intake supports muscle maintenance and satiety"
+      },
+      {
+        "nutrient": "Carbohydrates",
+        "optimal_timing": "Later in day (dinner time)",
+        "reasoning": "Evening carbs increase serotonin and melatonin, supporting sleep quality",
+        "insulin_sensitivity": "Highest in morning, but evening carbs don't negatively impact most people"
+      },
+      {
+        "nutrient": "Fats",
+        "optimal_timing": "Morning and throughout day",
+        "reasoning": "Supports satiety, hormone production, fat-soluble vitamin absorption",
+        "note": "Healthy fats don't spike insulin, good for sustained energy"
+      },
+      {
+        "nutrient": "Vitamin D",
+        "optimal_timing": "Morning with breakfast",
+        "reasoning": "Can interfere with sleep if taken at night (activating hormone)",
+        "requires": "Fat-containing meal"
+      },
+      {
+        "nutrient": "Magnesium",
+        "optimal_timing": "Evening before bed",
+        "reasoning": "Supports relaxation and sleep quality",
+        "note": "Can cause drowsiness"
+      },
+      {
+        "nutrient": "B Vitamins",
+        "optimal_timing": "Morning or midday",
+        "reasoning": "Energizing, may interfere with sleep if taken evening",
+        "food_sources": "Naturally occur in morning foods (eggs, meat)"
+      }
+    ]
+  }
+}

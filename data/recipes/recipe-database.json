@@ -1,0 +1,597 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-12-30",
+    "servingSizeOptions": [1, 2, 3, 4, 5, 6],
+    "defaultServings": 4
+  },
+  "recipes": [
+    {
+      "mealId": "nutrient_powerhouse_breakfast",
+      "name": "Nutrient Powerhouse Breakfast Bowl",
+      "description": "Pastured eggs, wild salmon, and greens for optimal morning nutrition",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "mealType": "breakfast",
+      "ingredients": [
+        {
+          "foodId": "pasture_raised_eggs",
+          "name": "Pasture-Raised Eggs",
+          "amount": 3,
+          "unit": "whole",
+          "grams": 150,
+          "notes": "Cooked to preference"
+        },
+        {
+          "foodId": "wild_salmon",
+          "name": "Wild Salmon",
+          "amount": 85,
+          "unit": "g",
+          "notes": "Leftover from dinner or smoked"
+        },
+        {
+          "foodId": "avocado",
+          "name": "Avocado",
+          "amount": 50,
+          "unit": "g",
+          "notes": "Half an avocado, sliced"
+        },
+        {
+          "foodId": "spinach",
+          "name": "Spinach",
+          "amount": 50,
+          "unit": "g",
+          "notes": "Lightly sautéed"
+        },
+        {
+          "foodId": "extra_virgin_olive_oil",
+          "name": "Extra Virgin Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "grams": 15,
+          "notes": "For cooking"
+        }
+      ],
+      "instructions": [
+        "Heat olive oil in a pan over medium heat",
+        "Sauté spinach until wilted, about 2 minutes (reduces oxalates by 30%)",
+        "Cook eggs to your preference (scrambled, fried, or poached)",
+        "Plate eggs with spinach, salmon, and sliced avocado",
+        "Season with sea salt and pepper to taste"
+      ],
+      "preparationNotes": {
+        "antiNutrientReduction": "Cooking spinach reduces oxalates by 30%, improving iron absorption. The vitamin C from remaining vegetables enhances iron bioavailability.",
+        "bioavailabilityTips": "The healthy fats from avocado and olive oil enhance absorption of fat-soluble vitamins A, D, E, and K. Heme iron from salmon is 3-5x more bioavailable than plant iron.",
+        "nutrientSynergies": [
+          "Vitamin D from salmon + fat from avocado = optimal D absorption",
+          "Iron from spinach + vitamin C = 3x better iron absorption",
+          "Choline from eggs supports brain and liver function"
+        ]
+      },
+      "nutritionPerServing": {
+        "calories": 620,
+        "macronutrients": {
+          "protein_g": 48,
+          "carbohydrates_g": 12,
+          "fat_g": 44,
+          "fiber_g": 6,
+          "omega3_g": 3.2
+        },
+        "vitamins": {
+          "vitaminA_mcg": 600,
+          "vitaminD_IU": 520,
+          "vitaminE_mg": 5,
+          "vitaminK_mcg": 250,
+          "vitaminC_mg": 16,
+          "vitaminB12_mcg": 5.8,
+          "folate_B9_mcg": 180,
+          "choline_mg": 520
+        },
+        "minerals": {
+          "iron_mg": 4.5,
+          "magnesium_mg": 65,
+          "selenium_mcg": 70,
+          "zinc_mg": 3.2,
+          "potassium_mg": 850
+        }
+      },
+      "tags": ["breakfast", "high-protein", "omega-3-rich", "nutrient-dense", "quick"]
+    },
+    {
+      "mealId": "ancient_grain_berry_bowl",
+      "name": "Ancient Grain Berry Bowl with Nuts",
+      "description": "Einkorn porridge with berries, walnuts, and grass-fed yogurt",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "20 min",
+      "mealType": "breakfast",
+      "ingredients": [
+        {
+          "foodId": "einkorn",
+          "name": "Einkorn (cooked)",
+          "amount": 150,
+          "unit": "g",
+          "notes": "Cook in water or milk"
+        },
+        {
+          "foodId": "blueberries",
+          "name": "Blueberries",
+          "amount": 100,
+          "unit": "g",
+          "notes": "Fresh or frozen"
+        },
+        {
+          "foodId": "walnuts",
+          "name": "Walnuts",
+          "amount": 28,
+          "unit": "g",
+          "notes": "Chopped, about 14 halves"
+        },
+        {
+          "foodId": "grass_fed_yogurt",
+          "name": "Full-Fat Grass-Fed Yogurt",
+          "amount": 100,
+          "unit": "g",
+          "notes": "Plain, unsweetened"
+        },
+        {
+          "foodId": "raw_honey",
+          "name": "Raw Honey",
+          "amount": 1,
+          "unit": "tsp",
+          "grams": 7,
+          "notes": "Optional sweetener"
+        }
+      ],
+      "instructions": [
+        "Cook einkorn according to package directions (usually 20 min in boiling water)",
+        "Top with yogurt, blueberries, and chopped walnuts",
+        "Drizzle with raw honey if desired",
+        "Serve warm"
+      ],
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": {
+          "protein_g": 16,
+          "carbohydrates_g": 62,
+          "fat_g": 24,
+          "fiber_g": 8,
+          "omega3_g": 2.5
+        },
+        "vitamins": {
+          "vitaminE_mg": 2,
+          "vitaminK_mcg": 15,
+          "vitaminC_mg": 12,
+          "thiamin_B1_mg": 0.3,
+          "riboflavin_B2_mg": 0.4
+        },
+        "minerals": {
+          "magnesium_mg": 75,
+          "manganese_mg": 1.4,
+          "copper_mg": 0.6,
+          "calcium_mg": 140
+        }
+      },
+      "tags": ["breakfast", "ancient-grains", "vegetarian", "fiber-rich"]
+    },
+    {
+      "mealId": "sardine_power_salad",
+      "name": "Sardine Power Salad",
+      "description": "Sardines with mixed greens, vegetables, and tahini dressing",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "mealType": "lunch",
+      "ingredients": [
+        {
+          "foodId": "sardines",
+          "name": "Sardines (with bones)",
+          "amount": 100,
+          "unit": "g",
+          "notes": "Wild-caught, canned in olive oil"
+        },
+        {
+          "foodId": "kale",
+          "name": "Kale",
+          "amount": 80,
+          "unit": "g",
+          "notes": "Massaged with lemon juice"
+        },
+        {
+          "foodId": "carrots",
+          "name": "Carrots",
+          "amount": 60,
+          "unit": "g",
+          "notes": "Shredded"
+        },
+        {
+          "foodId": "beets",
+          "name": "Beets",
+          "amount": 60,
+          "unit": "g",
+          "notes": "Roasted, diced"
+        },
+        {
+          "foodId": "pumpkin_seeds",
+          "name": "Pumpkin Seeds",
+          "amount": 20,
+          "unit": "g",
+          "notes": "Toasted"
+        },
+        {
+          "foodId": "extra_virgin_olive_oil",
+          "name": "Extra Virgin Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "grams": 15,
+          "notes": "For dressing"
+        },
+        {
+          "foodId": "lemon",
+          "name": "Lemon Juice",
+          "amount": 15,
+          "unit": "ml",
+          "notes": "Fresh squeezed"
+        }
+      ],
+      "instructions": [
+        "Massage kale with lemon juice for 2-3 minutes until tender",
+        "Arrange kale on a plate",
+        "Top with sardines, shredded carrots, and roasted beets",
+        "Sprinkle pumpkin seeds on top",
+        "Drizzle with olive oil",
+        "Season with sea salt and black pepper"
+      ],
+      "nutritionPerServing": {
+        "calories": 550,
+        "macronutrients": {
+          "protein_g": 32,
+          "carbohydrates_g": 24,
+          "fat_g": 36,
+          "fiber_g": 8,
+          "omega3_g": 2.4
+        },
+        "vitamins": {
+          "vitaminA_mcg": 1100,
+          "vitaminD_IU": 480,
+          "vitaminK_mcg": 580,
+          "vitaminC_mg": 95,
+          "vitaminB12_mcg": 8.9,
+          "folate_B9_mcg": 95
+        },
+        "minerals": {
+          "calcium_mg": 480,
+          "iron_mg": 5.2,
+          "magnesium_mg": 140,
+          "selenium_mcg": 65,
+          "zinc_mg": 3.8,
+          "potassium_mg": 820
+        }
+      },
+      "tags": ["lunch", "high-protein", "omega-3-rich", "no-cook", "calcium-rich"]
+    },
+    {
+      "mealId": "grass_fed_beef_veggie_bowl",
+      "name": "Grass-Fed Beef & Sweet Potato Bowl",
+      "description": "Ground grass-fed beef with roasted vegetables and ancient grains",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "30 min",
+      "mealType": "dinner",
+      "ingredients": [
+        {
+          "foodId": "grass_fed_beef",
+          "name": "Grass-Fed Ground Beef",
+          "amount": 120,
+          "unit": "g",
+          "notes": "85% lean"
+        },
+        {
+          "foodId": "sweet_potato",
+          "name": "Sweet Potato",
+          "amount": 200,
+          "unit": "g",
+          "notes": "Cubed and roasted"
+        },
+        {
+          "foodId": "broccoli",
+          "name": "Broccoli",
+          "amount": 100,
+          "unit": "g",
+          "notes": "Steamed"
+        },
+        {
+          "foodId": "brussels_sprouts",
+          "name": "Brussels Sprouts",
+          "amount": 100,
+          "unit": "g",
+          "notes": "Roasted"
+        },
+        {
+          "foodId": "quinoa",
+          "name": "Quinoa (cooked)",
+          "amount": 100,
+          "unit": "g",
+          "notes": "Cooked in bone broth"
+        },
+        {
+          "foodId": "extra_virgin_olive_oil",
+          "name": "Extra Virgin Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "grams": 15,
+          "notes": "For roasting"
+        },
+        {
+          "foodId": "garlic",
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "whole",
+          "grams": 6,
+          "notes": "Minced"
+        }
+      ],
+      "instructions": [
+        "Preheat oven to 400°F (200°C)",
+        "Toss sweet potato cubes and Brussels sprouts with olive oil, season with salt",
+        "Roast vegetables for 25-30 minutes until caramelized",
+        "Steam broccoli for 5-7 minutes",
+        "Brown ground beef in a pan with minced garlic",
+        "Cook quinoa according to package directions",
+        "Assemble bowl with quinoa, beef, and all vegetables"
+      ],
+      "nutritionPerServing": {
+        "calories": 720,
+        "macronutrients": {
+          "protein_g": 42,
+          "carbohydrates_g": 68,
+          "fat_g": 28,
+          "fiber_g": 14
+        },
+        "vitamins": {
+          "vitaminA_mcg": 950,
+          "vitaminC_mg": 185,
+          "vitaminK_mcg": 260,
+          "vitaminB6_mg": 0.9,
+          "folate_B9_mcg": 180,
+          "vitaminB12_mcg": 2.5
+        },
+        "minerals": {
+          "iron_mg": 6.5,
+          "zinc_mg": 7.2,
+          "magnesium_mg": 145,
+          "potassium_mg": 1450,
+          "selenium_mcg": 28
+        }
+      },
+      "tags": ["dinner", "high-protein", "nutrient-dense", "filling", "whole-foods"]
+    },
+    {
+      "mealId": "wild_salmon_asparagus",
+      "name": "Wild Salmon with Roasted Vegetables",
+      "description": "Omega-3 rich salmon with seasonal vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "mealType": "dinner",
+      "ingredients": [
+        {
+          "foodId": "wild_salmon",
+          "name": "Wild Salmon Fillet",
+          "amount": 150,
+          "unit": "g",
+          "notes": "Skin-on"
+        },
+        {
+          "foodId": "asparagus",
+          "name": "Asparagus",
+          "amount": 150,
+          "unit": "g",
+          "notes": "Trimmed"
+        },
+        {
+          "foodId": "broccoli",
+          "name": "Broccoli",
+          "amount": 100,
+          "unit": "g",
+          "notes": "Florets"
+        },
+        {
+          "foodId": "sweet_potato",
+          "name": "Sweet Potato",
+          "amount": 150,
+          "unit": "g",
+          "notes": "Cubed"
+        },
+        {
+          "foodId": "extra_virgin_olive_oil",
+          "name": "Extra Virgin Olive Oil",
+          "amount": 2,
+          "unit": "tbsp",
+          "grams": 30,
+          "notes": "For cooking"
+        },
+        {
+          "foodId": "lemon",
+          "name": "Lemon",
+          "amount": 0.5,
+          "unit": "whole",
+          "notes": "Juice and zest"
+        },
+        {
+          "foodId": "garlic",
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "whole",
+          "grams": 6,
+          "notes": "Minced"
+        }
+      ],
+      "instructions": [
+        "Preheat oven to 400°F (200°C)",
+        "Toss vegetables with 1 tbsp olive oil, garlic, salt, and pepper",
+        "Roast vegetables for 20 minutes",
+        "Season salmon with salt, pepper, and lemon zest",
+        "Heat remaining olive oil in an oven-safe pan",
+        "Sear salmon skin-side down for 4 minutes",
+        "Flip and transfer pan to oven for 6-8 minutes",
+        "Serve salmon over roasted vegetables with lemon wedges"
+      ],
+      "nutritionPerServing": {
+        "calories": 680,
+        "macronutrients": {
+          "protein_g": 44,
+          "carbohydrates_g": 48,
+          "fat_g": 34,
+          "fiber_g": 11,
+          "omega3_g": 3.8
+        },
+        "vitamins": {
+          "vitaminA_mcg": 850,
+          "vitaminD_IU": 900,
+          "vitaminE_mg": 6,
+          "vitaminK_mcg": 180,
+          "vitaminC_mg": 110,
+          "vitaminB12_mcg": 4.8,
+          "folate_B9_mcg": 220
+        },
+        "minerals": {
+          "selenium_mcg": 68,
+          "potassium_mg": 1600,
+          "magnesium_mg": 110,
+          "iron_mg": 3.8,
+          "zinc_mg": 2.2
+        }
+      },
+      "tags": ["dinner", "omega-3-rich", "anti-inflammatory", "heart-healthy"]
+    },
+    {
+      "mealId": "brazil_nut_berries_snack",
+      "name": "Brazil Nuts & Berries",
+      "description": "Selenium-rich snack with antioxidants",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "2 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "ingredients": [
+        {
+          "foodId": "brazil_nuts",
+          "name": "Brazil Nuts",
+          "amount": 2,
+          "unit": "whole",
+          "grams": 10,
+          "notes": "Provides full daily selenium"
+        },
+        {
+          "foodId": "blueberries",
+          "name": "Blueberries",
+          "amount": 75,
+          "unit": "g",
+          "notes": "Fresh"
+        },
+        {
+          "foodId": "strawberries",
+          "name": "Strawberries",
+          "amount": 75,
+          "unit": "g",
+          "notes": "Fresh"
+        }
+      ],
+      "instructions": [
+        "Combine all ingredients in a bowl",
+        "Enjoy immediately"
+      ],
+      "nutritionPerServing": {
+        "calories": 140,
+        "macronutrients": {
+          "protein_g": 3,
+          "carbohydrates_g": 18,
+          "fat_g": 7,
+          "fiber_g": 4
+        },
+        "vitamins": {
+          "vitaminC_mg": 55,
+          "vitaminE_mg": 2
+        },
+        "minerals": {
+          "selenium_mcg": 190,
+          "magnesium_mg": 45
+        }
+      },
+      "tags": ["snack", "no-cook", "antioxidant-rich", "selenium-rich"]
+    },
+    {
+      "mealId": "hard_boiled_eggs_veggies",
+      "name": "Hard-Boiled Eggs with Veggie Sticks",
+      "description": "Protein-rich snack with crunchy vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "10 min",
+      "mealType": "snack",
+      "ingredients": [
+        {
+          "foodId": "pasture_raised_eggs",
+          "name": "Pasture-Raised Eggs",
+          "amount": 2,
+          "unit": "whole",
+          "grams": 100,
+          "notes": "Hard-boiled"
+        },
+        {
+          "foodId": "carrots",
+          "name": "Carrots",
+          "amount": 80,
+          "unit": "g",
+          "notes": "Cut into sticks"
+        },
+        {
+          "foodId": "celery",
+          "name": "Celery",
+          "amount": 60,
+          "unit": "g",
+          "notes": "Cut into sticks"
+        },
+        {
+          "foodId": "bell_pepper",
+          "name": "Bell Pepper",
+          "amount": 60,
+          "unit": "g",
+          "notes": "Sliced"
+        }
+      ],
+      "instructions": [
+        "Hard boil eggs (10 min in boiling water, then ice bath)",
+        "Peel and slice eggs",
+        "Cut vegetables into sticks",
+        "Sprinkle with sea salt"
+      ],
+      "nutritionPerServing": {
+        "calories": 190,
+        "macronutrients": {
+          "protein_g": 13,
+          "carbohydrates_g": 14,
+          "fat_g": 10,
+          "fiber_g": 4
+        },
+        "vitamins": {
+          "vitaminA_mcg": 720,
+          "vitaminC_mg": 85,
+          "choline_mg": 294
+        },
+        "minerals": {
+          "selenium_mcg": 30,
+          "iron_mg": 2
+        }
+      },
+      "tags": ["snack", "high-protein", "portable", "meal-prep-friendly"]
+    }
+  ]
+}

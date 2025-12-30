@@ -1,0 +1,486 @@
+{
+  "description": "Function Health biomarker integration schema for personalized nutrition optimization",
+  "about_function_health": {
+    "company": "Function Health",
+    "website": "https://functionhealth.com",
+    "service": "Comprehensive lab testing with 100+ biomarkers for preventive health",
+    "tests_covered": [
+      "Nutrient status (vitamins, minerals)",
+      "Metabolic health (glucose, insulin, HbA1c)",
+      "Cardiovascular markers (lipids, ApoB, inflammation)",
+      "Hormones (thyroid, sex hormones, cortisol)",
+      "Liver and kidney function",
+      "Inflammation markers (CRP, homocysteine)",
+      "Complete blood count",
+      "Immune function markers"
+    ],
+    "frequency": "Quarterly testing recommended for tracking trends"
+  },
+  "biomarker_categories": {
+    "nutrient_status": {
+      "description": "Direct measurement of nutrient levels in blood - most accurate way to assess deficiencies",
+      "markers": [
+        {
+          "marker": "Vitamin D (25-OH)",
+          "unit": "ng/mL",
+          "functional_range": {
+            "optimal": "40-60",
+            "sufficient": "30-40",
+            "insufficient": "20-30",
+            "deficient": "<20"
+          },
+          "standard_lab_range": "30-100 (too broad)",
+          "meal_plan_adjustments": {
+            "if_below_40": [
+              "Add fatty fish (salmon, sardines, mackerel) 4x per week",
+              "Include pastured egg yolks daily",
+              "Add vitamin D-rich mushrooms (UV-exposed)",
+              "Increase healthy fats with meals for absorption",
+              "Consider 15-20min midday sun exposure"
+            ]
+          }
+        },
+        {
+          "marker": "Vitamin B12",
+          "unit": "pg/mL",
+          "functional_range": {
+            "optimal": ">500",
+            "sufficient": "400-500",
+            "suboptimal": "200-400",
+            "deficient": "<200"
+          },
+          "standard_lab_range": "200-900 (too broad)",
+          "note": "Levels 200-400 can still cause neurological symptoms",
+          "meal_plan_adjustments": {
+            "if_below_500": [
+              "Add liver 1-2x per week (highest B12 source - 59mcg/100g)",
+              "Include shellfish (clams, oysters)",
+              "Eat red meat (grass-fed) 3-4x per week",
+              "Add nutritional yeast (B12-fortified)",
+              "For vegans: supplementation required (food sources insufficient)"
+            ]
+          }
+        },
+        {
+          "marker": "Folate (B9)",
+          "unit": "ng/mL",
+          "functional_range": {
+            "optimal": ">10",
+            "sufficient": "6-10",
+            "deficient": "<6"
+          },
+          "meal_plan_adjustments": {
+            "if_below_10": [
+              "Add liver (290mcg/100g)",
+              "Increase leafy greens (spinach, kale) - cooked",
+              "Add legumes (lentils, chickpeas) - properly soaked",
+              "Include asparagus and Brussels sprouts",
+              "Avoid synthetic folic acid - use natural folate sources"
+            ]
+          }
+        },
+        {
+          "marker": "Ferritin (Iron Storage)",
+          "unit": "ng/mL",
+          "functional_range": {
+            "optimal_men": "100-200",
+            "optimal_women": "50-100",
+            "sufficient": "30-50",
+            "deficient": "<30",
+            "excess": ">300"
+          },
+          "note": "Better indicator than serum iron; tracks long-term status",
+          "meal_plan_adjustments": {
+            "if_low": [
+              "Add red meat (heme iron) 3-4x per week",
+              "Include liver 1x per week (highest bioavailable iron)",
+              "Add vitamin C with all plant iron sources",
+              "Cook in cast iron pans",
+              "Avoid tea/coffee with meals",
+              "Separate calcium supplements from iron-rich meals by 2+ hours"
+            ],
+            "if_high": [
+              "Reduce red meat and liver intake",
+              "Avoid iron-fortified foods",
+              "Consider blood donation (if medically appropriate)",
+              "Increase tea consumption with meals (tannins reduce absorption)"
+            ]
+          }
+        },
+        {
+          "marker": "Magnesium (RBC)",
+          "unit": "mg/dL",
+          "functional_range": {
+            "optimal": "6.0-6.5",
+            "sufficient": "5.0-6.0",
+            "deficient": "<5.0"
+          },
+          "note": "RBC magnesium better than serum (serum doesn't reflect intracellular status)",
+          "meal_plan_adjustments": {
+            "if_below_6": [
+              "Add pumpkin seeds daily (28g = 150mg)",
+              "Include dark chocolate/cacao (95mg/30g)",
+              "Add leafy greens (cooked spinach, Swiss chard)",
+              "Include nuts (almonds, cashews)",
+              "Add fish (mackerel, salmon)",
+              "Reduce alcohol, caffeine, sugar (deplete magnesium)",
+              "Ensure adequate vitamin B6 (enhances absorption)"
+            ]
+          }
+        },
+        {
+          "marker": "Zinc (Serum)",
+          "unit": "μg/dL",
+          "functional_range": {
+            "optimal": "90-120",
+            "sufficient": "75-90",
+            "deficient": "<75"
+          },
+          "meal_plan_adjustments": {
+            "if_below_90": [
+              "Add oysters 1-2x per week (78mg/100g - highest source)",
+              "Include red meat (grass-fed beef, lamb)",
+              "Add pumpkin seeds (soaked)",
+              "Include poultry and fish",
+              "Ensure adequate protein intake",
+              "Maintain copper balance (10:1 zinc:copper ratio)"
+            ]
+          }
+        },
+        {
+          "marker": "Omega-3 Index",
+          "unit": "% of RBC membranes",
+          "functional_range": {
+            "optimal": ">8%",
+            "acceptable": "6-8%",
+            "suboptimal": "4-6%",
+            "deficient": "<4%"
+          },
+          "note": "Measures EPA+DHA in red blood cell membranes - best marker for omega-3 status",
+          "meal_plan_adjustments": {
+            "if_below_8": [
+              "Add wild fatty fish 4-5x per week (salmon, sardines, mackerel)",
+              "Include fish roe/caviar (highest omega-3 density)",
+              "Reduce omega-6 sources (seed oils, grain-fed meat)",
+              "Add grass-fed meat (better omega-3:6 ratio)",
+              "Include walnuts as plant source (supplement, not replacement)",
+              "Target: 3-4g combined EPA+DHA daily"
+            ]
+          }
+        }
+      ]
+    },
+    "metabolic_health": {
+      "description": "Indicators of blood sugar control and metabolic function",
+      "markers": [
+        {
+          "marker": "Fasting Glucose",
+          "unit": "mg/dL",
+          "functional_range": {
+            "optimal": "70-85",
+            "acceptable": "86-99",
+            "prediabetes": "100-125",
+            "diabetes": "≥126"
+          },
+          "standard_lab_range": "<100 (allows early dysfunction)",
+          "meal_plan_adjustments": {
+            "if_above_85": [
+              "Increase fiber intake (40g+ daily)",
+              "Add cinnamon to meals (improves insulin sensitivity)",
+              "Prioritize low-glycemic carbs (sweet potato, quinoa, legumes)",
+              "Increase protein at breakfast (stabilizes blood sugar)",
+              "Add chromium-rich foods (broccoli, eggs)",
+              "Include apple cider vinegar before carb-heavy meals",
+              "Reduce refined carbohydrates and sugars",
+              "Add resistance exercise"
+            ]
+          }
+        },
+        {
+          "marker": "HbA1c (Hemoglobin A1c)",
+          "unit": "%",
+          "functional_range": {
+            "optimal": "<5.3%",
+            "acceptable": "5.3-5.6%",
+            "prediabetes": "5.7-6.4%",
+            "diabetes": "≥6.5%"
+          },
+          "note": "3-month average of blood sugar - better than single glucose test",
+          "meal_plan_adjustments": {
+            "if_above_5_3": "Same as fasting glucose recommendations - focus on blood sugar stability"
+          }
+        },
+        {
+          "marker": "Fasting Insulin",
+          "unit": "μIU/mL",
+          "functional_range": {
+            "optimal": "<5",
+            "acceptable": "5-8",
+            "insulin_resistant": ">8"
+          },
+          "note": "Elevated insulin appears YEARS before glucose rises - early warning sign",
+          "meal_plan_adjustments": {
+            "if_above_5": [
+              "Implement time-restricted eating (12-14hr overnight fast)",
+              "Prioritize protein and fat over carbohydrates",
+              "Add magnesium-rich foods (improves insulin sensitivity)",
+              "Include omega-3 rich fish (reduces inflammation)",
+              "Avoid snacking between meals",
+              "Consider low-carb approach temporarily",
+              "Add strength training (builds insulin-sensitive muscle)"
+            ]
+          }
+        }
+      ]
+    },
+    "cardiovascular_health": {
+      "description": "Heart disease risk markers - focus on advanced lipid testing",
+      "markers": [
+        {
+          "marker": "ApoB (Apolipoprotein B)",
+          "unit": "mg/dL",
+          "functional_range": {
+            "optimal": "<80",
+            "acceptable": "80-100",
+            "elevated": ">100"
+          },
+          "note": "Best single predictor of cardiovascular risk - measures particle number",
+          "meal_plan_adjustments": {
+            "if_above_80": [
+              "Increase omega-3 intake (fatty fish 4-5x per week)",
+              "Add soluble fiber (oats, legumes, avocados)",
+              "Reduce saturated fat from poor sources (grain-fed meat, processed foods)",
+              "Increase plant sterols (nuts, seeds)",
+              "Add garlic (reduces ApoB)",
+              "Focus on monounsaturated fats (olive oil, avocados)",
+              "Ensure adequate magnesium intake"
+            ]
+          }
+        },
+        {
+          "marker": "LDL Particle Number (LDL-P)",
+          "unit": "nmol/L",
+          "functional_range": {
+            "optimal": "<1000",
+            "acceptable": "1000-1300",
+            "elevated": ">1300"
+          },
+          "note": "More important than LDL cholesterol amount - particle number matters",
+          "meal_plan_adjustments": {
+            "if_above_1000": "Similar to ApoB recommendations"
+          }
+        },
+        {
+          "marker": "hs-CRP (High-Sensitivity C-Reactive Protein)",
+          "unit": "mg/L",
+          "functional_range": {
+            "optimal": "<0.5",
+            "low_risk": "0.5-1.0",
+            "moderate_risk": "1.0-3.0",
+            "high_risk": ">3.0"
+          },
+          "note": "Measures systemic inflammation - predictor of heart disease and chronic illness",
+          "meal_plan_adjustments": {
+            "if_above_0_5": [
+              "Add fatty fish (EPA/DHA reduces inflammation)",
+              "Include turmeric with black pepper daily",
+              "Add ginger regularly",
+              "Increase colorful vegetables (antioxidants)",
+              "Include berries daily (anthocyanins)",
+              "Add fermented foods (gut health reduces inflammation)",
+              "Eliminate refined sugars and seed oils",
+              "Remove potential food sensitivities",
+              "Increase omega-3, reduce omega-6"
+            ]
+          }
+        },
+        {
+          "marker": "Homocysteine",
+          "unit": "μmol/L",
+          "functional_range": {
+            "optimal": "<7",
+            "acceptable": "7-10",
+            "elevated": ">10"
+          },
+          "note": "Elevated = increased cardiovascular risk and poor methylation",
+          "meal_plan_adjustments": {
+            "if_above_7": [
+              "Increase folate-rich foods (liver, leafy greens, legumes)",
+              "Add B12 sources (meat, fish, eggs) - critical for lowering homocysteine",
+              "Include B6 foods (poultry, fish, potatoes)",
+              "Add choline sources (eggs - 3-4 daily)",
+              "Ensure all B vitamins are adequate (work together for methylation)",
+              "Consider MTHFR gene testing (affects folate metabolism)"
+            ]
+          }
+        }
+      ]
+    },
+    "thyroid_function": {
+      "description": "Thyroid hormones regulate metabolism, energy, weight",
+      "markers": [
+        {
+          "marker": "TSH (Thyroid Stimulating Hormone)",
+          "unit": "mIU/L",
+          "functional_range": {
+            "optimal": "1.0-2.0",
+            "acceptable": "2.0-2.5",
+            "subclinical_hypo": ">2.5",
+            "hypothyroid": ">4.5"
+          },
+          "standard_lab_range": "0.5-4.5 (too broad - misses subclinical issues)",
+          "note": "Higher TSH = thyroid struggling to produce hormones"
+        },
+        {
+          "marker": "Free T3 (Active Thyroid Hormone)",
+          "unit": "pg/mL",
+          "functional_range": {
+            "optimal": "3.2-4.2",
+            "acceptable": "2.5-3.2",
+            "low": "<2.5"
+          },
+          "note": "Most important thyroid hormone - active form",
+          "meal_plan_adjustments": {
+            "if_suboptimal": [
+              "Ensure adequate iodine (seaweed, fish, eggs)",
+              "Add selenium (Brazil nuts, fish) - required for T4→T3 conversion",
+              "Include zinc (oysters, red meat) - supports thyroid function",
+              "Ensure adequate protein (amino acids needed for thyroid hormones)",
+              "Cook cruciferous vegetables (reduces goitrogens)",
+              "Avoid excessive raw cruciferous if low thyroid",
+              "Reduce inflammation (inflammation impairs T4→T3 conversion)"
+            ]
+          }
+        }
+      ]
+    },
+    "hormone_balance": {
+      "markers": [
+        {
+          "marker": "Testosterone (Total)",
+          "gender_specific": true,
+          "men": {
+            "unit": "ng/dL",
+            "functional_range": {
+              "optimal": "600-900",
+              "acceptable": "400-600",
+              "low": "<400"
+            }
+          },
+          "women": {
+            "unit": "ng/dL",
+            "functional_range": {
+              "optimal": "30-70",
+              "acceptable": "15-30",
+              "low": "<15"
+            }
+          },
+          "meal_plan_adjustments": {
+            "if_low": [
+              "Ensure adequate healthy fats (cholesterol is precursor)",
+              "Add zinc-rich foods (oysters, red meat)",
+              "Include magnesium foods",
+              "Ensure sufficient vitamin D",
+              "Add cruciferous vegetables (help estrogen metabolism)",
+              "Include pomegranate (supports testosterone)",
+              "Ensure adequate protein",
+              "Reduce sugar and refined carbs (insulin impacts testosterone)"
+            ]
+          }
+        },
+        {
+          "marker": "Cortisol (Morning)",
+          "unit": "μg/dL",
+          "functional_range": {
+            "optimal": "10-18",
+            "low": "<10",
+            "high": ">18"
+          },
+          "note": "Stress hormone - should be highest in morning",
+          "meal_plan_adjustments": {
+            "if_high": [
+              "Add adaptogenic herbs (ashwagandha in smoothies)",
+              "Increase magnesium (stress depletes)",
+              "Add vitamin C rich foods (stress increases need)",
+              "Include omega-3 (reduces cortisol)",
+              "Ensure adequate B vitamins (adrenal support)",
+              "Reduce caffeine",
+              "Add calming teas (chamomile, lemon balm)"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "personalization_engine": {
+    "description": "How to use biomarker data to personalize meal plans",
+    "workflow": [
+      {
+        "step": 1,
+        "action": "User uploads Function Health lab results (or manually enters key biomarkers)",
+        "data_extracted": "Vitamin D, B12, Ferritin, Magnesium, Omega-3 Index, HbA1c, hs-CRP, etc."
+      },
+      {
+        "step": 2,
+        "action": "App identifies deficiencies and suboptimal ranges",
+        "logic": "Compare against functional ranges (not standard lab ranges)"
+      },
+      {
+        "step": 3,
+        "action": "Prioritize interventions based on severity",
+        "priority_levels": {
+          "critical": "Below functional minimum - needs immediate attention",
+          "suboptimal": "In acceptable range but below optimal",
+          "optimal": "No dietary intervention needed, maintain current intake"
+        }
+      },
+      {
+        "step": 4,
+        "action": "Adjust meal plan to address deficiencies",
+        "adjustments": [
+          "Increase frequency of specific nutrient-dense foods",
+          "Add targeted recipes (e.g., liver for B12/iron)",
+          "Modify preparation methods (e.g., cook spinach to reduce oxalates if iron is low)",
+          "Adjust meal timing (e.g., avoid tea with iron-rich meals if ferritin is low)",
+          "Suggest food combinations for synergy (e.g., vitamin C with plant iron)"
+        ]
+      },
+      {
+        "step": 5,
+        "action": "Track biomarker trends over time",
+        "retest_frequency": "3 months (Function Health quarterly testing)",
+        "goal": "Move all biomarkers into optimal functional ranges"
+      }
+    ]
+  },
+  "example_personalization": {
+    "scenario": "User with low vitamin D (28 ng/mL) and low ferritin (22 ng/mL)",
+    "baseline_plan": "Standard 7-day meal plan",
+    "personalized_adjustments": {
+      "vitamin_D": {
+        "add": [
+          "Wild salmon 4x per week (replace chicken in 2 dinners)",
+          "Sardines for lunch 2x per week",
+          "Pastured eggs at every breakfast (increase from 2 to 3)"
+        ],
+        "note": "Also recommend 15-20min midday sun exposure"
+      },
+      "iron": {
+        "add": [
+          "Grass-fed beef 3x per week",
+          "Liver 1x per week (small portion - 100g)",
+          "Cast iron cooking for all meals"
+        ],
+        "modify": [
+          "Add bell peppers (vitamin C) to all iron-rich meals",
+          "Boil spinach and discard water (reduce oxalates)",
+          "Move tea consumption to 2+ hours after meals"
+        ],
+        "remove": [
+          "Calcium-rich foods at same meal as iron sources (separate by 2+ hours)"
+        ]
+      },
+      "expected_improvement": "Retest in 3 months - expect vitamin D >40 ng/mL, ferritin >50 ng/mL"
+    }
+  }
+}
