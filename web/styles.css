@@ -508,26 +508,75 @@ body {
 }
 
 .nutrient-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .nutrient-item {
-    padding: 12px;
-    background: var(--bg-light);
+    background: white;
+    padding: 15px;
     border-radius: 8px;
-    font-size: 0.95em;
+    border-left: 4px solid var(--primary-color);
 }
 
-.nutrient-name {
+.nutrient-item .nutrient-name {
     font-weight: 600;
     color: var(--text-dark);
+    margin-bottom: 5px;
 }
 
-.nutrient-value {
+.nutrient-item .nutrient-value {
     color: var(--text-light);
     font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.nutrient-bar {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.nutrient-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+    transition: width 0.3s ease;
+}
+
+.nutrient-percent {
+    font-size: 0.85em;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: right;
+}
+
+.nutrient-section.warning .nutrient-item {
+    border-left-color: #ffc107;
+}
+
+.nutrient-section.warning .nutrient-bar-fill {
+    background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
+}
+
+#excessive-nutrients .nutrient-item {
+    border-left-color: #dc3545;
+}
+
+#excessive-nutrients .nutrient-bar-fill {
+    background: linear-gradient(90deg, #dc3545 0%, #c82333 100%);
+}
+
+.nutrient-section {
+    margin-bottom: 30px;
+}
+
+.nutrient-section h4 {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
 }
 
 /* Modal */

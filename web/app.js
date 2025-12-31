@@ -692,8 +692,23 @@ function initializeNutritionTotals() {
 function addNutrition(total, addition) {
     total.calories += addition.calories || 0;
     
+    // Add macronutrients
     for (let key in addition.macronutrients) {
         total.macronutrients[key] = (total.macronutrients[key] || 0) + (addition.macronutrients[key] || 0);
+    }
+    
+    // Add vitamins
+    if (addition.vitamins) {
+        for (let key in addition.vitamins) {
+            total.vitamins[key] = (total.vitamins[key] || 0) + (addition.vitamins[key] || 0);
+        }
+    }
+    
+    // Add minerals
+    if (addition.minerals) {
+        for (let key in addition.minerals) {
+            total.minerals[key] = (total.minerals[key] || 0) + (addition.minerals[key] || 0);
+        }
     }
 }
 
@@ -701,67 +716,159 @@ function divideNutrition(nutrition, divisor) {
     const result = { ...nutrition };
     result.calories = Math.round(nutrition.calories / divisor);
     
+    // Divide macronutrients
     result.macronutrients = {};
     for (let key in nutrition.macronutrients) {
         result.macronutrients[key] = Math.round(nutrition.macronutrients[key] / divisor);
+    }
+    
+    // Divide vitamins
+    result.vitamins = {};
+    for (let key in nutrition.vitamins) {
+        result.vitamins[key] = Math.round((nutrition.vitamins[key] / divisor) * 10) / 10;
+    }
+    
+    // Divide minerals
+    result.minerals = {};
+    for (let key in nutrition.minerals) {
+        result.minerals[key] = Math.round((nutrition.minerals[key] / divisor) * 10) / 10;
     }
     
     return result;
 }
 
 function displayNutritionAnalysis(dailyAverage, weeklyTotal) {
+    // RDA/Optimal targets for adults
+    const targets = {
+        macros: {
+            protein_g: { target: 120, unit: 'g', name: 'Protein' },
+            carbohydrates_g: { target: 130, unit: 'g', name: 'Carbohydrates' },
+            fat_g: { target: 70, unit: 'g', name: 'Fat' },
+            fiber_g: { target: 40, unit: 'g', name: 'Fiber' },
+            omega3_g: { target: 2.5, unit: 'g', name: 'Omega-3' }
+        },
+        vitamins: {
+            vitaminA_mcg: { target: 900, unit: 'mcg', name: 'Vitamin A' },
+            vitaminD_IU: { target: 600, unit: 'IU', name: 'Vitamin D' },
+            vitaminE_mg: { target: 15, unit: 'mg', name: 'Vitamin E' },
+            vitaminK_mcg: { target: 120, unit: 'mcg', name: 'Vitamin K' },
+            vitaminC_mg: { target: 90, unit: 'mg', name: 'Vitamin C' },
+            vitaminB12_mcg: { target: 2.4, unit: 'mcg', name: 'Vitamin B12' },
+            vitaminB6_mg: { target: 1.7, unit: 'mg', name: 'Vitamin B6' },
+            folate_B9_mcg: { target: 400, unit: 'mcg', name: 'Folate (B9)' },
+            thiamin_B1_mg: { target: 1.2, unit: 'mg', name: 'Thiamin (B1)' },
+            riboflavin_B2_mg: { target: 1.3, unit: 'mg', name: 'Riboflavin (B2)' },
+            niacin_B3_mg: { target: 16, unit: 'mg', name: 'Niacin (B3)' },
+            choline_mg: { target: 550, unit: 'mg', name: 'Choline' }
+        },
+        minerals: {
+            iron_mg: { target: 18, unit: 'mg', name: 'Iron' },
+            magnesium_mg: { target: 420, unit: 'mg', name: 'Magnesium' },
+            selenium_mcg: { target: 55, unit: 'mcg', name: 'Selenium' },
+            zinc_mg: { target: 11, unit: 'mg', name: 'Zinc' },
+            potassium_mg: { target: 3500, unit: 'mg', name: 'Potassium' },
+            calcium_mg: { target: 1000, unit: 'mg', name: 'Calcium' },
+            phosphorus_mg: { target: 700, unit: 'mg', name: 'Phosphorus' },
+            copper_mg: { target: 0.9, unit: 'mg', name: 'Copper' },
+            manganese_mg: { target: 2.3, unit: 'mg', name: 'Manganese' }
+        }
+    };
+
     // Update summary cards
     document.getElementById('daily-calories').textContent = `${dailyAverage.calories} kcal`;
     document.getElementById('daily-protein').textContent = `${dailyAverage.macronutrients.protein_g}g protein`;
     document.getElementById('daily-fiber').textContent = `${dailyAverage.macronutrients.fiber_g}g fiber`;
 
-    // For now, show a simple compliance score (you can enhance this with actual requirements checking)
-    const proteinTarget = 120; // from optimal requirements
-    const fiberTarget = 40;
-    const proteinCompliance = Math.min((dailyAverage.macronutrients.protein_g / proteinTarget) * 100, 100);
-    const fiberCompliance = Math.min((dailyAverage.macronutrients.fiber_g / fiberTarget) * 100, 100);
-    const avgCompliance = Math.round((proteinCompliance + fiberCompliance) / 2);
+    // Calculate overall compliance
+    let totalCompliance = 0;
+    let nutrientCount = 0;
     
+    // Calculate macro compliance
+    for (let key in targets.macros) {
+        if (dailyAverage.macronutrients[key]) {
+            const percent = (dailyAverage.macronutrients[key] / targets.macros[key].target) * 100;
+            totalCompliance += Math.min(percent, 100);
+            nutrientCount++;
+        }
+    }
+    
+    const avgCompliance = nutrientCount > 0 ? Math.round(totalCompliance / nutrientCount) : 0;
     document.getElementById('compliance-score').textContent = `${avgCompliance}%`;
 
-    // Show nutrient breakdown (simplified)
+    // Build detailed nutrient lists
     const compliantList = document.querySelector('#compliant-nutrients .nutrient-list');
     const deficientList = document.querySelector('#deficient-nutrients .nutrient-list');
+    const excessiveList = document.querySelector('#excessive-nutrients .nutrient-list');
 
     compliantList.innerHTML = '';
     deficientList.innerHTML = '';
+    excessiveList.innerHTML = '';
 
-    if (dailyAverage.macronutrients.protein_g >= proteinTarget * 0.9) {
-        compliantList.innerHTML += `
+    // Helper function to display nutrient
+    function displayNutrient(value, target, name, unit) {
+        const percent = Math.round((value / target) * 100);
+        const displayValue = unit.includes('mcg') || unit.includes('mg') ? value.toFixed(1) : Math.round(value);
+        
+        const html = `
             <div class="nutrient-item">
-                <div class="nutrient-name">Protein</div>
-                <div class="nutrient-value">${dailyAverage.macronutrients.protein_g}g / ${proteinTarget}g</div>
+                <div class="nutrient-name">${name}</div>
+                <div class="nutrient-value">${displayValue}${unit} / ${target}${unit}</div>
+                <div class="nutrient-bar">
+                    <div class="nutrient-bar-fill" style="width: ${Math.min(percent, 100)}%"></div>
+                </div>
+                <div class="nutrient-percent">${percent}% DV</div>
             </div>
         `;
-    } else {
-        deficientList.innerHTML += `
-            <div class="nutrient-item">
-                <div class="nutrient-name">Protein</div>
-                <div class="nutrient-value">${dailyAverage.macronutrients.protein_g}g / ${proteinTarget}g (${Math.round(proteinCompliance)}%)</div>
-            </div>
-        `;
+        
+        if (percent >= 90 && percent <= 150) {
+            compliantList.innerHTML += html;
+        } else if (percent < 90) {
+            deficientList.innerHTML += html;
+        } else {
+            excessiveList.innerHTML += html;
+        }
     }
 
-    if (dailyAverage.macronutrients.fiber_g >= fiberTarget * 0.9) {
-        compliantList.innerHTML += `
-            <div class="nutrient-item">
-                <div class="nutrient-name">Fiber</div>
-                <div class="nutrient-value">${dailyAverage.macronutrients.fiber_g}g / ${fiberTarget}g</div>
-            </div>
-        `;
-    } else {
-        deficientList.innerHTML += `
-            <div class="nutrient-item">
-                <div class="nutrient-name">Fiber</div>
-                <div class="nutrient-value">${dailyAverage.macronutrients.fiber_g}g / ${fiberTarget}g (${Math.round(fiberCompliance)}%)</div>
-            </div>
-        `;
+    // Display macronutrients
+    for (let key in targets.macros) {
+        if (dailyAverage.macronutrients[key]) {
+            displayNutrient(
+                dailyAverage.macronutrients[key],
+                targets.macros[key].target,
+                targets.macros[key].name,
+                targets.macros[key].unit
+            );
+        }
     }
+
+    // Display vitamins
+    for (let key in targets.vitamins) {
+        if (dailyAverage.vitamins && dailyAverage.vitamins[key]) {
+            displayNutrient(
+                dailyAverage.vitamins[key],
+                targets.vitamins[key].target,
+                targets.vitamins[key].name,
+                targets.vitamins[key].unit
+            );
+        }
+    }
+
+    // Display minerals
+    for (let key in targets.minerals) {
+        if (dailyAverage.minerals && dailyAverage.minerals[key]) {
+            displayNutrient(
+                dailyAverage.minerals[key],
+                targets.minerals[key].target,
+                targets.minerals[key].name,
+                targets.minerals[key].unit
+            );
+        }
+    }
+
+    // Show/hide sections based on content
+    document.querySelector('#compliant-nutrients').style.display = compliantList.innerHTML ? 'block' : 'none';
+    document.querySelector('#deficient-nutrients').style.display = deficientList.innerHTML ? 'block' : 'none';
+    document.querySelector('#excessive-nutrients').style.display = excessiveList.innerHTML ? 'block' : 'none';
 }
 
 function updateAnalysisServings() {
