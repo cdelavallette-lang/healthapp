@@ -1461,27 +1461,97 @@ async function scanRecipeFromURL() {
         return;
     }
     
+    // Validate URL
+    try {
+        new URL(url);
+    } catch (e) {
+        showStatus(statusEl, '❌ Invalid URL format', 'error');
+        return;
+    }
+    
     showStatus(statusEl, '🔍 Scanning recipe...', 'info');
     
-    try {
-        // Use a CORS proxy to fetch the page
-        const proxyUrl = 'https://api.allorigins.win/raw?url=';
-        const response = await fetch(proxyUrl + encodeURIComponent(url));
-        const html = await response.text();
-        
-        // Parse recipe from HTML
-        const recipe = parseRecipeFromHTML(html, url);
-        
-        if (recipe) {
-            displayScannedRecipe(recipe);
-            showStatus(statusEl, '✅ Recipe scanned successfully!', 'success');
-        } else {
-            showStatus(statusEl, '⚠️ Could not extract recipe data. Try manual input.', 'error');
+    // Try multiple CORS proxies as fallback
+    const proxies = [
+        { url: 'https://api.allorigins.win/raw?url=', name: 'AllOrigins' },
+        { url: 'https://corsproxy.io/?', name: 'CORSProxy' },
+        { url: 'https://api.codetabs.com/v1/proxy?quest=', name: 'CodeTabs' }
+    ];
+    
+    let lastError = null;
+    
+    for (const proxy of proxies) {
+        try {
+            console.log(`Trying ${proxy.name} proxy...`);
+            showStatus(statusEl, `🔍 Trying ${proxy.name} proxy...`, 'info');
+            
+            const proxyUrl = proxy.url + encodeURIComponent(url);
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
+            
+            const response = await fetch(proxyUrl, { 
+                signal: controller.signal,
+                headers: {
+                    'Accept': 'text/html,application/xhtml+xml,application/xml'
+                }
+            });
+            clearTimeout(timeoutId);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            const html = await response.text();
+            console.log('HTML fetched, length:', html.length);
+            
+            // Parse recipe from HTML
+            const recipe = parseRecipeFromHTML(html, url);
+            
+            if (recipe && recipe.name) {
+                displayScannedRecipe(recipe);
+                showStatus(statusEl, `✅ Recipe scanned successfully via ${proxy.name}!`, 'success');
+                return; // Success!
+            } else {
+                throw new Error('No recipe data found in page');
+            }
+        } catch (error) {
+            console.error(`${proxy.name} proxy failed:`, error);
+            lastError = error;
+            // Continue to next proxy
         }
-    } catch (error) {
-        console.error('URL scan error:', error);
-        showStatus(statusEl, '❌ Error scanning URL. Check console for details.', 'error');
     }
+    
+    // All proxies failed
+    const errorMsg = lastError?.name === 'AbortError' 
+        ? '⏱️ Request timed out. Site may be slow or blocking scrapers.'
+        : '❌ Could not fetch recipe. Site may block automated access.';
+    
+    showStatus(statusEl, errorMsg, 'error');
+    
+    // Show helpful message
+    const previewEl = document.getElementById('scanned-recipe-preview');
+    previewEl.style.display = 'block';
+    previewEl.innerHTML = `
+        <h4>⚠️ Unable to Scan Recipe</h4>
+        <p><strong>Possible reasons:</strong></p>
+        <ul style="margin: 12px 0; padding-left: 20px; line-height: 1.8;">
+            <li>Website blocks automated scraping</li>
+            <li>Recipe not formatted with standard schema</li>
+            <li>CORS proxy limitations</li>
+            <li>Network or timeout issues</li>
+        </ul>
+        <p><strong>Alternative options:</strong></p>
+        <div class="form-actions" style="margin-top: 16px;">
+            <button onclick="switchInputMethod('manual')" class="btn-primary">
+                ✍️ Enter Recipe Manually
+            </button>
+            <button onclick="copyPasteHelper()" class="btn-secondary">
+                📋 Copy/Paste Helper
+            </button>
+        </div>
+    `;
+    
+    console.log('All proxies failed. Last error:', lastError);
 }
 
 // Parse recipe from HTML using Schema.org or common patterns
@@ -1515,17 +1585,26 @@ function parseRecipeFromHTML(html, url) {
 
 // Extract recipe from Schema.org JSON-LD
 function extractFromSchema(data) {
+    const getText = (value) => {
+        if (!value) return '';
+        if (typeof value === 'string') return value;
+        if (value['@value']) return value['@value'];
+        if (value.name) return value.name;
+        if (Array.isArray(value)) return value[0] ? getText(value[0]) : '';
+        return String(value);
+    };
+    
     return {
-        name: data.name || '',
-        description: data.description || '',
-        prepTime: data.prepTime || '',
-        cookTime: data.cookTime || '',
-        servings: data.recipeYield || 4,
-        ingredients: Array.isArray(data.recipeIngredient) ? data.recipeIngredient : [],
+        name: getText(data.name),
+        description: getText(data.description),
+        prepTime: getText(data.prepTime),
+        cookTime: getText(data.cookTime),
+        servings: parseInt(getText(data.recipeYield)) || parseInt(getText(data.yield)) || 4,
+        ingredients: Array.isArray(data.recipeIngredient) ? data.recipeIngredient.map(i => getText(i)) : [],
         instructions: Array.isArray(data.recipeInstructions) ? 
-            data.recipeInstructions.map(i => typeof i === 'string' ? i : i.text).join('\n') : '',
+            data.recipeInstructions.map(i => getText(i.text || i)).filter(t => t).join('\n') : '',
         nutrition: data.nutrition || null,
-        image: data.image?.url || data.image || ''
+        image: data.image?.url || (Array.isArray(data.image) ? data.image[0] : data.image) || ''
     };
 }
 
@@ -1993,8 +2072,16 @@ function showStatus(element, message, type) {
     element.className = `status-message ${type}`;
 }
 
+// Copy/Paste helper for manual entry
+function copyPasteHelper() {
+    switchInputMethod('manual');
+    alert('💡 Quick Tip:\n\n1. Open the recipe in another tab\n2. Copy the recipe text\n3. Paste ingredients one at a time\n4. Use online nutrition calculators:\n   • MyFitnessPal\n   • Cronometer\n   • USDA FoodData Central\n\nPaste nutrition values into the form below!');
+    document.getElementById('recipe-name').focus();
+}
+
 // Make functions globally available
 window.populateFormFromScanned = populateFormFromScanned;
 window.saveScannedRecipeDirectly = saveScannedRecipeDirectly;
 window.deleteCustomRecipe = deleteCustomRecipe;
+window.copyPasteHelper = copyPasteHelper;
 
