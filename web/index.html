@@ -38,6 +38,7 @@
         <!-- Navigation Tabs -->
         <nav class="tabs">
             <button class="tab active" data-tab="recipes">Recipe Library</button>
+            <button class="tab" data-tab="add-recipe">➕ Add Recipe</button>
             <button class="tab" data-tab="planner">Weekly Planner</button>
             <button class="tab" data-tab="nutrition">Nutrition Analysis</button>
             <button class="tab" data-tab="biomarkers">🔬 Biomarkers</button>
@@ -55,6 +56,269 @@
 
             <div id="recipe-grid" class="recipe-grid">
                 <!-- Recipes loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Add Recipe Tab -->
+        <section id="add-recipe-tab" class="tab-content">
+            <div class="add-recipe-header">
+                <h2>Add Your Own Recipe</h2>
+                <p class="subtitle">Expand your meal plan with custom recipes</p>
+            </div>
+
+            <!-- Recipe Input Method Selector -->
+            <div class="input-method-tabs">
+                <button class="method-tab active" data-method="url">🔗 From URL</button>
+                <button class="method-tab" data-method="manual">✍️ Manual Input</button>
+                <button class="method-tab" data-method="upload">📤 Upload File</button>
+            </div>
+
+            <!-- URL Input Method -->
+            <div id="url-method" class="input-method active">
+                <div class="input-card">
+                    <h3>Scan Recipe from URL</h3>
+                    <p>Paste a recipe URL from popular cooking sites</p>
+                    <div class="url-input-group">
+                        <input type="url" id="recipe-url" class="url-input" 
+                               placeholder="https://www.example.com/recipe" />
+                        <button id="scan-url-btn" class="btn-primary">Scan Recipe</button>
+                    </div>
+                    <div id="url-status" class="status-message"></div>
+                    <div id="scanned-recipe-preview" class="recipe-preview" style="display: none;">
+                        <!-- Scanned recipe preview will appear here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manual Input Method -->
+            <div id="manual-method" class="input-method">
+                <div class="input-card">
+                    <h3>Create Recipe Manually</h3>
+                    <form id="manual-recipe-form" class="recipe-form">
+                        <div class="form-section">
+                            <h4>Basic Information</h4>
+                            <div class="form-group">
+                                <label for="recipe-name">Recipe Name *</label>
+                                <input type="text" id="recipe-name" required 
+                                       placeholder="e.g., Grass-Fed Beef Bowl" />
+                            </div>
+                            <div class="form-group">
+                                <label for="recipe-description">Description</label>
+                                <textarea id="recipe-description" rows="3" 
+                                          placeholder="Brief description of the dish"></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="recipe-meal-type">Meal Type *</label>
+                                    <select id="recipe-meal-type" required>
+                                        <option value="">Select...</option>
+                                        <option value="breakfast">Breakfast</option>
+                                        <option value="lunch">Lunch</option>
+                                        <option value="dinner">Dinner</option>
+                                        <option value="snack">Snack</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipe-servings">Servings *</label>
+                                    <input type="number" id="recipe-servings" min="1" value="4" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipe-prep-time">Prep Time</label>
+                                    <input type="text" id="recipe-prep-time" placeholder="e.g., 15 min" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipe-cook-time">Cook Time</label>
+                                    <input type="text" id="recipe-cook-time" placeholder="e.g., 30 min" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4>Ingredients</h4>
+                            <p class="helper-text">Add ingredients to automatically calculate nutrition, or enter manually below</p>
+                            <div id="ingredients-list" class="ingredients-list">
+                                <!-- Dynamic ingredient inputs -->
+                            </div>
+                            <button type="button" id="add-ingredient-btn" class="btn-secondary">+ Add Ingredient</button>
+                            <button type="button" id="calculate-nutrition-btn" class="btn-primary">🧮 Calculate Nutrition</button>
+                        </div>
+
+                        <div class="form-section">
+                            <h4>Nutrition Per Serving</h4>
+                            <div class="nutrition-inputs">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="nutrition-calories">Calories *</label>
+                                        <input type="number" id="nutrition-calories" step="1" required />
+                                    </div>
+                                </div>
+                                
+                                <h5>Macronutrients</h5>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="nutrition-protein">Protein (g) *</label>
+                                        <input type="number" id="nutrition-protein" step="0.1" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nutrition-carbs">Carbohydrates (g) *</label>
+                                        <input type="number" id="nutrition-carbs" step="0.1" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nutrition-fat">Fat (g) *</label>
+                                        <input type="number" id="nutrition-fat" step="0.1" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nutrition-fiber">Fiber (g) *</label>
+                                        <input type="number" id="nutrition-fiber" step="0.1" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nutrition-omega3">Omega-3 (g)</label>
+                                        <input type="number" id="nutrition-omega3" step="0.1" value="0" />
+                                    </div>
+                                </div>
+
+                                <details class="expandable-section">
+                                    <summary>Vitamins (Optional)</summary>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="nutrition-vitaminA">Vitamin A (mcg)</label>
+                                            <input type="number" id="nutrition-vitaminA" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-vitaminD">Vitamin D (IU)</label>
+                                            <input type="number" id="nutrition-vitaminD" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-vitaminE">Vitamin E (mg)</label>
+                                            <input type="number" id="nutrition-vitaminE" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-vitaminK">Vitamin K (mcg)</label>
+                                            <input type="number" id="nutrition-vitaminK" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-vitaminC">Vitamin C (mg)</label>
+                                            <input type="number" id="nutrition-vitaminC" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-vitaminB12">Vitamin B12 (mcg)</label>
+                                            <input type="number" id="nutrition-vitaminB12" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-vitaminB6">Vitamin B6 (mg)</label>
+                                            <input type="number" id="nutrition-vitaminB6" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-folate">Folate B9 (mcg)</label>
+                                            <input type="number" id="nutrition-folate" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-thiamin">Thiamin B1 (mg)</label>
+                                            <input type="number" id="nutrition-thiamin" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-riboflavin">Riboflavin B2 (mg)</label>
+                                            <input type="number" id="nutrition-riboflavin" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-niacin">Niacin B3 (mg)</label>
+                                            <input type="number" id="nutrition-niacin" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-choline">Choline (mg)</label>
+                                            <input type="number" id="nutrition-choline" step="0.1" value="0" />
+                                        </div>
+                                    </div>
+                                </details>
+
+                                <details class="expandable-section">
+                                    <summary>Minerals (Optional)</summary>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="nutrition-iron">Iron (mg)</label>
+                                            <input type="number" id="nutrition-iron" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-magnesium">Magnesium (mg)</label>
+                                            <input type="number" id="nutrition-magnesium" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-selenium">Selenium (mcg)</label>
+                                            <input type="number" id="nutrition-selenium" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-zinc">Zinc (mg)</label>
+                                            <input type="number" id="nutrition-zinc" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-potassium">Potassium (mg)</label>
+                                            <input type="number" id="nutrition-potassium" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-calcium">Calcium (mg)</label>
+                                            <input type="number" id="nutrition-calcium" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-phosphorus">Phosphorus (mg)</label>
+                                            <input type="number" id="nutrition-phosphorus" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-copper">Copper (mg)</label>
+                                            <input type="number" id="nutrition-copper" step="0.1" value="0" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nutrition-manganese">Manganese (mg)</label>
+                                            <input type="number" id="nutrition-manganese" step="0.1" value="0" />
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4>Tags (Optional)</h4>
+                            <input type="text" id="recipe-tags" 
+                                   placeholder="e.g., high-protein, quick, paleo (comma-separated)" />
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">💾 Save Recipe</button>
+                            <button type="button" id="reset-form-btn" class="btn-secondary">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Upload Method -->
+            <div id="upload-method" class="input-method">
+                <div class="input-card">
+                    <h3>Upload Recipe File</h3>
+                    <div class="upload-options">
+                        <div class="upload-option">
+                            <h4>📄 JSON/CSV Upload</h4>
+                            <p>Upload a file with recipe data</p>
+                            <input type="file" id="file-upload" accept=".json,.csv" style="display: none;" />
+                            <button id="file-upload-btn" class="btn-primary">Choose File</button>
+                            <div id="file-upload-status" class="status-message"></div>
+                        </div>
+                        <div class="upload-option">
+                            <h4>📸 Recipe Image</h4>
+                            <p>Upload an image of a recipe card or cookbook page</p>
+                            <input type="file" id="image-upload" accept="image/*" style="display: none;" />
+                            <button id="image-upload-btn" class="btn-primary">Choose Image</button>
+                            <div id="image-upload-status" class="status-message"></div>
+                            <p class="helper-text">⚠️ OCR feature requires API integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User's Custom Recipes -->
+            <div class="custom-recipes-section">
+                <h3>Your Custom Recipes</h3>
+                <div id="custom-recipes-grid" class="recipe-grid">
+                    <!-- User's recipes loaded dynamically -->
+                </div>
             </div>
         </section>
 

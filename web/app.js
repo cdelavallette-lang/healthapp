@@ -226,6 +226,9 @@ function setupEventListeners() {
         const modal = document.getElementById('recipe-modal');
         if (e.target === modal) closeModal();
     });
+    
+    // Initialize recipe management
+    initializeRecipeManagement();
 }
 
 // Switch between tabs
@@ -1393,3 +1396,605 @@ async function saveBiomarkers() {
     
     alert('Biomarkers saved to cloud and downloaded!');
 }
+
+// ==========================================
+// RECIPE MANAGEMENT FUNCTIONALITY
+// ==========================================
+
+let customRecipes = [];
+let ingredientCounter = 0;
+
+// Initialize recipe management features
+function initializeRecipeManagement() {
+    // Method tab switching
+    document.querySelectorAll('.method-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            const method = tab.dataset.method;
+            switchInputMethod(method);
+        });
+    });
+    
+    // URL scanning
+    document.getElementById('scan-url-btn').addEventListener('click', scanRecipeFromURL);
+    
+    // Manual form
+    document.getElementById('add-ingredient-btn').addEventListener('click', addIngredientRow);
+    document.getElementById('calculate-nutrition-btn').addEventListener('click', calculateNutritionFromIngredients);
+    document.getElementById('manual-recipe-form').addEventListener('submit', saveManualRecipe);
+    document.getElementById('reset-form-btn').addEventListener('click', resetManualForm);
+    
+    // File uploads
+    document.getElementById('file-upload-btn').addEventListener('click', () => {
+        document.getElementById('file-upload').click();
+    });
+    document.getElementById('file-upload').addEventListener('change', handleFileUpload);
+    
+    document.getElementById('image-upload-btn').addEventListener('click', () => {
+        document.getElementById('image-upload').click();
+    });
+    document.getElementById('image-upload').addEventListener('change', handleImageUpload);
+    
+    // Initialize with one ingredient row
+    addIngredientRow();
+    
+    // Load custom recipes
+    loadCustomRecipes();
+}
+
+// Switch between input methods
+function switchInputMethod(method) {
+    document.querySelectorAll('.method-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.method === method);
+    });
+    document.querySelectorAll('.input-method').forEach(section => {
+        section.classList.toggle('active', section.id === `${method}-method`);
+    });
+}
+
+// Scan recipe from URL
+async function scanRecipeFromURL() {
+    const url = document.getElementById('recipe-url').value.trim();
+    const statusEl = document.getElementById('url-status');
+    
+    if (!url) {
+        showStatus(statusEl, 'Please enter a URL', 'error');
+        return;
+    }
+    
+    showStatus(statusEl, '🔍 Scanning recipe...', 'info');
+    
+    try {
+        // Use a CORS proxy to fetch the page
+        const proxyUrl = 'https://api.allorigins.win/raw?url=';
+        const response = await fetch(proxyUrl + encodeURIComponent(url));
+        const html = await response.text();
+        
+        // Parse recipe from HTML
+        const recipe = parseRecipeFromHTML(html, url);
+        
+        if (recipe) {
+            displayScannedRecipe(recipe);
+            showStatus(statusEl, '✅ Recipe scanned successfully!', 'success');
+        } else {
+            showStatus(statusEl, '⚠️ Could not extract recipe data. Try manual input.', 'error');
+        }
+    } catch (error) {
+        console.error('URL scan error:', error);
+        showStatus(statusEl, '❌ Error scanning URL. Check console for details.', 'error');
+    }
+}
+
+// Parse recipe from HTML using Schema.org or common patterns
+function parseRecipeFromHTML(html, url) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    
+    // Try to find Recipe schema (JSON-LD)
+    const scripts = doc.querySelectorAll('script[type="application/ld+json"]');
+    for (const script of scripts) {
+        try {
+            const data = JSON.parse(script.textContent);
+            if (data['@type'] === 'Recipe' || (Array.isArray(data['@graph']) && data['@graph'].find(item => item['@type'] === 'Recipe'))) {
+                const recipeData = Array.isArray(data['@graph']) ? data['@graph'].find(item => item['@type'] === 'Recipe') : data;
+                return extractFromSchema(recipeData);
+            }
+        } catch (e) {
+            continue;
+        }
+    }
+    
+    // Try microdata
+    const recipeEl = doc.querySelector('[itemtype*="schema.org/Recipe"]');
+    if (recipeEl) {
+        return extractFromMicrodata(recipeEl);
+    }
+    
+    // Fallback: common patterns
+    return extractFromCommonPatterns(doc);
+}
+
+// Extract recipe from Schema.org JSON-LD
+function extractFromSchema(data) {
+    return {
+        name: data.name || '',
+        description: data.description || '',
+        prepTime: data.prepTime || '',
+        cookTime: data.cookTime || '',
+        servings: data.recipeYield || 4,
+        ingredients: Array.isArray(data.recipeIngredient) ? data.recipeIngredient : [],
+        instructions: Array.isArray(data.recipeInstructions) ? 
+            data.recipeInstructions.map(i => typeof i === 'string' ? i : i.text).join('\n') : '',
+        nutrition: data.nutrition || null,
+        image: data.image?.url || data.image || ''
+    };
+}
+
+// Extract from microdata
+function extractFromMicrodata(el) {
+    const get = (prop) => el.querySelector(`[itemprop="${prop}"]`)?.textContent?.trim();
+    const getAll = (prop) => Array.from(el.querySelectorAll(`[itemprop="${prop}"]`)).map(e => e.textContent.trim());
+    
+    return {
+        name: get('name') || '',
+        description: get('description') || '',
+        prepTime: get('prepTime') || '',
+        cookTime: get('cookTime') || '',
+        servings: get('recipeYield') || 4,
+        ingredients: getAll('recipeIngredient'),
+        instructions: getAll('recipeInstructions').join('\n'),
+        nutrition: null,
+        image: el.querySelector('[itemprop="image"]')?.src || ''
+    };
+}
+
+// Extract from common HTML patterns
+function extractFromCommonPatterns(doc) {
+    const getBySelectors = (selectors) => {
+        for (const sel of selectors) {
+            const el = doc.querySelector(sel);
+            if (el) return el.textContent.trim();
+        }
+        return '';
+    };
+    
+    const getAllBySelectors = (selectors) => {
+        for (const sel of selectors) {
+            const els = doc.querySelectorAll(sel);
+            if (els.length > 0) return Array.from(els).map(e => e.textContent.trim());
+        }
+        return [];
+    };
+    
+    return {
+        name: getBySelectors(['.recipe-title', '.recipe-name', 'h1.title', 'h1']),
+        description: getBySelectors(['.recipe-description', '.description', '.summary']),
+        prepTime: getBySelectors(['.prep-time', '.preptime', '[class*="prep"]']),
+        cookTime: getBySelectors(['.cook-time', '.cooktime', '[class*="cook"]']),
+        servings: getBySelectors(['.servings', '.yield', '[class*="serving"]']) || 4,
+        ingredients: getAllBySelectors(['.ingredient', '.ingredients li', '[class*="ingredient"] li']),
+        instructions: getAllBySelectors(['.instruction', '.instructions li', '.step', '[class*="instruction"] li']).join('\n'),
+        nutrition: null,
+        image: doc.querySelector('.recipe-image img, .featured-image img, [class*="recipe"] img')?.src || ''
+    };
+}
+
+// Display scanned recipe for review
+function displayScannedRecipe(recipe) {
+    const previewEl = document.getElementById('scanned-recipe-preview');
+    previewEl.style.display = 'block';
+    previewEl.innerHTML = `
+        <h4>📋 Scanned Recipe</h4>
+        ${recipe.image ? `<img src="${recipe.image}" alt="${recipe.name}" style="max-width: 100%; max-height: 300px; border-radius: 8px; margin: 12px 0;">` : ''}
+        <p><strong>Name:</strong> ${recipe.name}</p>
+        <p><strong>Description:</strong> ${recipe.description}</p>
+        <p><strong>Servings:</strong> ${recipe.servings}</p>
+        <p><strong>Prep:</strong> ${recipe.prepTime} | <strong>Cook:</strong> ${recipe.cookTime}</p>
+        <div style="margin: 16px 0;">
+            <strong>Ingredients (${recipe.ingredients.length}):</strong>
+            <ul style="margin: 8px 0; padding-left: 20px;">
+                ${recipe.ingredients.slice(0, 5).map(ing => `<li>${ing}</li>`).join('')}
+                ${recipe.ingredients.length > 5 ? `<li><em>...and ${recipe.ingredients.length - 5} more</em></li>` : ''}
+            </ul>
+        </div>
+        <div class="form-actions" style="margin-top: 16px;">
+            <button onclick="populateFormFromScanned(${JSON.stringify(recipe).replace(/"/g, '&quot;')})" class="btn-primary">
+                ✏️ Edit & Save
+            </button>
+            <button onclick="saveScannedRecipeDirectly(${JSON.stringify(recipe).replace(/"/g, '&quot;')})" class="btn-secondary">
+                💾 Save As-Is
+            </button>
+        </div>
+    `;
+}
+
+// Populate manual form from scanned recipe
+function populateFormFromScanned(recipe) {
+    switchInputMethod('manual');
+    document.getElementById('recipe-name').value = recipe.name || '';
+    document.getElementById('recipe-description').value = recipe.description || '';
+    document.getElementById('recipe-servings').value = recipe.servings || 4;
+    document.getElementById('recipe-prep-time').value = recipe.prepTime || '';
+    document.getElementById('recipe-cook-time').value = recipe.cookTime || '';
+    
+    // Clear existing ingredients
+    document.getElementById('ingredients-list').innerHTML = '';
+    ingredientCounter = 0;
+    
+    // Add ingredients
+    if (recipe.ingredients && recipe.ingredients.length > 0) {
+        recipe.ingredients.forEach(ing => {
+            addIngredientRow(ing);
+        });
+    } else {
+        addIngredientRow();
+    }
+    
+    // Scroll to form
+    document.getElementById('manual-method').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Save scanned recipe directly (with estimated nutrition)
+async function saveScannedRecipeDirectly(recipe) {
+    if (!recipe.name) {
+        alert('Recipe must have a name');
+        return;
+    }
+    
+    // Generate recipe ID
+    const mealId = 'custom_' + Date.now() + '_' + recipe.name.toLowerCase().replace(/[^a-z0-9]/g, '_');
+    
+    // Estimate basic nutrition (user can edit later)
+    const customRecipe = {
+        mealId,
+        name: recipe.name,
+        description: recipe.description || 'Scanned from web',
+        baseServings: recipe.servings || 4,
+        scalable: true,
+        prepTime: recipe.prepTime || 'Unknown',
+        cookTime: recipe.cookTime || 'Unknown',
+        mealType: 'dinner', // Default, user can change
+        ingredients: recipe.ingredients || [],
+        nutritionPerServing: {
+            calories: 400, // Estimated
+            macronutrients: { protein_g: 25, carbohydrates_g: 35, fat_g: 15, fiber_g: 5, omega3_g: 0.5 },
+            vitamins: { vitaminA_mcg: 0, vitaminD_IU: 0, vitaminE_mg: 0, vitaminK_mcg: 0, vitaminC_mg: 0, vitaminB12_mcg: 0, vitaminB6_mg: 0, folate_B9_mcg: 0, thiamin_B1_mg: 0, riboflavin_B2_mg: 0, niacin_B3_mg: 0, choline_mg: 0 },
+            minerals: { iron_mg: 0, magnesium_mg: 0, selenium_mcg: 0, zinc_mg: 0, potassium_mg: 0, calcium_mg: 0, phosphorus_mg: 0, copper_mg: 0, manganese_mg: 0 }
+        },
+        tags: ['custom', 'scanned'],
+        sourceUrl: document.getElementById('recipe-url').value,
+        custom: true
+    };
+    
+    await saveRecipeToFirestore(customRecipe);
+    alert(`✅ Recipe "${recipe.name}" saved! Note: Nutrition values are estimated. You can edit them later.`);
+}
+
+// Add ingredient row to manual form
+function addIngredientRow(value = '') {
+    const container = document.getElementById('ingredients-list');
+    const row = document.createElement('div');
+    row.className = 'ingredient-item';
+    row.innerHTML = `
+        <input type="text" placeholder="Ingredient name" value="${value}" class="ingredient-name" />
+        <input type="text" placeholder="Amount (e.g., 2 cups)" class="ingredient-amount" />
+        <button type="button" onclick="this.parentElement.remove()">✕</button>
+    `;
+    container.appendChild(row);
+    ingredientCounter++;
+}
+
+// Calculate nutrition from ingredients (using USDA API or estimation)
+async function calculateNutritionFromIngredients() {
+    const ingredients = [];
+    document.querySelectorAll('.ingredient-item').forEach(item => {
+        const name = item.querySelector('.ingredient-name').value.trim();
+        const amount = item.querySelector('.ingredient-amount').value.trim();
+        if (name) ingredients.push({ name, amount });
+    });
+    
+    if (ingredients.length === 0) {
+        alert('Please add ingredients first');
+        return;
+    }
+    
+    const statusEl = document.getElementById('url-status');
+    showStatus(statusEl, '🧮 Calculating nutrition...', 'info');
+    
+    try {
+        // Note: This would require USDA FoodData Central API or similar
+        // For now, we'll show a message that this requires API setup
+        alert('⚠️ Nutrition calculation requires USDA API integration.\n\nFor now, please:\n1. Use a nutrition calculator website\n2. Enter values manually in the form below\n\nAPI integration coming soon!');
+        showStatus(statusEl, 'Manual nutrition entry required', 'info');
+        
+        // Scroll to nutrition section
+        document.querySelector('.nutrition-inputs').scrollIntoView({ behavior: 'smooth' });
+    } catch (error) {
+        console.error('Nutrition calculation error:', error);
+        showStatus(statusEl, 'Error calculating nutrition', 'error');
+    }
+}
+
+// Save manual recipe
+async function saveManualRecipe(e) {
+    e.preventDefault();
+    
+    // Collect form data
+    const ingredients = [];
+    document.querySelectorAll('.ingredient-item').forEach(item => {
+        const name = item.querySelector('.ingredient-name').value.trim();
+        const amount = item.querySelector('.ingredient-amount').value.trim();
+        if (name) ingredients.push({ name, amount });
+    });
+    
+    const tags = document.getElementById('recipe-tags').value
+        .split(',')
+        .map(t => t.trim())
+        .filter(t => t);
+    tags.push('custom'); // Always add custom tag
+    
+    const recipe = {
+        mealId: 'custom_' + Date.now() + '_' + document.getElementById('recipe-name').value.toLowerCase().replace(/[^a-z0-9]/g, '_'),
+        name: document.getElementById('recipe-name').value,
+        description: document.getElementById('recipe-description').value || '',
+        baseServings: parseInt(document.getElementById('recipe-servings').value),
+        scalable: true,
+        prepTime: document.getElementById('recipe-prep-time').value || 'Not specified',
+        cookTime: document.getElementById('recipe-cook-time').value || 'Not specified',
+        mealType: document.getElementById('recipe-meal-type').value,
+        ingredients,
+        nutritionPerServing: {
+            calories: parseFloat(document.getElementById('nutrition-calories').value) || 0,
+            macronutrients: {
+                protein_g: parseFloat(document.getElementById('nutrition-protein').value) || 0,
+                carbohydrates_g: parseFloat(document.getElementById('nutrition-carbs').value) || 0,
+                fat_g: parseFloat(document.getElementById('nutrition-fat').value) || 0,
+                fiber_g: parseFloat(document.getElementById('nutrition-fiber').value) || 0,
+                omega3_g: parseFloat(document.getElementById('nutrition-omega3').value) || 0
+            },
+            vitamins: {
+                vitaminA_mcg: parseFloat(document.getElementById('nutrition-vitaminA').value) || 0,
+                vitaminD_IU: parseFloat(document.getElementById('nutrition-vitaminD').value) || 0,
+                vitaminE_mg: parseFloat(document.getElementById('nutrition-vitaminE').value) || 0,
+                vitaminK_mcg: parseFloat(document.getElementById('nutrition-vitaminK').value) || 0,
+                vitaminC_mg: parseFloat(document.getElementById('nutrition-vitaminC').value) || 0,
+                vitaminB12_mcg: parseFloat(document.getElementById('nutrition-vitaminB12').value) || 0,
+                vitaminB6_mg: parseFloat(document.getElementById('nutrition-vitaminB6').value) || 0,
+                folate_B9_mcg: parseFloat(document.getElementById('nutrition-folate').value) || 0,
+                thiamin_B1_mg: parseFloat(document.getElementById('nutrition-thiamin').value) || 0,
+                riboflavin_B2_mg: parseFloat(document.getElementById('nutrition-riboflavin').value) || 0,
+                niacin_B3_mg: parseFloat(document.getElementById('nutrition-niacin').value) || 0,
+                choline_mg: parseFloat(document.getElementById('nutrition-choline').value) || 0
+            },
+            minerals: {
+                iron_mg: parseFloat(document.getElementById('nutrition-iron').value) || 0,
+                magnesium_mg: parseFloat(document.getElementById('nutrition-magnesium').value) || 0,
+                selenium_mcg: parseFloat(document.getElementById('nutrition-selenium').value) || 0,
+                zinc_mg: parseFloat(document.getElementById('nutrition-zinc').value) || 0,
+                potassium_mg: parseFloat(document.getElementById('nutrition-potassium').value) || 0,
+                calcium_mg: parseFloat(document.getElementById('nutrition-calcium').value) || 0,
+                phosphorus_mg: parseFloat(document.getElementById('nutrition-phosphorus').value) || 0,
+                copper_mg: parseFloat(document.getElementById('nutrition-copper').value) || 0,
+                manganese_mg: parseFloat(document.getElementById('nutrition-manganese').value) || 0
+            }
+        },
+        tags,
+        custom: true,
+        createdAt: new Date().toISOString()
+    };
+    
+    await saveRecipeToFirestore(recipe);
+    alert(`✅ Recipe "${recipe.name}" saved successfully!`);
+    resetManualForm();
+    
+    // Switch to recipe library to show the new recipe
+    document.querySelector('[data-tab="recipes"]').click();
+}
+
+// Save recipe to Firestore
+async function saveRecipeToFirestore(recipe) {
+    if (!currentUser) {
+        alert('You must be logged in to save recipes');
+        return;
+    }
+    
+    try {
+        await db.collection('users').doc(currentUser.uid)
+            .collection('customRecipes').doc(recipe.mealId).set(recipe);
+        
+        // Add to local array
+        customRecipes.push(recipe);
+        
+        // Reload recipes to include custom ones
+        await loadCustomRecipes();
+        renderRecipes();
+    } catch (error) {
+        console.error('Error saving recipe:', error);
+        alert('Error saving recipe: ' + error.message);
+    }
+}
+
+// Load custom recipes from Firestore
+async function loadCustomRecipes() {
+    if (!currentUser) return;
+    
+    try {
+        const snapshot = await db.collection('users').doc(currentUser.uid)
+            .collection('customRecipes').get();
+        
+        customRecipes = [];
+        snapshot.forEach(doc => {
+            customRecipes.push(doc.data());
+        });
+        
+        console.log('Loaded custom recipes:', customRecipes.length);
+        
+        // Merge with main recipes array for auto-generate
+        recipes = [...recipes.filter(r => !r.custom), ...customRecipes];
+        
+        // Render custom recipes in the Add Recipe tab
+        renderCustomRecipes();
+    } catch (error) {
+        console.error('Error loading custom recipes:', error);
+    }
+}
+
+// Render custom recipes in Add Recipe tab
+function renderCustomRecipes() {
+    const grid = document.getElementById('custom-recipes-grid');
+    if (!grid) return;
+    
+    if (customRecipes.length === 0) {
+        grid.innerHTML = '<p style="text-align: center; color: #666; padding: 40px;">No custom recipes yet. Create your first recipe above!</p>';
+        return;
+    }
+    
+    grid.innerHTML = customRecipes.map(recipe => `
+        <div class="recipe-card custom-recipe" draggable="true" data-recipe-id="${recipe.mealId}">
+            <div class="recipe-image" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">
+                <span style="font-size: 48px;">🍳</span>
+            </div>
+            <div class="recipe-info">
+                <h3>${recipe.name}</h3>
+                <p class="recipe-description">${recipe.description || ''}</p>
+                <div class="recipe-meta">
+                    <span>⏱️ ${recipe.prepTime}</span>
+                    <span>🍽️ ${recipe.baseServings} servings</span>
+                </div>
+                <div class="recipe-nutrition">
+                    <div class="nutrition-item">
+                        <span class="nutrition-value">${recipe.nutritionPerServing.calories}</span>
+                        <span class="nutrition-label">cal</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <span class="nutrition-value">${recipe.nutritionPerServing.macronutrients.protein_g}g</span>
+                        <span class="nutrition-label">protein</span>
+                    </div>
+                </div>
+                <div class="recipe-tags">
+                    ${recipe.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                <button onclick="deleteCustomRecipe('${recipe.mealId}')" class="btn-secondary" style="margin-top: 12px; width: 100%;">
+                    🗑️ Delete
+                </button>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Delete custom recipe
+async function deleteCustomRecipe(mealId) {
+    if (!confirm('Delete this recipe?')) return;
+    
+    try {
+        await db.collection('users').doc(currentUser.uid)
+            .collection('customRecipes').doc(mealId).delete();
+        
+        customRecipes = customRecipes.filter(r => r.mealId !== mealId);
+        recipes = recipes.filter(r => r.mealId !== mealId);
+        
+        renderCustomRecipes();
+        renderRecipes();
+        alert('Recipe deleted');
+    } catch (error) {
+        console.error('Error deleting recipe:', error);
+        alert('Error deleting recipe');
+    }
+}
+
+// Reset manual form
+function resetManualForm() {
+    document.getElementById('manual-recipe-form').reset();
+    document.getElementById('ingredients-list').innerHTML = '';
+    ingredientCounter = 0;
+    addIngredientRow();
+}
+
+// Handle file upload (JSON/CSV)
+async function handleFileUpload(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    const statusEl = document.getElementById('file-upload-status');
+    showStatus(statusEl, '📤 Uploading...', 'info');
+    
+    try {
+        const text = await file.text();
+        let recipes = [];
+        
+        if (file.name.endsWith('.json')) {
+            const data = JSON.parse(text);
+            recipes = Array.isArray(data) ? data : (data.recipes || [data]);
+        } else if (file.name.endsWith('.csv')) {
+            recipes = parseCSV(text);
+        }
+        
+        if (recipes.length === 0) {
+            showStatus(statusEl, '❌ No recipes found in file', 'error');
+            return;
+        }
+        
+        // Save all recipes
+        for (const recipe of recipes) {
+            // Ensure required fields
+            if (!recipe.name || !recipe.mealType) continue;
+            
+            recipe.mealId = recipe.mealId || ('custom_' + Date.now() + '_' + recipe.name.toLowerCase().replace(/[^a-z0-9]/g, '_'));
+            recipe.custom = true;
+            
+            await saveRecipeToFirestore(recipe);
+        }
+        
+        showStatus(statusEl, `✅ Imported ${recipes.length} recipes!`, 'success');
+        e.target.value = ''; // Reset input
+    } catch (error) {
+        console.error('File upload error:', error);
+        showStatus(statusEl, '❌ Error importing file', 'error');
+    }
+}
+
+// Parse CSV to recipes
+function parseCSV(text) {
+    const lines = text.split('\n').map(l => l.trim()).filter(l => l);
+    if (lines.length < 2) return [];
+    
+    const headers = lines[0].split(',').map(h => h.trim());
+    const recipes = [];
+    
+    for (let i = 1; i < lines.length; i++) {
+        const values = lines[i].split(',').map(v => v.trim());
+        const recipe = {};
+        headers.forEach((header, idx) => {
+            recipe[header] = values[idx] || '';
+        });
+        recipes.push(recipe);
+    }
+    
+    return recipes;
+}
+
+// Handle image upload (OCR)
+function handleImageUpload(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    const statusEl = document.getElementById('image-upload-status');
+    showStatus(statusEl, '📸 Image uploaded. OCR requires API integration (Tesseract.js or Google Vision).', 'info');
+    
+    // OCR implementation would go here
+    // For now, show placeholder message
+    alert('Image OCR feature requires additional setup:\n\n1. Install Tesseract.js for client-side OCR\n2. Or integrate Google Cloud Vision API\n3. Or use AWS Textract\n\nThis feature is coming soon!');
+    
+    e.target.value = ''; // Reset input
+}
+
+// Show status message
+function showStatus(element, message, type) {
+    element.textContent = message;
+    element.className = `status-message ${type}`;
+}
+
+// Make functions globally available
+window.populateFormFromScanned = populateFormFromScanned;
+window.saveScannedRecipeDirectly = saveScannedRecipeDirectly;
+window.deleteCustomRecipe = deleteCustomRecipe;
+
