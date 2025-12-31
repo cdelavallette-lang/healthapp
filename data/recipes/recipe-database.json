@@ -592,6 +592,1519 @@
         }
       },
       "tags": ["snack", "high-protein", "portable", "meal-prep-friendly"]
+    },
+    {
+      "mealId": "grass_fed_liver_pate_toast",
+      "name": "Grass-Fed Beef Liver Pâté on Sourdough",
+      "description": "Nutrient-dense liver pâté with fermented pickles",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 32, "carbohydrates_g": 25, "fat_g": 18, "fiber_g": 4, "omega3_g": 0.5 },
+        "vitamins": { "vitaminA_mcg": 4500, "vitaminD_IU": 80, "vitaminE_mg": 3, "vitaminK_mcg": 15, "vitaminC_mg": 8, "vitaminB12_mcg": 16.5, "vitaminB6_mg": 0.9, "folate_B9_mcg": 290, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 2.8, "niacin_B3_mg": 14, "choline_mg": 418 },
+        "minerals": { "iron_mg": 8.2, "magnesium_mg": 35, "selenium_mcg": 42, "zinc_mg": 5.3, "potassium_mg": 380, "calcium_mg": 85, "phosphorus_mg": 420, "copper_mg": 9.8, "manganese_mg": 0.4 }
+      },
+      "tags": ["breakfast", "organ-meat", "nutrient-dense", "quick"]
+    },
+    {
+      "mealId": "smoked_mackerel_avocado_bowl",
+      "name": "Smoked Mackerel with Avocado Bowl",
+      "description": "Omega-3 rich mackerel with avocado and mixed greens",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 450,
+        "macronutrients": { "protein_g": 38, "carbohydrates_g": 12, "fat_g": 28, "fiber_g": 7, "omega3_g": 4.8 },
+        "vitamins": { "vitaminA_mcg": 380, "vitaminD_IU": 640, "vitaminE_mg": 6, "vitaminK_mcg": 185, "vitaminC_mg": 22, "vitaminB12_mcg": 12.3, "vitaminB6_mg": 0.8, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 18, "choline_mg": 285 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 110, "selenium_mcg": 85, "zinc_mg": 2.8, "potassium_mg": 920, "calcium_mg": 145, "phosphorus_mg": 480, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["breakfast", "omega-3-rich", "no-cook", "anti-inflammatory"]
+    },
+    {
+      "mealId": "bone_broth_egg_drop",
+      "name": "Bone Broth Egg Drop Soup",
+      "description": "Healing bone broth with pastured eggs and vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 250,
+        "macronutrients": { "protein_g": 22, "carbohydrates_g": 8, "fat_g": 14, "fiber_g": 2, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 420, "vitaminD_IU": 180, "vitaminE_mg": 2.5, "vitaminK_mcg": 45, "vitaminC_mg": 12, "vitaminB12_mcg": 1.8, "vitaminB6_mg": 0.4, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 4, "choline_mg": 380 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 28, "selenium_mcg": 48, "zinc_mg": 2.2, "potassium_mg": 450, "calcium_mg": 95, "phosphorus_mg": 320, "copper_mg": 0.2, "manganese_mg": 0.3 }
+      },
+      "tags": ["breakfast", "gut-healing", "warming", "collagen-rich"]
+    },
+    {
+      "mealId": "sourdough_french_toast_berries",
+      "name": "Sourdough French Toast with Mixed Berries",
+      "description": "Einkorn sourdough with pastured eggs and antioxidant berries",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "10 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 390,
+        "macronutrients": { "protein_g": 18, "carbohydrates_g": 42, "fat_g": 16, "fiber_g": 6, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 285, "vitaminD_IU": 165, "vitaminE_mg": 3.8, "vitaminK_mcg": 28, "vitaminC_mg": 48, "vitaminB12_mcg": 1.5, "vitaminB6_mg": 0.3, "folate_B9_mcg": 85, "thiamin_B1_mg": 0.5, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 3.2, "choline_mg": 290 },
+        "minerals": { "iron_mg": 3.5, "magnesium_mg": 58, "selenium_mcg": 35, "zinc_mg": 2.1, "potassium_mg": 380, "calcium_mg": 125, "phosphorus_mg": 280, "copper_mg": 0.3, "manganese_mg": 1.2 }
+      },
+      "tags": ["breakfast", "comfort-food", "family-friendly", "antioxidant"]
+    },
+    {
+      "mealId": "pastured_eggs_sauerkraut",
+      "name": "Scrambled Eggs with Fermented Sauerkraut",
+      "description": "Protein-rich eggs with probiotic sauerkraut",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "8 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 24, "carbohydrates_g": 8, "fat_g": 22, "fiber_g": 3, "omega3_g": 1.5 },
+        "vitamins": { "vitaminA_mcg": 420, "vitaminD_IU": 180, "vitaminE_mg": 4.2, "vitaminK_mcg": 68, "vitaminC_mg": 28, "vitaminB12_mcg": 2.2, "vitaminB6_mg": 0.5, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 1.1, "niacin_B3_mg": 2.8, "choline_mg": 520 },
+        "minerals": { "iron_mg": 3.8, "magnesium_mg": 42, "selenium_mcg": 62, "zinc_mg": 2.8, "potassium_mg": 420, "calcium_mg": 90, "phosphorus_mg": 360, "copper_mg": 0.2, "manganese_mg": 0.3 }
+      },
+      "tags": ["breakfast", "probiotic", "gut-health", "quick"]
+    },
+    {
+      "mealId": "wild_salmon_cucumber_salad",
+      "name": "Wild Salmon and Cucumber Salad",
+      "description": "Cold-smoked salmon with cucumber and dill",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 42, "carbohydrates_g": 8, "fat_g": 20, "fiber_g": 3, "omega3_g": 3.8 },
+        "vitamins": { "vitaminA_mcg": 220, "vitaminD_IU": 580, "vitaminE_mg": 5.2, "vitaminK_mcg": 38, "vitaminC_mg": 15, "vitaminB12_mcg": 8.5, "vitaminB6_mg": 1.2, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 16, "choline_mg": 180 },
+        "minerals": { "iron_mg": 2.2, "magnesium_mg": 68, "selenium_mcg": 92, "zinc_mg": 1.8, "potassium_mg": 880, "calcium_mg": 65, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.2 }
+      },
+      "tags": ["lunch", "no-cook", "omega-3-rich", "light"]
+    },
+    {
+      "mealId": "grass_fed_bison_burger",
+      "name": "Grass-Fed Bison Burger Bowl",
+      "description": "Lean bison with roasted vegetables and sweet potato",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 35, "fat_g": 22, "fiber_g": 7, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 1580, "vitaminD_IU": 45, "vitaminE_mg": 2.8, "vitaminK_mcg": 85, "vitaminC_mg": 38, "vitaminB12_mcg": 4.2, "vitaminB6_mg": 1.1, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 12, "choline_mg": 195 },
+        "minerals": { "iron_mg": 6.8, "magnesium_mg": 98, "selenium_mcg": 55, "zinc_mg": 8.5, "potassium_mg": 1120, "calcium_mg": 85, "phosphorus_mg": 580, "copper_mg": 0.4, "manganese_mg": 0.8 }
+      },
+      "tags": ["lunch", "high-protein", "grass-fed", "nutrient-dense"]
+    },
+    {
+      "mealId": "chicken_liver_onions",
+      "name": "Sautéed Chicken Liver with Caramelized Onions",
+      "description": "Iron-rich chicken liver with onions and herbs",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 350,
+        "macronutrients": { "protein_g": 35, "carbohydrates_g": 18, "fat_g": 14, "fiber_g": 2, "omega3_g": 0.3 },
+        "vitamins": { "vitaminA_mcg": 5200, "vitaminD_IU": 65, "vitaminE_mg": 1.8, "vitaminK_mcg": 12, "vitaminC_mg": 28, "vitaminB12_mcg": 18.2, "vitaminB6_mg": 1.2, "folate_B9_mcg": 650, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 3.5, "niacin_B3_mg": 15, "choline_mg": 385 },
+        "minerals": { "iron_mg": 12.5, "magnesium_mg": 45, "selenium_mcg": 82, "zinc_mg": 5.8, "potassium_mg": 520, "calcium_mg": 58, "phosphorus_mg": 480, "copper_mg": 0.7, "manganese_mg": 0.5 }
+      },
+      "tags": ["lunch", "organ-meat", "iron-rich", "B-vitamins"]
+    },
+    {
+      "mealId": "wild_shrimp_zoodles",
+      "name": "Wild Shrimp with Zucchini Noodles",
+      "description": "Gulf shrimp with spiralized zucchini and garlic",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "10 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 290,
+        "macronutrients": { "protein_g": 38, "carbohydrates_g": 12, "fat_g": 10, "fiber_g": 4, "omega3_g": 0.9 },
+        "vitamins": { "vitaminA_mcg": 380, "vitaminD_IU": 120, "vitaminE_mg": 3.5, "vitaminK_mcg": 52, "vitaminC_mg": 45, "vitaminB12_mcg": 2.8, "vitaminB6_mg": 0.6, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 6.5, "choline_mg": 225 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 88, "selenium_mcg": 78, "zinc_mg": 2.8, "potassium_mg": 680, "calcium_mg": 125, "phosphorus_mg": 420, "copper_mg": 0.5, "manganese_mg": 0.4 }
+      },
+      "tags": ["lunch", "low-carb", "seafood", "light"]
+    },
+    {
+      "mealId": "heritage_pork_chops_apples",
+      "name": "Heritage Pork Chops with Apples",
+      "description": "Pasture-raised pork with caramelized apples and greens",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "25 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 580,
+        "macronutrients": { "protein_g": 52, "carbohydrates_g": 28, "fat_g": 28, "fiber_g": 5, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 85, "vitaminE_mg": 1.8, "vitaminK_mcg": 125, "vitaminC_mg": 35, "vitaminB12_mcg": 1.5, "vitaminB6_mg": 1.2, "folate_B9_mcg": 58, "thiamin_B1_mg": 1.2, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 14, "choline_mg": 195 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 72, "selenium_mcg": 68, "zinc_mg": 4.5, "potassium_mg": 980, "calcium_mg": 95, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.4 }
+      },
+      "tags": ["dinner", "comfort-food", "seasonal", "pasture-raised"]
+    },
+    {
+      "mealId": "lamb_stew_root_vegetables",
+      "name": "Grass-Fed Lamb Stew with Root Vegetables",
+      "description": "Slow-cooked lamb with carrots, turnips, and herbs",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "20 min",
+      "cookTime": "90 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 620,
+        "macronutrients": { "protein_g": 58, "carbohydrates_g": 32, "fat_g": 26, "fiber_g": 8, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 2850, "vitaminD_IU": 45, "vitaminE_mg": 2.2, "vitaminK_mcg": 95, "vitaminC_mg": 42, "vitaminB12_mcg": 3.8, "vitaminB6_mg": 0.9, "folate_B9_mcg": 78, "thiamin_B1_mg": 0.5, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 18, "choline_mg": 205 },
+        "minerals": { "iron_mg": 5.2, "magnesium_mg": 85, "selenium_mcg": 62, "zinc_mg": 9.5, "potassium_mg": 1280, "calcium_mg": 125, "phosphorus_mg": 580, "copper_mg": 0.4, "manganese_mg": 0.9 }
+      },
+      "tags": ["dinner", "warming", "slow-cooked", "anti-inflammatory"]
+    },
+    {
+      "mealId": "cod_fennel_tomatoes",
+      "name": "Wild Cod with Fennel and Tomatoes",
+      "description": "Roasted cod with Mediterranean vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 18, "fat_g": 12, "fiber_g": 6, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 680, "vitaminD_IU": 280, "vitaminE_mg": 4.2, "vitaminK_mcg": 68, "vitaminC_mg": 58, "vitaminB12_mcg": 3.2, "vitaminB6_mg": 0.8, "folate_B9_mcg": 85, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 10, "choline_mg": 185 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 95, "selenium_mcg": 88, "zinc_mg": 1.8, "potassium_mg": 1180, "calcium_mg": 145, "phosphorus_mg": 480, "copper_mg": 0.3, "manganese_mg": 0.5 }
+      },
+      "tags": ["dinner", "seafood", "Mediterranean", "light"]
+    },
+    {
+      "mealId": "venison_mushroom_sauce",
+      "name": "Wild Venison with Mushroom Sauce",
+      "description": "Lean venison with wild mushrooms and herbs",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 450,
+        "macronutrients": { "protein_g": 58, "carbohydrates_g": 12, "fat_g": 18, "fiber_g": 3, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 180, "vitaminD_IU": 95, "vitaminE_mg": 1.2, "vitaminK_mcg": 28, "vitaminC_mg": 12, "vitaminB12_mcg": 4.8, "vitaminB6_mg": 1.5, "folate_B9_mcg": 42, "thiamin_B1_mg": 0.8, "riboflavin_B2_mg": 1.2, "niacin_B3_mg": 22, "choline_mg": 215 },
+        "minerals": { "iron_mg": 8.5, "magnesium_mg": 68, "selenium_mcg": 72, "zinc_mg": 7.8, "potassium_mg": 820, "calcium_mg": 48, "phosphorus_mg": 580, "copper_mg": 0.6, "manganese_mg": 0.4 }
+      },
+      "tags": ["dinner", "wild-game", "high-protein", "lean"]
+    },
+    {
+      "mealId": "oysters_mignonette",
+      "name": "Fresh Oysters with Mignonette",
+      "description": "Raw oysters with classic mignonette sauce",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 180,
+        "macronutrients": { "protein_g": 18, "carbohydrates_g": 8, "fat_g": 6, "fiber_g": 0, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 285, "vitaminD_IU": 320, "vitaminE_mg": 2.8, "vitaminK_mcg": 12, "vitaminC_mg": 15, "vitaminB12_mcg": 28.5, "vitaminB6_mg": 0.2, "folate_B9_mcg": 38, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 4.2, "choline_mg": 125 },
+        "minerals": { "iron_mg": 8.2, "magnesium_mg": 58, "selenium_mcg": 95, "zinc_mg": 78.5, "potassium_mg": 420, "calcium_mg": 85, "phosphorus_mg": 280, "copper_mg": 4.5, "manganese_mg": 0.8 }
+      },
+      "tags": ["snack", "seafood", "zinc-rich", "no-cook"]
+    },
+    {
+      "mealId": "kefir_berries_walnuts",
+      "name": "Grass-Fed Kefir with Berries and Walnuts",
+      "description": "Probiotic kefir with antioxidant berries and omega-3 walnuts",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 280,
+        "macronutrients": { "protein_g": 14, "carbohydrates_g": 22, "fat_g": 16, "fiber_g": 4, "omega3_g": 2.8 },
+        "vitamins": { "vitaminA_mcg": 380, "vitaminD_IU": 125, "vitaminE_mg": 1.2, "vitaminK_mcg": 18, "vitaminC_mg": 28, "vitaminB12_mcg": 1.2, "vitaminB6_mg": 0.3, "folate_B9_mcg": 45, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 1.5, "choline_mg": 85 },
+        "minerals": { "iron_mg": 1.2, "magnesium_mg": 68, "selenium_mcg": 28, "zinc_mg": 2.2, "potassium_mg": 580, "calcium_mg": 385, "phosphorus_mg": 320, "copper_mg": 0.5, "manganese_mg": 1.2 }
+      },
+      "tags": ["snack", "probiotic", "quick", "no-cook"]
+    },
+    {
+      "mealId": "beef_bone_marrow_toast",
+      "name": "Roasted Bone Marrow on Sourdough",
+      "description": "Nutrient-dense bone marrow with sea salt and herbs",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "20 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 16, "carbohydrates_g": 22, "fat_g": 32, "fiber_g": 3, "omega3_g": 0.3 },
+        "vitamins": { "vitaminA_mcg": 180, "vitaminD_IU": 45, "vitaminE_mg": 1.8, "vitaminK_mcg": 28, "vitaminC_mg": 2, "vitaminB12_mcg": 3.2, "vitaminB6_mg": 0.2, "folate_B9_mcg": 12, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 2.8, "choline_mg": 145 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 28, "selenium_mcg": 18, "zinc_mg": 4.2, "potassium_mg": 280, "calcium_mg": 85, "phosphorus_mg": 220, "copper_mg": 0.2, "manganese_mg": 0.3 }
+      },
+      "tags": ["snack", "nutrient-dense", "collagen", "traditional"]
+    },
+    {
+      "mealId": "seaweed_snack_miso",
+      "name": "Roasted Seaweed with Miso Dip",
+      "description": "Iodine-rich seaweed with fermented miso",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 95,
+        "macronutrients": { "protein_g": 6, "carbohydrates_g": 12, "fat_g": 2, "fiber_g": 4, "omega3_g": 0.2 },
+        "vitamins": { "vitaminA_mcg": 520, "vitaminD_IU": 0, "vitaminE_mg": 2.2, "vitaminK_mcg": 185, "vitaminC_mg": 18, "vitaminB12_mcg": 0.3, "vitaminB6_mg": 0.2, "folate_B9_mcg": 280, "thiamin_B1_mg": 0.1, "riboflavin_B2_mg": 0.5, "niacin_B3_mg": 1.2, "choline_mg": 45 },
+        "minerals": { "iron_mg": 3.8, "magnesium_mg": 125, "selenium_mcg": 12, "zinc_mg": 1.2, "potassium_mg": 680, "calcium_mg": 180, "phosphorus_mg": 95, "copper_mg": 0.3, "manganese_mg": 0.8 }
+      },
+      "tags": ["snack", "iodine-rich", "low-calorie", "umami"]
+    },
+    {
+      "mealId": "chia_pudding_coconut",
+      "name": "Chia Seed Pudding with Coconut",
+      "description": "Omega-3 rich chia with coconut milk and mango",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min (+ 4h chill)",
+      "cookTime": "0 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 10, "carbohydrates_g": 28, "fat_g": 20, "fiber_g": 12, "omega3_g": 5.2 },
+        "vitamins": { "vitaminA_mcg": 680, "vitaminD_IU": 0, "vitaminE_mg": 2.8, "vitaminK_mcg": 12, "vitaminC_mg": 45, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.3, "folate_B9_mcg": 35, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.1, "niacin_B3_mg": 1.8, "choline_mg": 48 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 125, "selenium_mcg": 18, "zinc_mg": 1.5, "potassium_mg": 420, "calcium_mg": 285, "phosphorus_mg": 320, "copper_mg": 0.4, "manganese_mg": 1.2 }
+      },
+      "tags": ["breakfast", "make-ahead", "omega-3-rich", "vegan"]
+    },
+    {
+      "mealId": "buckwheat_pancakes_blueberries",
+      "name": "Buckwheat Pancakes with Wild Blueberries",
+      "description": "Gluten-free buckwheat pancakes with antioxidant berries",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 410,
+        "macronutrients": { "protein_g": 16, "carbohydrates_g": 58, "fat_g": 14, "fiber_g": 8, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 285, "vitaminD_IU": 85, "vitaminE_mg": 2.5, "vitaminK_mcg": 25, "vitaminC_mg": 22, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 0.5, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 4.2, "choline_mg": 125 },
+        "minerals": { "iron_mg": 3.8, "magnesium_mg": 145, "selenium_mcg": 28, "zinc_mg": 2.2, "potassium_mg": 480, "calcium_mg": 95, "phosphorus_mg": 380, "copper_mg": 0.6, "manganese_mg": 1.8 }
+      },
+      "tags": ["breakfast", "gluten-free", "antioxidant", "comfort-food"]
+    },
+    {
+      "mealId": "smoked_trout_cream_cheese",
+      "name": "Smoked Trout with Herb Cream Cheese",
+      "description": "Omega-3 rich trout on whole grain crackers",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 360,
+        "macronutrients": { "protein_g": 32, "carbohydrates_g": 18, "fat_g": 18, "fiber_g": 3, "omega3_g": 2.8 },
+        "vitamins": { "vitaminA_mcg": 420, "vitaminD_IU": 485, "vitaminE_mg": 3.2, "vitaminK_mcg": 18, "vitaminC_mg": 8, "vitaminB12_mcg": 8.5, "vitaminB6_mg": 0.6, "folate_B9_mcg": 42, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.5, "niacin_B3_mg": 12, "choline_mg": 195 },
+        "minerals": { "iron_mg": 2.2, "magnesium_mg": 68, "selenium_mcg": 78, "zinc_mg": 1.8, "potassium_mg": 680, "calcium_mg": 125, "phosphorus_mg": 420, "copper_mg": 0.2, "manganese_mg": 0.4 }
+      },
+      "tags": ["breakfast", "no-cook", "omega-3-rich", "quick"]
+    },
+    {
+      "mealId": "turkey_sausage_peppers",
+      "name": "Pasture-Raised Turkey Sausage with Peppers",
+      "description": "Lean turkey sausage with colorful bell peppers",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 38, "carbohydrates_g": 15, "fat_g": 18, "fiber_g": 4, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 45, "vitaminE_mg": 3.8, "vitaminK_mcg": 28, "vitaminC_mg": 185, "vitaminB12_mcg": 1.2, "vitaminB6_mg": 0.9, "folate_B9_mcg": 58, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 14, "choline_mg": 165 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 58, "selenium_mcg": 68, "zinc_mg": 4.2, "potassium_mg": 720, "calcium_mg": 48, "phosphorus_mg": 380, "copper_mg": 0.2, "manganese_mg": 0.3 }
+      },
+      "tags": ["breakfast", "high-protein", "colorful", "pasture-raised"]
+    },
+    {
+      "mealId": "cottage_cheese_tomatoes_basil",
+      "name": "Organic Cottage Cheese with Heirloom Tomatoes",
+      "description": "High-protein cottage cheese with fresh basil",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 240,
+        "macronutrients": { "protein_g": 28, "carbohydrates_g": 12, "fat_g": 8, "fiber_g": 2, "omega3_g": 0.2 },
+        "vitamins": { "vitaminA_mcg": 680, "vitaminD_IU": 28, "vitaminE_mg": 1.8, "vitaminK_mcg": 42, "vitaminC_mg": 28, "vitaminB12_mcg": 1.5, "vitaminB6_mg": 0.3, "folate_B9_mcg": 38, "thiamin_B1_mg": 0.1, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 1.2, "choline_mg": 145 },
+        "minerals": { "iron_mg": 1.2, "magnesium_mg": 42, "selenium_mcg": 32, "zinc_mg": 1.8, "potassium_mg": 520, "calcium_mg": 225, "phosphorus_mg": 380, "copper_mg": 0.2, "manganese_mg": 0.2 }
+      },
+      "tags": ["breakfast", "high-protein", "no-cook", "low-calorie"]
+    },
+    {
+      "mealId": "quinoa_veggie_bowl",
+      "name": "Ancient Grain Quinoa Bowl with Roasted Vegetables",
+      "description": "Complete protein quinoa with seasonal vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "30 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 16, "carbohydrates_g": 58, "fat_g": 14, "fiber_g": 10, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 1580, "vitaminD_IU": 0, "vitaminE_mg": 4.8, "vitaminK_mcg": 185, "vitaminC_mg": 95, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.6, "folate_B9_mcg": 125, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 2.8, "choline_mg": 85 },
+        "minerals": { "iron_mg": 4.8, "magnesium_mg": 165, "selenium_mcg": 28, "zinc_mg": 2.8, "potassium_mg": 1120, "calcium_mg": 125, "phosphorus_mg": 420, "copper_mg": 0.6, "manganese_mg": 1.8 }
+      },
+      "tags": ["lunch", "plant-based", "complete-protein", "fiber-rich"]
+    },
+    {
+      "mealId": "wild_caught_tuna_salad",
+      "name": "Wild-Caught Tuna Nicoise Salad",
+      "description": "Mediterranean tuna with olives, eggs, and vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "10 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 22, "fat_g": 22, "fiber_g": 6, "omega3_g": 2.8 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 285, "vitaminE_mg": 5.8, "vitaminK_mcg": 125, "vitaminC_mg": 45, "vitaminB12_mcg": 6.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 22, "choline_mg": 385 },
+        "minerals": { "iron_mg": 4.2, "magnesium_mg": 88, "selenium_mcg": 125, "zinc_mg": 2.2, "potassium_mg": 980, "calcium_mg": 125, "phosphorus_mg": 520, "copper_mg": 0.4, "manganese_mg": 0.5 }
+      },
+      "tags": ["lunch", "Mediterranean", "omega-3-rich", "colorful"]
+    },
+    {
+      "mealId": "duck_confit_lentils",
+      "name": "Duck Confit with French Green Lentils",
+      "description": "Rich duck with protein-packed lentils",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "35 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 620,
+        "macronutrients": { "protein_g": 52, "carbohydrates_g": 38, "fat_g": 28, "fiber_g": 12, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 380, "vitaminD_IU": 85, "vitaminE_mg": 2.2, "vitaminK_mcg": 48, "vitaminC_mg": 18, "vitaminB12_mcg": 1.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 285, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 16, "choline_mg": 225 },
+        "minerals": { "iron_mg": 8.5, "magnesium_mg": 125, "selenium_mcg": 68, "zinc_mg": 6.2, "potassium_mg": 980, "calcium_mg": 85, "phosphorus_mg": 580, "copper_mg": 0.8, "manganese_mg": 1.2 }
+      },
+      "tags": ["lunch", "French-cuisine", "iron-rich", "gourmet"]
+    },
+    {
+      "mealId": "chicken_bone_broth_veggies",
+      "name": "Chicken Bone Broth Soup with Vegetables",
+      "description": "Collagen-rich bone broth with chicken and vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 38, "carbohydrates_g": 18, "fat_g": 10, "fiber_g": 4, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 45, "vitaminE_mg": 1.8, "vitaminK_mcg": 95, "vitaminC_mg": 38, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 0.9, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 18, "choline_mg": 195 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 58, "selenium_mcg": 48, "zinc_mg": 3.2, "potassium_mg": 820, "calcium_mg": 125, "phosphorus_mg": 380, "copper_mg": 0.3, "manganese_mg": 0.4 }
+      },
+      "tags": ["lunch", "gut-healing", "collagen-rich", "warming"]
+    },
+    {
+      "mealId": "turkey_avocado_wrap",
+      "name": "Heritage Turkey and Avocado Collard Wrap",
+      "description": "Lean turkey wrapped in nutrient-dense collard greens",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 42, "carbohydrates_g": 15, "fat_g": 18, "fiber_g": 8, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 2850, "vitaminD_IU": 28, "vitaminE_mg": 4.2, "vitaminK_mcg": 685, "vitaminC_mg": 85, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 0.9, "folate_B9_mcg": 185, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 16, "choline_mg": 145 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 85, "selenium_mcg": 58, "zinc_mg": 4.2, "potassium_mg": 920, "calcium_mg": 285, "phosphorus_mg": 380, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["lunch", "low-carb", "no-cook", "portable"]
+    },
+    {
+      "mealId": "grass_fed_ribeye_chimichurri",
+      "name": "Grass-Fed Ribeye with Chimichurri",
+      "description": "Marbled ribeye with fresh herb sauce",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 680,
+        "macronutrients": { "protein_g": 58, "carbohydrates_g": 8, "fat_g": 48, "fiber_g": 2, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 285, "vitaminD_IU": 28, "vitaminE_mg": 3.8, "vitaminK_mcg": 185, "vitaminC_mg": 42, "vitaminB12_mcg": 4.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 18, "choline_mg": 215 },
+        "minerals": { "iron_mg": 5.8, "magnesium_mg": 72, "selenium_mcg": 58, "zinc_mg": 12.5, "potassium_mg": 820, "calcium_mg": 68, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.2 }
+      },
+      "tags": ["dinner", "high-protein", "grass-fed", "argentinian"]
+    },
+    {
+      "mealId": "halibut_asparagus_lemon",
+      "name": "Wild Halibut with Asparagus and Lemon",
+      "description": "Delicate halibut with spring asparagus",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 52, "carbohydrates_g": 12, "fat_g": 18, "fiber_g": 5, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 680, "vitaminD_IU": 380, "vitaminE_mg": 4.8, "vitaminK_mcg": 185, "vitaminC_mg": 38, "vitaminB12_mcg": 1.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 185, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 14, "choline_mg": 185 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 95, "selenium_mcg": 88, "zinc_mg": 1.8, "potassium_mg": 1180, "calcium_mg": 125, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.5 }
+      },
+      "tags": ["dinner", "seafood", "light", "spring"]
+    },
+    {
+      "mealId": "wild_boar_ragu",
+      "name": "Wild Boar Ragu with Pappardelle",
+      "description": "Slow-cooked wild boar with ancient grain pasta",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "20 min",
+      "cookTime": "120 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 720,
+        "macronutrients": { "protein_g": 62, "carbohydrates_g": 58, "fat_g": 28, "fiber_g": 6, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 45, "vitaminE_mg": 2.8, "vitaminK_mcg": 68, "vitaminC_mg": 28, "vitaminB12_mcg": 2.8, "vitaminB6_mg": 1.5, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.8, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 22, "choline_mg": 225 },
+        "minerals": { "iron_mg": 6.8, "magnesium_mg": 98, "selenium_mcg": 68, "zinc_mg": 8.5, "potassium_mg": 1180, "calcium_mg": 125, "phosphorus_mg": 580, "copper_mg": 0.5, "manganese_mg": 0.8 }
+      },
+      "tags": ["dinner", "wild-game", "Italian", "slow-cooked"]
+    },
+    {
+      "mealId": "scallops_butternut_squash",
+      "name": "Seared Scallops with Butternut Squash Puree",
+      "description": "Sweet scallops with creamy squash",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 38, "carbohydrates_g": 32, "fat_g": 16, "fiber_g": 5, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 2850, "vitaminD_IU": 28, "vitaminE_mg": 3.2, "vitaminK_mcg": 28, "vitaminC_mg": 35, "vitaminB12_mcg": 2.2, "vitaminB6_mg": 0.6, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 3.8, "choline_mg": 165 },
+        "minerals": { "iron_mg": 2.2, "magnesium_mg": 85, "selenium_mcg": 68, "zinc_mg": 2.8, "potassium_mg": 920, "calcium_mg": 95, "phosphorus_mg": 420, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["dinner", "seafood", "elegant", "seasonal"]
+    },
+    {
+      "mealId": "elk_medallions_juniper",
+      "name": "Elk Medallions with Juniper Berry Sauce",
+      "description": "Lean elk with aromatic juniper and root vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 62, "carbohydrates_g": 18, "fat_g": 18, "fiber_g": 4, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 45, "vitaminE_mg": 1.8, "vitaminK_mcg": 68, "vitaminC_mg": 28, "vitaminB12_mcg": 3.8, "vitaminB6_mg": 1.8, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.9, "riboflavin_B2_mg": 1.2, "niacin_B3_mg": 24, "choline_mg": 215 },
+        "minerals": { "iron_mg": 9.2, "magnesium_mg": 78, "selenium_mcg": 68, "zinc_mg": 9.5, "potassium_mg": 980, "calcium_mg": 58, "phosphorus_mg": 620, "copper_mg": 0.6, "manganese_mg": 0.4 }
+      },
+      "tags": ["dinner", "wild-game", "lean", "gourmet"]
+    },
+    {
+      "mealId": "grass_fed_yogurt_granola",
+      "name": "Grass-Fed Yogurt with Sprouted Granola",
+      "description": "Probiotic yogurt with nutrient-dense granola",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 340,
+        "macronutrients": { "protein_g": 18, "carbohydrates_g": 38, "fat_g": 14, "fiber_g": 6, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 285, "vitaminD_IU": 125, "vitaminE_mg": 3.8, "vitaminK_mcg": 12, "vitaminC_mg": 8, "vitaminB12_mcg": 1.2, "vitaminB6_mg": 0.3, "folate_B9_mcg": 45, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 2.2, "choline_mg": 125 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 98, "selenium_mcg": 28, "zinc_mg": 2.8, "potassium_mg": 520, "calcium_mg": 420, "phosphorus_mg": 380, "copper_mg": 0.4, "manganese_mg": 1.5 }
+      },
+      "tags": ["snack", "probiotic", "make-ahead", "portable"]
+    },
+    {
+      "mealId": "sardine_crackers_mustard",
+      "name": "Wild Sardines on Seed Crackers",
+      "description": "Omega-3 rich sardines with whole grain crackers",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 28, "carbohydrates_g": 18, "fat_g": 16, "fiber_g": 4, "omega3_g": 3.2 },
+        "vitamins": { "vitaminA_mcg": 185, "vitaminD_IU": 280, "vitaminE_mg": 2.8, "vitaminK_mcg": 12, "vitaminC_mg": 2, "vitaminB12_mcg": 8.9, "vitaminB6_mg": 0.4, "folate_B9_mcg": 28, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.5, "niacin_B3_mg": 10, "choline_mg": 185 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 78, "selenium_mcg": 82, "zinc_mg": 2.2, "potassium_mg": 480, "calcium_mg": 382, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.4 }
+      },
+      "tags": ["snack", "omega-3-rich", "no-cook", "calcium-rich"]
+    },
+    {
+      "mealId": "almond_butter_celery",
+      "name": "Raw Almond Butter with Celery Sticks",
+      "description": "Creamy almond butter with crunchy celery",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 280,
+        "macronutrients": { "protein_g": 10, "carbohydrates_g": 12, "fat_g": 22, "fiber_g": 6, "omega3_g": 0.2 },
+        "vitamins": { "vitaminA_mcg": 185, "vitaminD_IU": 0, "vitaminE_mg": 8.2, "vitaminK_mcg": 28, "vitaminC_mg": 12, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.3, "folate_B9_mcg": 38, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 1.8, "choline_mg": 68 },
+        "minerals": { "iron_mg": 1.8, "magnesium_mg": 125, "selenium_mcg": 12, "zinc_mg": 1.5, "potassium_mg": 420, "calcium_mg": 145, "phosphorus_mg": 220, "copper_mg": 0.4, "manganese_mg": 0.9 }
+      },
+      "tags": ["snack", "no-cook", "portable", "vitamin-e-rich"]
+    },
+    {
+      "mealId": "sweet_potato_toast_avocado",
+      "name": "Sweet Potato Toast with Avocado",
+      "description": "Roasted sweet potato slices topped with mashed avocado",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 6, "carbohydrates_g": 38, "fat_g": 16, "fiber_g": 10, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 2850, "vitaminD_IU": 0, "vitaminE_mg": 4.2, "vitaminK_mcg": 28, "vitaminC_mg": 28, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.6, "folate_B9_mcg": 85, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 2.8, "choline_mg": 48 },
+        "minerals": { "iron_mg": 1.8, "magnesium_mg": 68, "selenium_mcg": 8, "zinc_mg": 0.9, "potassium_mg": 920, "calcium_mg": 58, "phosphorus_mg": 125, "copper_mg": 0.4, "manganese_mg": 0.8 }
+      },
+      "tags": ["breakfast", "vegan", "gluten-free", "trendy"]
+    },
+    {
+      "mealId": "shakshuka_feta",
+      "name": "Shakshuka with Sheep's Milk Feta",
+      "description": "Poached eggs in spiced tomato sauce with feta",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 24, "carbohydrates_g": 22, "fat_g": 26, "fiber_g": 6, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 180, "vitaminE_mg": 5.2, "vitaminK_mcg": 68, "vitaminC_mg": 85, "vitaminB12_mcg": 2.2, "vitaminB6_mg": 0.6, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 3.8, "choline_mg": 385 },
+        "minerals": { "iron_mg": 4.2, "magnesium_mg": 78, "selenium_mcg": 52, "zinc_mg": 2.8, "potassium_mg": 820, "calcium_mg": 285, "phosphorus_mg": 380, "copper_mg": 0.4, "manganese_mg": 0.6 }
+      },
+      "tags": ["breakfast", "Middle-Eastern", "warming", "colorful"]
+    },
+    {
+      "mealId": "coconut_flour_waffles",
+      "name": "Coconut Flour Waffles with Berries",
+      "description": "Grain-free waffles with mixed berries",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 14, "carbohydrates_g": 32, "fat_g": 22, "fiber_g": 12, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 285, "vitaminD_IU": 165, "vitaminE_mg": 2.8, "vitaminK_mcg": 18, "vitaminC_mg": 38, "vitaminB12_mcg": 1.5, "vitaminB6_mg": 0.4, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 2.2, "choline_mg": 285 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 95, "selenium_mcg": 38, "zinc_mg": 2.2, "potassium_mg": 480, "calcium_mg": 125, "phosphorus_mg": 280, "copper_mg": 0.3, "manganese_mg": 1.2 }
+      },
+      "tags": ["breakfast", "grain-free", "paleo", "family-friendly"]
+    },
+    {
+      "mealId": "smoked_salmon_bagel",
+      "name": "Wild Smoked Salmon on Sprouted Grain Bagel",
+      "description": "Classic lox with cream cheese and capers",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 32, "carbohydrates_g": 45, "fat_g": 18, "fiber_g": 6, "omega3_g": 2.8 },
+        "vitamins": { "vitaminA_mcg": 285, "vitaminD_IU": 485, "vitaminE_mg": 3.2, "vitaminK_mcg": 12, "vitaminC_mg": 8, "vitaminB12_mcg": 6.8, "vitaminB6_mg": 0.6, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.5, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 12, "choline_mg": 225 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 78, "selenium_mcg": 82, "zinc_mg": 2.2, "potassium_mg": 720, "calcium_mg": 145, "phosphorus_mg": 480, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["breakfast", "classic", "omega-3-rich", "no-cook"]
+    },
+    {
+      "mealId": "mushroom_spinach_frittata",
+      "name": "Wild Mushroom and Spinach Frittata",
+      "description": "Baked egg dish with foraged mushrooms",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "25 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 350,
+        "macronutrients": { "protein_g": 28, "carbohydrates_g": 12, "fat_g": 22, "fiber_g": 3, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 1820, "vitaminD_IU": 285, "vitaminE_mg": 3.8, "vitaminK_mcg": 285, "vitaminC_mg": 22, "vitaminB12_mcg": 2.2, "vitaminB6_mg": 0.5, "folate_B9_mcg": 125, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 1.2, "niacin_B3_mg": 6.8, "choline_mg": 485 },
+        "minerals": { "iron_mg": 4.2, "magnesium_mg": 68, "selenium_mcg": 68, "zinc_mg": 3.2, "potassium_mg": 720, "calcium_mg": 185, "phosphorus_mg": 420, "copper_mg": 0.6, "manganese_mg": 0.5 }
+      },
+      "tags": ["breakfast", "make-ahead", "vegetarian", "vitamin-d-rich"]
+    },
+    {
+      "mealId": "tempeh_bacon_sandwich",
+      "name": "Tempeh Bacon BLT on Sourdough",
+      "description": "Fermented tempeh with tomato and lettuce",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "10 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 24, "carbohydrates_g": 42, "fat_g": 18, "fiber_g": 8, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 680, "vitaminD_IU": 0, "vitaminE_mg": 2.8, "vitaminK_mcg": 68, "vitaminC_mg": 28, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.4, "folate_B9_mcg": 85, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 3.8, "choline_mg": 95 },
+        "minerals": { "iron_mg": 3.8, "magnesium_mg": 125, "selenium_mcg": 22, "zinc_mg": 2.2, "potassium_mg": 620, "calcium_mg": 185, "phosphorus_mg": 380, "copper_mg": 0.6, "manganese_mg": 1.8 }
+      },
+      "tags": ["lunch", "plant-based", "fermented", "comfort-food"]
+    },
+    {
+      "mealId": "grass_fed_meatballs_zoodles",
+      "name": "Grass-Fed Beef Meatballs with Zucchini Noodles",
+      "description": "Italian-style meatballs with spiralized vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 42, "carbohydrates_g": 18, "fat_g": 28, "fiber_g": 5, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 28, "vitaminE_mg": 2.8, "vitaminK_mcg": 85, "vitaminC_mg": 58, "vitaminB12_mcg": 3.2, "vitaminB6_mg": 0.8, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.5, "niacin_B3_mg": 12, "choline_mg": 185 },
+        "minerals": { "iron_mg": 5.8, "magnesium_mg": 85, "selenium_mcg": 48, "zinc_mg": 8.5, "potassium_mg": 980, "calcium_mg": 125, "phosphorus_mg": 480, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["lunch", "Italian", "low-carb", "family-friendly"]
+    },
+    {
+      "mealId": "wild_salmon_poke_bowl",
+      "name": "Wild Salmon Poke Bowl",
+      "description": "Hawaiian-style raw salmon with rice and vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": { "protein_g": 42, "carbohydrates_g": 48, "fat_g": 18, "fiber_g": 6, "omega3_g": 3.2 },
+        "vitamins": { "vitaminA_mcg": 680, "vitaminD_IU": 585, "vitaminE_mg": 4.8, "vitaminK_mcg": 95, "vitaminC_mg": 42, "vitaminB12_mcg": 7.5, "vitaminB6_mg": 1.2, "folate_B9_mcg": 85, "thiamin_B1_mg": 0.5, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 16, "choline_mg": 195 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 98, "selenium_mcg": 92, "zinc_mg": 2.2, "potassium_mg": 1080, "calcium_mg": 85, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.8 }
+      },
+      "tags": ["lunch", "Hawaiian", "omega-3-rich", "fresh"]
+    },
+    {
+      "mealId": "lentil_walnut_tacos",
+      "name": "Lentil and Walnut Tacos",
+      "description": "Plant-based tacos with sprouted corn tortillas",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 22, "carbohydrates_g": 52, "fat_g": 20, "fiber_g": 16, "omega3_g": 2.8 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 0, "vitaminE_mg": 3.2, "vitaminK_mcg": 48, "vitaminC_mg": 28, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.6, "folate_B9_mcg": 285, "thiamin_B1_mg": 0.5, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 3.8, "choline_mg": 95 },
+        "minerals": { "iron_mg": 6.8, "magnesium_mg": 145, "selenium_mcg": 28, "zinc_mg": 3.8, "potassium_mg": 820, "calcium_mg": 125, "phosphorus_mg": 420, "copper_mg": 0.8, "manganese_mg": 2.2 }
+      },
+      "tags": ["lunch", "plant-based", "fiber-rich", "Mexican"]
+    },
+    {
+      "mealId": "chicken_caesar_kale",
+      "name": "Pastured Chicken Caesar with Kale",
+      "description": "Classic Caesar with nutrient-dense kale",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 22, "fat_g": 28, "fiber_g": 6, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 2850, "vitaminD_IU": 45, "vitaminE_mg": 3.8, "vitaminK_mcg": 685, "vitaminC_mg": 125, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 18, "choline_mg": 185 },
+        "minerals": { "iron_mg": 3.8, "magnesium_mg": 85, "selenium_mcg": 58, "zinc_mg": 4.2, "potassium_mg": 920, "calcium_mg": 385, "phosphorus_mg": 480, "copper_mg": 0.4, "manganese_mg": 0.8 }
+      },
+      "tags": ["lunch", "classic", "calcium-rich", "high-protein"]
+    },
+    {
+      "mealId": "rainbow_trout_almonds",
+      "name": "Rainbow Trout Almondine",
+      "description": "Pan-fried trout with toasted almonds and lemon",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 12, "fat_g": 32, "fiber_g": 4, "omega3_g": 2.8 },
+        "vitamins": { "vitaminA_mcg": 285, "vitaminD_IU": 685, "vitaminE_mg": 8.2, "vitaminK_mcg": 28, "vitaminC_mg": 18, "vitaminB12_mcg": 5.2, "vitaminB6_mg": 0.9, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.5, "niacin_B3_mg": 14, "choline_mg": 195 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 125, "selenium_mcg": 82, "zinc_mg": 2.2, "potassium_mg": 920, "calcium_mg": 145, "phosphorus_mg": 580, "copper_mg": 0.4, "manganese_mg": 0.8 }
+      },
+      "tags": ["dinner", "elegant", "omega-3-rich", "French"]
+    },
+    {
+      "mealId": "braised_short_ribs",
+      "name": "Grass-Fed Beef Short Ribs",
+      "description": "Slow-braised short ribs with red wine and herbs",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "20 min",
+      "cookTime": "180 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 720,
+        "macronutrients": { "protein_g": 58, "carbohydrates_g": 18, "fat_g": 48, "fiber_g": 4, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 28, "vitaminE_mg": 2.2, "vitaminK_mcg": 68, "vitaminC_mg": 28, "vitaminB12_mcg": 4.2, "vitaminB6_mg": 0.9, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 14, "choline_mg": 215 },
+        "minerals": { "iron_mg": 6.8, "magnesium_mg": 68, "selenium_mcg": 52, "zinc_mg": 12.5, "potassium_mg": 820, "calcium_mg": 85, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.4 }
+      },
+      "tags": ["dinner", "comfort-food", "slow-cooked", "special-occasion"]
+    },
+    {
+      "mealId": "mahi_mahi_mango_salsa",
+      "name": "Grilled Mahi Mahi with Mango Salsa",
+      "description": "Lean white fish with tropical fruit salsa",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "10 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 42, "carbohydrates_g": 28, "fat_g": 10, "fiber_g": 4, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 185, "vitaminE_mg": 2.8, "vitaminK_mcg": 28, "vitaminC_mg": 68, "vitaminB12_mcg": 3.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 18, "choline_mg": 165 },
+        "minerals": { "iron_mg": 2.2, "magnesium_mg": 78, "selenium_mcg": 88, "zinc_mg": 1.8, "potassium_mg": 1080, "calcium_mg": 58, "phosphorus_mg": 480, "copper_mg": 0.2, "manganese_mg": 0.4 }
+      },
+      "tags": ["dinner", "tropical", "light", "colorful"]
+    },
+    {
+      "mealId": "duck_breast_cherry_sauce",
+      "name": "Duck Breast with Tart Cherry Sauce",
+      "description": "Pan-seared duck with antioxidant cherry reduction",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "25 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 580,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 22, "fat_g": 32, "fiber_g": 3, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 420, "vitaminD_IU": 85, "vitaminE_mg": 2.2, "vitaminK_mcg": 28, "vitaminC_mg": 12, "vitaminB12_mcg": 1.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 38, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 16, "choline_mg": 225 },
+        "minerals": { "iron_mg": 5.8, "magnesium_mg": 68, "selenium_mcg": 58, "zinc_mg": 5.2, "potassium_mg": 720, "calcium_mg": 48, "phosphorus_mg": 420, "copper_mg": 0.5, "manganese_mg": 0.3 }
+      },
+      "tags": ["dinner", "gourmet", "antioxidant", "French"]
+    },
+    {
+      "mealId": "lobster_butter_asparagus",
+      "name": "Maine Lobster Tail with Clarified Butter",
+      "description": "Steamed lobster with grass-fed butter and asparagus",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 38, "carbohydrates_g": 12, "fat_g": 24, "fiber_g": 5, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 185, "vitaminE_mg": 3.8, "vitaminK_mcg": 185, "vitaminC_mg": 28, "vitaminB12_mcg": 4.2, "vitaminB6_mg": 0.6, "folate_B9_mcg": 185, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 4.8, "choline_mg": 185 },
+        "minerals": { "iron_mg": 2.2, "magnesium_mg": 85, "selenium_mcg": 95, "zinc_mg": 5.8, "potassium_mg": 820, "calcium_mg": 125, "phosphorus_mg": 380, "copper_mg": 2.8, "manganese_mg": 0.5 }
+      },
+      "tags": ["dinner", "luxurious", "special-occasion", "seafood"]
+    },
+    {
+      "mealId": "pumpkin_seeds_dark_chocolate",
+      "name": "Sprouted Pumpkin Seeds with Dark Chocolate",
+      "description": "Zinc-rich pumpkin seeds with 85% cacao",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 14, "carbohydrates_g": 22, "fat_g": 22, "fiber_g": 8, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 12, "vitaminD_IU": 0, "vitaminE_mg": 3.8, "vitaminK_mcg": 12, "vitaminC_mg": 2, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.3, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 2.8, "choline_mg": 68 },
+        "minerals": { "iron_mg": 6.8, "magnesium_mg": 285, "selenium_mcg": 12, "zinc_mg": 8.5, "potassium_mg": 620, "calcium_mg": 85, "phosphorus_mg": 680, "copper_mg": 1.5, "manganese_mg": 2.2 }
+      },
+      "tags": ["snack", "zinc-rich", "magnesium-rich", "antioxidant"]
+    },
+    {
+      "mealId": "kombucha_ginger",
+      "name": "Homemade Ginger Kombucha",
+      "description": "Probiotic fermented tea with fresh ginger",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min (+ 7 days fermentation)",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 45,
+        "macronutrients": { "protein_g": 0, "carbohydrates_g": 11, "fat_g": 0, "fiber_g": 0, "omega3_g": 0 },
+        "vitamins": { "vitaminA_mcg": 0, "vitaminD_IU": 0, "vitaminE_mg": 0, "vitaminK_mcg": 0, "vitaminC_mg": 8, "vitaminB12_mcg": 0.3, "vitaminB6_mg": 0.1, "folate_B9_mcg": 12, "thiamin_B1_mg": 0.1, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 0.5, "choline_mg": 8 },
+        "minerals": { "iron_mg": 0.3, "magnesium_mg": 8, "selenium_mcg": 2, "zinc_mg": 0.2, "potassium_mg": 85, "calcium_mg": 12, "phosphorus_mg": 18, "copper_mg": 0.1, "manganese_mg": 0.4 }
+      },
+      "tags": ["snack", "probiotic", "fermented", "low-calorie"]
+    },
+    {
+      "mealId": "beef_jerky_grassfed",
+      "name": "Grass-Fed Beef Jerky",
+      "description": "Protein-rich dried beef with no additives",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "0 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 180,
+        "macronutrients": { "protein_g": 32, "carbohydrates_g": 6, "fat_g": 4, "fiber_g": 0, "omega3_g": 0.3 },
+        "vitamins": { "vitaminA_mcg": 0, "vitaminD_IU": 0, "vitaminE_mg": 0.5, "vitaminK_mcg": 2, "vitaminC_mg": 0, "vitaminB12_mcg": 2.8, "vitaminB6_mg": 0.6, "folate_B9_mcg": 12, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 8, "choline_mg": 95 },
+        "minerals": { "iron_mg": 4.2, "magnesium_mg": 42, "selenium_mcg": 28, "zinc_mg": 6.8, "potassium_mg": 420, "calcium_mg": 28, "phosphorus_mg": 280, "copper_mg": 0.2, "manganese_mg": 0.1 }
+      },
+      "tags": ["snack", "portable", "high-protein", "zero-prep"]
+    },
+    {
+      "mealId": "acai_bowl_granola",
+      "name": "Acai Berry Bowl with Granola",
+      "description": "Antioxidant-rich acai with toppings",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 12, "carbohydrates_g": 58, "fat_g": 16, "fiber_g": 10, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 680, "vitaminD_IU": 0, "vitaminE_mg": 5.2, "vitaminK_mcg": 18, "vitaminC_mg": 85, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.4, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 2.2, "choline_mg": 48 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 125, "selenium_mcg": 18, "zinc_mg": 1.8, "potassium_mg": 720, "calcium_mg": 185, "phosphorus_mg": 280, "copper_mg": 0.6, "manganese_mg": 1.8 }
+      },
+      "tags": ["breakfast", "antioxidant", "colorful", "trendy"]
+    },
+    {
+      "mealId": "steel_cut_oats_nuts",
+      "name": "Steel Cut Oats with Mixed Nuts",
+      "description": "Slow-cooked oats with walnuts and almonds",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "30 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 18, "carbohydrates_g": 52, "fat_g": 22, "fiber_g": 10, "omega3_g": 2.8 },
+        "vitamins": { "vitaminA_mcg": 28, "vitaminD_IU": 0, "vitaminE_mg": 6.8, "vitaminK_mcg": 12, "vitaminC_mg": 2, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.5, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 2.8, "choline_mg": 68 },
+        "minerals": { "iron_mg": 4.2, "magnesium_mg": 185, "selenium_mcg": 28, "zinc_mg": 3.2, "potassium_mg": 520, "calcium_mg": 145, "phosphorus_mg": 420, "copper_mg": 0.8, "manganese_mg": 3.2 }
+      },
+      "tags": ["breakfast", "warming", "fiber-rich", "budget-friendly"]
+    },
+    {
+      "mealId": "huevos_rancheros",
+      "name": "Huevos Rancheros with Black Beans",
+      "description": "Mexican eggs with beans and salsa",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 28, "carbohydrates_g": 42, "fat_g": 22, "fiber_g": 12, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 180, "vitaminE_mg": 3.8, "vitaminK_mcg": 48, "vitaminC_mg": 42, "vitaminB12_mcg": 2.2, "vitaminB6_mg": 0.6, "folate_B9_mcg": 185, "thiamin_B1_mg": 0.5, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 3.8, "choline_mg": 385 },
+        "minerals": { "iron_mg": 5.2, "magnesium_mg": 125, "selenium_mcg": 52, "zinc_mg": 3.2, "potassium_mg": 920, "calcium_mg": 145, "phosphorus_mg": 420, "copper_mg": 0.6, "manganese_mg": 0.9 }
+      },
+      "tags": ["breakfast", "Mexican", "fiber-rich", "hearty"]
+    },
+    {
+      "mealId": "protein_smoothie_spinach",
+      "name": "Green Protein Smoothie",
+      "description": "Grass-fed whey with spinach and berries",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 32, "carbohydrates_g": 28, "fat_g": 8, "fiber_g": 6, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 85, "vitaminE_mg": 2.8, "vitaminK_mcg": 185, "vitaminC_mg": 68, "vitaminB12_mcg": 1.5, "vitaminB6_mg": 0.5, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 2.2, "choline_mg": 125 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 95, "selenium_mcg": 28, "zinc_mg": 2.2, "potassium_mg": 720, "calcium_mg": 385, "phosphorus_mg": 320, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["breakfast", "quick", "high-protein", "on-the-go"]
+    },
+    {
+      "mealId": "veggie_omelet_goat_cheese",
+      "name": "Vegetable Omelet with Goat Cheese",
+      "description": "Three-egg omelet with seasonal vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "10 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 28, "carbohydrates_g": 12, "fat_g": 26, "fiber_g": 4, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 1820, "vitaminD_IU": 180, "vitaminE_mg": 4.2, "vitaminK_mcg": 185, "vitaminC_mg": 68, "vitaminB12_mcg": 2.2, "vitaminB6_mg": 0.6, "folate_B9_mcg": 125, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 1.2, "niacin_B3_mg": 3.2, "choline_mg": 520 },
+        "minerals": { "iron_mg": 3.8, "magnesium_mg": 68, "selenium_mcg": 68, "zinc_mg": 3.2, "potassium_mg": 620, "calcium_mg": 185, "phosphorus_mg": 420, "copper_mg": 0.3, "manganese_mg": 0.4 }
+      },
+      "tags": ["breakfast", "vegetarian", "nutrient-dense", "classic"]
+    },
+    {
+      "mealId": "chicken_avocado_salad",
+      "name": "Pastured Chicken and Avocado Salad",
+      "description": "Grilled chicken with creamy avocado dressing",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 18, "fat_g": 28, "fiber_g": 10, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 1820, "vitaminD_IU": 45, "vitaminE_mg": 5.2, "vitaminK_mcg": 285, "vitaminC_mg": 58, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 125, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 18, "choline_mg": 185 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 98, "selenium_mcg": 58, "zinc_mg": 4.2, "potassium_mg": 1180, "calcium_mg": 125, "phosphorus_mg": 480, "copper_mg": 0.4, "manganese_mg": 0.6 }
+      },
+      "tags": ["lunch", "high-protein", "fresh", "low-carb"]
+    },
+    {
+      "mealId": "mediterranean_chickpea_salad",
+      "name": "Mediterranean Chickpea Salad",
+      "description": "Protein-rich chickpeas with olives and feta",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "0 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 18, "carbohydrates_g": 48, "fat_g": 18, "fiber_g": 14, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 680, "vitaminD_IU": 0, "vitaminE_mg": 4.8, "vitaminK_mcg": 68, "vitaminC_mg": 42, "vitaminB12_mcg": 0.3, "vitaminB6_mg": 0.6, "folate_B9_mcg": 285, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 2.8, "choline_mg": 95 },
+        "minerals": { "iron_mg": 4.8, "magnesium_mg": 125, "selenium_mcg": 28, "zinc_mg": 2.8, "potassium_mg": 720, "calcium_mg": 185, "phosphorus_mg": 320, "copper_mg": 0.6, "manganese_mg": 1.8 }
+      },
+      "tags": ["lunch", "plant-based", "Mediterranean", "fiber-rich"]
+    },
+    {
+      "mealId": "steak_blue_cheese_salad",
+      "name": "Grass-Fed Steak Salad with Blue Cheese",
+      "description": "Sliced ribeye over mixed greens with blue cheese",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "15 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 620,
+        "macronutrients": { "protein_g": 52, "carbohydrates_g": 15, "fat_g": 42, "fiber_g": 6, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 1820, "vitaminD_IU": 28, "vitaminE_mg": 3.8, "vitaminK_mcg": 285, "vitaminC_mg": 48, "vitaminB12_mcg": 4.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 18, "choline_mg": 215 },
+        "minerals": { "iron_mg": 5.8, "magnesium_mg": 85, "selenium_mcg": 58, "zinc_mg": 12.5, "potassium_mg": 920, "calcium_mg": 285, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["lunch", "high-protein", "grass-fed", "gourmet"]
+    },
+    {
+      "mealId": "asian_salmon_bowl",
+      "name": "Asian-Style Salmon Rice Bowl",
+      "description": "Teriyaki salmon with vegetables and brown rice",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 580,
+        "macronutrients": { "protein_g": 42, "carbohydrates_g": 52, "fat_g": 20, "fiber_g": 6, "omega3_g": 3.2 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 585, "vitaminE_mg": 4.2, "vitaminK_mcg": 68, "vitaminC_mg": 38, "vitaminB12_mcg": 7.5, "vitaminB6_mg": 1.2, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 16, "choline_mg": 195 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 125, "selenium_mcg": 92, "zinc_mg": 2.2, "potassium_mg": 1080, "calcium_mg": 85, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 1.2 }
+      },
+      "tags": ["lunch", "Asian", "omega-3-rich", "balanced"]
+    },
+    {
+      "mealId": "turkey_veggie_soup",
+      "name": "Heritage Turkey and Vegetable Soup",
+      "description": "Hearty turkey soup with root vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "35 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 42, "carbohydrates_g": 28, "fat_g": 10, "fiber_g": 8, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 2850, "vitaminD_IU": 28, "vitaminE_mg": 2.2, "vitaminK_mcg": 95, "vitaminC_mg": 48, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 0.9, "folate_B9_mcg": 85, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 16, "choline_mg": 165 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 78, "selenium_mcg": 58, "zinc_mg": 4.2, "potassium_mg": 1180, "calcium_mg": 125, "phosphorus_mg": 420, "copper_mg": 0.4, "manganese_mg": 0.6 }
+      },
+      "tags": ["lunch", "warming", "low-fat", "comfort-food"]
+    },
+    {
+      "mealId": "swordfish_mediterranean",
+      "name": "Grilled Swordfish with Mediterranean Vegetables",
+      "description": "Meaty swordfish with roasted peppers and olives",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 18, "fat_g": 22, "fiber_g": 5, "omega3_g": 1.8 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 685, "vitaminE_mg": 5.2, "vitaminK_mcg": 68, "vitaminC_mg": 125, "vitaminB12_mcg": 2.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 18, "choline_mg": 185 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 98, "selenium_mcg": 128, "zinc_mg": 2.2, "potassium_mg": 1180, "calcium_mg": 85, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.5 }
+      },
+      "tags": ["dinner", "Mediterranean", "selenium-rich", "grilled"]
+    },
+    {
+      "mealId": "osso_buco",
+      "name": "Grass-Fed Veal Osso Buco",
+      "description": "Braised veal shanks with gremolata",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "20 min",
+      "cookTime": "150 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 620,
+        "macronutrients": { "protein_g": 58, "carbohydrates_g": 22, "fat_g": 32, "fiber_g": 4, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 45, "vitaminE_mg": 2.2, "vitaminK_mcg": 85, "vitaminC_mg": 38, "vitaminB12_mcg": 3.8, "vitaminB6_mg": 0.9, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 14, "choline_mg": 215 },
+        "minerals": { "iron_mg": 4.2, "magnesium_mg": 68, "selenium_mcg": 52, "zinc_mg": 9.5, "potassium_mg": 820, "calcium_mg": 125, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.4 }
+      },
+      "tags": ["dinner", "Italian", "special-occasion", "slow-cooked"]
+    },
+    {
+      "mealId": "cornish_hen_herbs",
+      "name": "Roasted Cornish Hen with Herbs",
+      "description": "Whole roasted game hen with root vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "50 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": { "protein_g": 52, "carbohydrates_g": 18, "fat_g": 26, "fiber_g": 4, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 45, "vitaminE_mg": 2.2, "vitaminK_mcg": 68, "vitaminC_mg": 38, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.5, "niacin_B3_mg": 20, "choline_mg": 195 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 72, "selenium_mcg": 68, "zinc_mg": 4.8, "potassium_mg": 820, "calcium_mg": 58, "phosphorus_mg": 480, "copper_mg": 0.3, "manganese_mg": 0.4 }
+      },
+      "tags": ["dinner", "elegant", "whole-animal", "roasted"]
+    },
+    {
+      "mealId": "sea_bass_fennel",
+      "name": "Chilean Sea Bass with Braised Fennel",
+      "description": "Buttery sea bass with anise-flavored fennel",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 15, "fat_g": 26, "fiber_g": 5, "omega3_g": 2.2 },
+        "vitamins": { "vitaminA_mcg": 420, "vitaminD_IU": 385, "vitaminE_mg": 3.8, "vitaminK_mcg": 68, "vitaminC_mg": 38, "vitaminB12_mcg": 2.8, "vitaminB6_mg": 0.8, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 10, "choline_mg": 185 },
+        "minerals": { "iron_mg": 2.2, "magnesium_mg": 88, "selenium_mcg": 98, "zinc_mg": 1.8, "potassium_mg": 1080, "calcium_mg": 125, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.5 }
+      },
+      "tags": ["dinner", "luxurious", "omega-3-rich", "elegant"]
+    },
+    {
+      "mealId": "rabbit_mustard_sauce",
+      "name": "Braised Rabbit with Mustard Sauce",
+      "description": "Lean rabbit with Dijon cream sauce",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "20 min",
+      "cookTime": "90 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 52, "carbohydrates_g": 12, "fat_g": 18, "fiber_g": 2, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 185, "vitaminD_IU": 28, "vitaminE_mg": 1.8, "vitaminK_mcg": 28, "vitaminC_mg": 12, "vitaminB12_mcg": 8.5, "vitaminB6_mg": 1.2, "folate_B9_mcg": 28, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.5, "niacin_B3_mg": 18, "choline_mg": 165 },
+        "minerals": { "iron_mg": 5.2, "magnesium_mg": 48, "selenium_mcg": 48, "zinc_mg": 3.8, "potassium_mg": 620, "calcium_mg": 48, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.2 }
+      },
+      "tags": ["dinner", "French", "lean", "traditional"]
+    },
+    {
+      "mealId": "coconut_yogurt_chia",
+      "name": "Coconut Yogurt with Chia Seeds",
+      "description": "Dairy-free probiotic yogurt with omega-3 seeds",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 280,
+        "macronutrients": { "protein_g": 6, "carbohydrates_g": 18, "fat_g": 22, "fiber_g": 8, "omega3_g": 4.2 },
+        "vitamins": { "vitaminA_mcg": 12, "vitaminD_IU": 0, "vitaminE_mg": 1.8, "vitaminK_mcg": 8, "vitaminC_mg": 2, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.2, "folate_B9_mcg": 28, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.1, "niacin_B3_mg": 1.2, "choline_mg": 38 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 95, "selenium_mcg": 12, "zinc_mg": 1.2, "potassium_mg": 280, "calcium_mg": 225, "phosphorus_mg": 220, "copper_mg": 0.3, "manganese_mg": 0.9 }
+      },
+      "tags": ["snack", "dairy-free", "probiotic", "omega-3-rich"]
+    },
+    {
+      "mealId": "nori_avocado_rolls",
+      "name": "Nori Rolls with Avocado",
+      "description": "Seaweed wraps with vegetables and avocado",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 180,
+        "macronutrients": { "protein_g": 6, "carbohydrates_g": 18, "fat_g": 10, "fiber_g": 8, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 0, "vitaminE_mg": 3.2, "vitaminK_mcg": 285, "vitaminC_mg": 18, "vitaminB12_mcg": 0.5, "vitaminB6_mg": 0.3, "folate_B9_mcg": 185, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 1.8, "choline_mg": 38 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 95, "selenium_mcg": 8, "zinc_mg": 0.9, "potassium_mg": 580, "calcium_mg": 125, "phosphorus_mg": 95, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["snack", "iodine-rich", "no-cook", "portable"]
+    },
+    {
+      "mealId": "liver_pate_crackers",
+      "name": "Chicken Liver Pâté with Crackers",
+      "description": "Smooth liver pâté with whole grain crackers",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 22, "carbohydrates_g": 18, "fat_g": 18, "fiber_g": 3, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 4200, "vitaminD_IU": 45, "vitaminE_mg": 2.2, "vitaminK_mcg": 12, "vitaminC_mg": 8, "vitaminB12_mcg": 14.5, "vitaminB6_mg": 0.8, "folate_B9_mcg": 485, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 2.5, "niacin_B3_mg": 12, "choline_mg": 320 },
+        "minerals": { "iron_mg": 9.5, "magnesium_mg": 38, "selenium_mcg": 68, "zinc_mg": 4.2, "potassium_mg": 380, "calcium_mg": 48, "phosphorus_mg": 380, "copper_mg": 0.6, "manganese_mg": 0.4 }
+      },
+      "tags": ["snack", "nutrient-dense", "iron-rich", "gourmet"]
+    },
+    {
+      "mealId": "turkey_sausage_scramble",
+      "name": "Turkey Sausage Breakfast Scramble",
+      "description": "Lean turkey sausage with eggs and vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 38, "carbohydrates_g": 18, "fat_g": 22, "fiber_g": 5, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 165, "vitaminE_mg": 3.8, "vitaminK_mcg": 125, "vitaminC_mg": 85, "vitaminB12_mcg": 2.2, "vitaminB6_mg": 0.9, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 14, "choline_mg": 485 },
+        "minerals": { "iron_mg": 3.8, "magnesium_mg": 78, "selenium_mcg": 68, "zinc_mg": 4.8, "potassium_mg": 820, "calcium_mg": 125, "phosphorus_mg": 420, "copper_mg": 0.3, "manganese_mg": 0.5 }
+      },
+      "tags": ["breakfast", "high-protein", "low-carb", "savory"]
+    },
+    {
+      "mealId": "millet_porridge_dates",
+      "name": "Ancient Grain Millet Porridge with Dates",
+      "description": "Gluten-free millet with sweet dates and cinnamon",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "25 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 10, "carbohydrates_g": 68, "fat_g": 8, "fiber_g": 8, "omega3_g": 0.3 },
+        "vitamins": { "vitaminA_mcg": 28, "vitaminD_IU": 0, "vitaminE_mg": 1.2, "vitaminK_mcg": 8, "vitaminC_mg": 2, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.5, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.5, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 3.8, "choline_mg": 48 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 145, "selenium_mcg": 12, "zinc_mg": 2.2, "potassium_mg": 520, "calcium_mg": 28, "phosphorus_mg": 320, "copper_mg": 0.6, "manganese_mg": 1.8 }
+      },
+      "tags": ["breakfast", "gluten-free", "warming", "ancient-grain"]
+    },
+    {
+      "mealId": "breakfast_burrito_sweet_potato",
+      "name": "Breakfast Burrito with Sweet Potato",
+      "description": "Whole grain wrap with eggs, beans, and sweet potato",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": { "protein_g": 26, "carbohydrates_g": 62, "fat_g": 20, "fiber_g": 12, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 2850, "vitaminD_IU": 165, "vitaminE_mg": 3.2, "vitaminK_mcg": 48, "vitaminC_mg": 38, "vitaminB12_mcg": 2.2, "vitaminB6_mg": 0.8, "folate_B9_mcg": 185, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 4.2, "choline_mg": 385 },
+        "minerals": { "iron_mg": 5.2, "magnesium_mg": 125, "selenium_mcg": 52, "zinc_mg": 3.2, "potassium_mg": 1080, "calcium_mg": 145, "phosphorus_mg": 420, "copper_mg": 0.5, "manganese_mg": 0.9 }
+      },
+      "tags": ["breakfast", "portable", "fiber-rich", "Mexican"]
+    },
+    {
+      "mealId": "cod_liver_toast",
+      "name": "Smoked Cod Liver on Toast",
+      "description": "Omega-3 and vitamin D rich cod liver",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 18, "carbohydrates_g": 22, "fat_g": 18, "fiber_g": 3, "omega3_g": 3.8 },
+        "vitamins": { "vitaminA_mcg": 3200, "vitaminD_IU": 1280, "vitaminE_mg": 5.2, "vitaminK_mcg": 12, "vitaminC_mg": 8, "vitaminB12_mcg": 9.5, "vitaminB6_mg": 0.4, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 6.8, "choline_mg": 285 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 48, "selenium_mcg": 68, "zinc_mg": 1.8, "potassium_mg": 420, "calcium_mg": 85, "phosphorus_mg": 320, "copper_mg": 0.3, "manganese_mg": 0.3 }
+      },
+      "tags": ["breakfast", "omega-3-rich", "vitamin-d-rich", "Nordic"]
+    },
+    {
+      "mealId": "amaranth_bowl_berries",
+      "name": "Amaranth Bowl with Mixed Berries",
+      "description": "Ancient grain with antioxidant berries and honey",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "25 min",
+      "mealType": "breakfast",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 14, "carbohydrates_g": 58, "fat_g": 10, "fiber_g": 8, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 185, "vitaminD_IU": 0, "vitaminE_mg": 2.8, "vitaminK_mcg": 18, "vitaminC_mg": 42, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.5, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 2.2, "choline_mg": 68 },
+        "minerals": { "iron_mg": 5.8, "magnesium_mg": 185, "selenium_mcg": 18, "zinc_mg": 2.8, "potassium_mg": 480, "calcium_mg": 185, "phosphorus_mg": 420, "copper_mg": 0.6, "manganese_mg": 2.8 }
+      },
+      "tags": ["breakfast", "ancient-grain", "gluten-free", "iron-rich"]
+    },
+    {
+      "mealId": "greek_salad_chicken",
+      "name": "Greek Salad with Grilled Chicken",
+      "description": "Traditional Greek salad with pastured chicken",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 18, "fat_g": 28, "fiber_g": 6, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 45, "vitaminE_mg": 4.8, "vitaminK_mcg": 185, "vitaminC_mg": 68, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.4, "niacin_B3_mg": 18, "choline_mg": 185 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 85, "selenium_mcg": 58, "zinc_mg": 4.2, "potassium_mg": 820, "calcium_mg": 285, "phosphorus_mg": 480, "copper_mg": 0.3, "manganese_mg": 0.5 }
+      },
+      "tags": ["lunch", "Mediterranean", "fresh", "high-protein"]
+    },
+    {
+      "mealId": "pork_tenderloin_salad",
+      "name": "Heritage Pork Tenderloin Salad",
+      "description": "Lean pork with mixed greens and apples",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 22, "fat_g": 22, "fiber_g": 6, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 85, "vitaminE_mg": 2.8, "vitaminK_mcg": 185, "vitaminC_mg": 28, "vitaminB12_mcg": 1.5, "vitaminB6_mg": 1.2, "folate_B9_mcg": 68, "thiamin_B1_mg": 1.2, "riboflavin_B2_mg": 0.6, "niacin_B3_mg": 14, "choline_mg": 195 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 78, "selenium_mcg": 68, "zinc_mg": 4.8, "potassium_mg": 920, "calcium_mg": 125, "phosphorus_mg": 520, "copper_mg": 0.3, "manganese_mg": 0.5 }
+      },
+      "tags": ["lunch", "lean", "fresh", "seasonal"]
+    },
+    {
+      "mealId": "falafel_tahini",
+      "name": "Baked Falafel with Tahini Sauce",
+      "description": "Chickpea falafel with sesame tahini",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "20 min",
+      "cookTime": "25 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 20, "carbohydrates_g": 52, "fat_g": 22, "fiber_g": 14, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 185, "vitaminD_IU": 0, "vitaminE_mg": 3.2, "vitaminK_mcg": 48, "vitaminC_mg": 18, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.6, "folate_B9_mcg": 285, "thiamin_B1_mg": 0.5, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 3.8, "choline_mg": 95 },
+        "minerals": { "iron_mg": 5.8, "magnesium_mg": 145, "selenium_mcg": 28, "zinc_mg": 3.2, "potassium_mg": 620, "calcium_mg": 185, "phosphorus_mg": 380, "copper_mg": 0.8, "manganese_mg": 1.8 }
+      },
+      "tags": ["lunch", "plant-based", "Middle-Eastern", "fiber-rich"]
+    },
+    {
+      "mealId": "crab_cake_salad",
+      "name": "Wild Crab Cake Salad",
+      "description": "Maryland-style crab cakes over greens",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "20 min",
+      "cookTime": "15 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 420,
+        "macronutrients": { "protein_g": 32, "carbohydrates_g": 22, "fat_g": 22, "fiber_g": 5, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 1280, "vitaminD_IU": 28, "vitaminE_mg": 4.8, "vitaminK_mcg": 185, "vitaminC_mg": 58, "vitaminB12_mcg": 6.8, "vitaminB6_mg": 0.6, "folate_B9_mcg": 95, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 4.8, "choline_mg": 225 },
+        "minerals": { "iron_mg": 2.2, "magnesium_mg": 85, "selenium_mcg": 78, "zinc_mg": 6.8, "potassium_mg": 720, "calcium_mg": 145, "phosphorus_mg": 380, "copper_mg": 1.2, "manganese_mg": 0.6 }
+      },
+      "tags": ["lunch", "seafood", "gourmet", "zinc-rich"]
+    },
+    {
+      "mealId": "beef_pho",
+      "name": "Grass-Fed Beef Pho",
+      "description": "Vietnamese bone broth soup with rice noodles",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "20 min",
+      "cookTime": "180 min",
+      "mealType": "lunch",
+      "nutritionPerServing": {
+        "calories": 520,
+        "macronutrients": { "protein_g": 42, "carbohydrates_g": 48, "fat_g": 18, "fiber_g": 4, "omega3_g": 0.6 },
+        "vitamins": { "vitaminA_mcg": 680, "vitaminD_IU": 28, "vitaminE_mg": 2.2, "vitaminK_mcg": 68, "vitaminC_mg": 28, "vitaminB12_mcg": 3.2, "vitaminB6_mg": 0.8, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.5, "niacin_B3_mg": 12, "choline_mg": 185 },
+        "minerals": { "iron_mg": 5.2, "magnesium_mg": 78, "selenium_mcg": 48, "zinc_mg": 8.5, "potassium_mg": 820, "calcium_mg": 125, "phosphorus_mg": 480, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["lunch", "Vietnamese", "bone-broth", "warming"]
+    },
+    {
+      "mealId": "rack_of_lamb_mint",
+      "name": "Rack of Lamb with Mint Pesto",
+      "description": "Herb-crusted lamb with fresh mint sauce",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 620,
+        "macronutrients": { "protein_g": 58, "carbohydrates_g": 8, "fat_g": 38, "fiber_g": 2, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 185, "vitaminD_IU": 45, "vitaminE_mg": 2.8, "vitaminK_mcg": 125, "vitaminC_mg": 18, "vitaminB12_mcg": 3.8, "vitaminB6_mg": 0.9, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.5, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 18, "choline_mg": 205 },
+        "minerals": { "iron_mg": 5.2, "magnesium_mg": 68, "selenium_mcg": 62, "zinc_mg": 9.5, "potassium_mg": 720, "calcium_mg": 58, "phosphorus_mg": 520, "copper_mg": 0.4, "manganese_mg": 0.3 }
+      },
+      "tags": ["dinner", "elegant", "special-occasion", "grass-fed"]
+    },
+    {
+      "mealId": "whole_roasted_chicken",
+      "name": "Whole Roasted Pastured Chicken",
+      "description": "Herb-roasted chicken with root vegetables",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "20 min",
+      "cookTime": "75 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 580,
+        "macronutrients": { "protein_g": 58, "carbohydrates_g": 22, "fat_g": 28, "fiber_g": 6, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 2850, "vitaminD_IU": 45, "vitaminE_mg": 2.2, "vitaminK_mcg": 95, "vitaminC_mg": 48, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 1.2, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.4, "riboflavin_B2_mg": 0.5, "niacin_B3_mg": 20, "choline_mg": 195 },
+        "minerals": { "iron_mg": 3.2, "magnesium_mg": 85, "selenium_mcg": 68, "zinc_mg": 5.2, "potassium_mg": 1180, "calcium_mg": 125, "phosphorus_mg": 520, "copper_mg": 0.4, "manganese_mg": 0.6 }
+      },
+      "tags": ["dinner", "classic", "family-friendly", "roasted"]
+    },
+    {
+      "mealId": "king_crab_legs",
+      "name": "Alaskan King Crab Legs with Butter",
+      "description": "Steamed crab legs with clarified butter",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "10 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 380,
+        "macronutrients": { "protein_g": 42, "carbohydrates_g": 0, "fat_g": 22, "fiber_g": 0, "omega3_g": 1.8 },
+        "vitamins": { "vitaminA_mcg": 185, "vitaminD_IU": 185, "vitaminE_mg": 2.8, "vitaminK_mcg": 12, "vitaminC_mg": 12, "vitaminB12_mcg": 9.5, "vitaminB6_mg": 0.6, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 4.8, "choline_mg": 185 },
+        "minerals": { "iron_mg": 1.8, "magnesium_mg": 68, "selenium_mcg": 95, "zinc_mg": 9.5, "potassium_mg": 520, "calcium_mg": 85, "phosphorus_mg": 380, "copper_mg": 2.8, "manganese_mg": 0.3 }
+      },
+      "tags": ["dinner", "luxurious", "low-carb", "zinc-rich"]
+    },
+    {
+      "mealId": "bison_ribeye_sweet_potato",
+      "name": "Grass-Fed Bison Ribeye with Sweet Potato",
+      "description": "Lean bison steak with roasted sweet potato",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "10 min",
+      "cookTime": "25 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 580,
+        "macronutrients": { "protein_g": 58, "carbohydrates_g": 38, "fat_g": 22, "fiber_g": 6, "omega3_g": 0.8 },
+        "vitamins": { "vitaminA_mcg": 2850, "vitaminD_IU": 45, "vitaminE_mg": 2.2, "vitaminK_mcg": 48, "vitaminC_mg": 28, "vitaminB12_mcg": 4.2, "vitaminB6_mg": 1.2, "folate_B9_mcg": 68, "thiamin_B1_mg": 0.6, "riboflavin_B2_mg": 0.8, "niacin_B3_mg": 12, "choline_mg": 195 },
+        "minerals": { "iron_mg": 6.8, "magnesium_mg": 98, "selenium_mcg": 55, "zinc_mg": 8.5, "potassium_mg": 1280, "calcium_mg": 85, "phosphorus_mg": 580, "copper_mg": 0.4, "manganese_mg": 0.8 }
+      },
+      "tags": ["dinner", "grass-fed", "lean", "nutrient-dense"]
+    },
+    {
+      "mealId": "grouper_coconut_curry",
+      "name": "Black Grouper in Coconut Curry",
+      "description": "Flaky grouper in Thai-style curry sauce",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "mealType": "dinner",
+      "nutritionPerServing": {
+        "calories": 480,
+        "macronutrients": { "protein_g": 48, "carbohydrates_g": 18, "fat_g": 24, "fiber_g": 4, "omega3_g": 1.2 },
+        "vitamins": { "vitaminA_mcg": 820, "vitaminD_IU": 185, "vitaminE_mg": 3.2, "vitaminK_mcg": 48, "vitaminC_mg": 38, "vitaminB12_mcg": 2.8, "vitaminB6_mg": 0.8, "folate_B9_mcg": 48, "thiamin_B1_mg": 0.3, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 10, "choline_mg": 185 },
+        "minerals": { "iron_mg": 2.8, "magnesium_mg": 88, "selenium_mcg": 88, "zinc_mg": 1.8, "potassium_mg": 920, "calcium_mg": 85, "phosphorus_mg": 480, "copper_mg": 0.3, "manganese_mg": 0.6 }
+      },
+      "tags": ["dinner", "Thai", "seafood", "aromatic"]
+    },
+    {
+      "mealId": "macadamia_nuts",
+      "name": "Raw Macadamia Nuts",
+      "description": "Creamy macadamias with sea salt",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "0 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 320,
+        "macronutrients": { "protein_g": 6, "carbohydrates_g": 12, "fat_g": 30, "fiber_g": 4, "omega3_g": 0.3 },
+        "vitamins": { "vitaminA_mcg": 0, "vitaminD_IU": 0, "vitaminE_mg": 2.2, "vitaminK_mcg": 2, "vitaminC_mg": 2, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.3, "folate_B9_mcg": 18, "thiamin_B1_mg": 0.8, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 1.8, "choline_mg": 48 },
+        "minerals": { "iron_mg": 1.8, "magnesium_mg": 125, "selenium_mcg": 8, "zinc_mg": 1.2, "potassium_mg": 420, "calcium_mg": 85, "phosphorus_mg": 220, "copper_mg": 0.8, "manganese_mg": 4.2 }
+      },
+      "tags": ["snack", "zero-prep", "portable", "manganese-rich"]
+    },
+    {
+      "mealId": "dates_almond_butter",
+      "name": "Medjool Dates with Almond Butter",
+      "description": "Natural energy from dates and nut butter",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 280,
+        "macronutrients": { "protein_g": 6, "carbohydrates_g": 42, "fat_g": 12, "fiber_g": 6, "omega3_g": 0.2 },
+        "vitamins": { "vitaminA_mcg": 12, "vitaminD_IU": 0, "vitaminE_mg": 4.2, "vitaminK_mcg": 8, "vitaminC_mg": 2, "vitaminB12_mcg": 0, "vitaminB6_mg": 0.4, "folate_B9_mcg": 28, "thiamin_B1_mg": 0.2, "riboflavin_B2_mg": 0.2, "niacin_B3_mg": 1.8, "choline_mg": 38 },
+        "minerals": { "iron_mg": 1.2, "magnesium_mg": 68, "selenium_mcg": 8, "zinc_mg": 0.9, "potassium_mg": 680, "calcium_mg": 85, "phosphorus_mg": 125, "copper_mg": 0.4, "manganese_mg": 0.6 }
+      },
+      "tags": ["snack", "energy-boost", "no-cook", "sweet"]
+    },
+    {
+      "mealId": "olives_feta_herbs",
+      "name": "Marinated Olives with Feta",
+      "description": "Mediterranean olives with sheep's milk feta",
+      "baseServings": 1,
+      "scalable": true,
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "mealType": "snack",
+      "nutritionPerServing": {
+        "calories": 220,
+        "macronutrients": { "protein_g": 8, "carbohydrates_g": 8, "fat_g": 18, "fiber_g": 3, "omega3_g": 0.4 },
+        "vitamins": { "vitaminA_mcg": 285, "vitaminD_IU": 12, "vitaminE_mg": 4.8, "vitaminK_mcg": 12, "vitaminC_mg": 2, "vitaminB12_mcg": 0.8, "vitaminB6_mg": 0.2, "folate_B9_mcg": 18, "thiamin_B1_mg": 0.1, "riboflavin_B2_mg": 0.3, "niacin_B3_mg": 0.8, "choline_mg": 48 },
+        "minerals": { "iron_mg": 1.8, "magnesium_mg": 28, "selenium_mcg": 8, "zinc_mg": 0.6, "potassium_mg": 180, "calcium_mg": 185, "phosphorus_mg": 125, "copper_mg": 0.2, "manganese_mg": 0.2 }
+      },
+      "tags": ["snack", "Mediterranean", "no-cook", "savory"]
     }
   ]
 }
