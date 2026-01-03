@@ -1,0 +1,370 @@
+{
+  "colorants": [
+    {
+      "name": "White Kaolin Clay",
+      "color": "white",
+      "hex": "#F5F5F5",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Gentle exfoliation, adds slip to lather, helps scent stick",
+      "notes": "Creates creamy white soap, safe for sensitive skin"
+    },
+    {
+      "name": "Titanium Dioxide",
+      "color": "white",
+      "hex": "#FFFFFF",
+      "usage_rate": "1 tsp per pound of oils",
+      "benefits": "Brightens colors, creates pure white",
+      "notes": "Mix with oil before adding to prevent clumping"
+    },
+    {
+      "name": "Marshmallow Root Powder",
+      "color": "cream-white",
+      "hex": "#F8F6F0",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Soft cream-white color, soothing, moisturizing, adds slip",
+      "notes": "Creates gentle cream tone. Very mild and soothing for sensitive skin"
+    },
+    {
+      "name": "Indigo Powder",
+      "color": "blue",
+      "hex": "#2E4057",
+      "usage_rate": "1/4-1/2 tsp per pound of oils",
+      "benefits": "Natural deep blue color",
+      "notes": "Can turn greenish in CP soap, may morph over time"
+    },
+    {
+      "name": "Blue Spirulina",
+      "color": "blue",
+      "hex": "#5B9BD5",
+      "usage_rate": "1/4-1 tsp per pound of oils",
+      "benefits": "Bright blue color, nutrient-rich",
+      "notes": "More stable than regular spirulina, vibrant blue"
+    },
+    {
+      "name": "Spirulina Powder",
+      "color": "green",
+      "hex": "#7CB342",
+      "usage_rate": "1/4-1 tsp per pound of oils",
+      "benefits": "Green color, antioxidants",
+      "notes": "Creates olive to dark green depending on amount"
+    },
+    {
+      "name": "Chlorella Powder",
+      "color": "green",
+      "hex": "#6BA547",
+      "usage_rate": "1/4-1 tsp per pound of oils",
+      "benefits": "Bright green color, detoxifying",
+      "notes": "Similar to spirulina but brighter green"
+    },
+    {
+      "name": "French Green Clay",
+      "color": "green",
+      "hex": "#8FA878",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Sage green, draws out impurities",
+      "notes": "Gentle exfoliation, good for oily skin"
+    },
+    {
+      "name": "Spinach Powder",
+      "color": "green",
+      "hex": "#71A95A",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Natural green color, vitamins",
+      "notes": "Creates soft green color"
+    },
+    {
+      "name": "Nettle Powder",
+      "color": "green",
+      "hex": "#6B8E23",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Green color, soothing properties",
+      "notes": "Creates earthy green tone"
+    },
+    {
+      "name": "Matcha Powder",
+      "color": "green",
+      "hex": "#88B04B",
+      "usage_rate": "1/2-1 tsp per pound of oils",
+      "benefits": "Bright green, antioxidants, subtle scent",
+      "notes": "Creates vibrant green, may fade slightly. High quality matcha works best"
+    },
+    {
+      "name": "Wheatgrass Powder",
+      "color": "green",
+      "hex": "#7CB342",
+      "usage_rate": "1/2-1 tsp per pound of oils",
+      "benefits": "Bright green color, nutrient-dense",
+      "notes": "Similar to spirulina, creates strong green color"
+    },
+    {
+      "name": "Parsley Powder",
+      "color": "green",
+      "hex": "#6A8D3E",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Natural green, mild herbal scent",
+      "notes": "Creates soft to medium green depending on amount"
+    },
+    {
+      "name": "Turmeric Powder",
+      "color": "yellow",
+      "hex": "#FDB813",
+      "usage_rate": "1/4-1/2 tsp per pound of oils",
+      "benefits": "Bright yellow-orange, anti-inflammatory",
+      "notes": "Can stain skin temporarily, use sparingly"
+    },
+    {
+      "name": "Calendula Powder",
+      "color": "yellow",
+      "hex": "#F4C430",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Soft yellow, skin-soothing",
+      "notes": "Creates gentle yellow tone"
+    },
+    {
+      "name": "Saffron Threads",
+      "color": "yellow-gold",
+      "hex": "#F4C430",
+      "usage_rate": "1/8-1/4 tsp per pound of oils (expensive)",
+      "benefits": "Golden yellow, luxurious, antioxidant",
+      "notes": "Infuse in warm oil first. Creates warm golden tone. Very potent"
+    },
+    {
+      "name": "Annatto Seeds (infused oil)",
+      "color": "yellow-orange",
+      "hex": "#E67E22",
+      "usage_rate": "Replace 10-30% of oils with infused oil",
+      "benefits": "Yellow to orange color",
+      "notes": "Infuse in oil first, color depends on concentration"
+    },
+    {
+      "name": "Pumpkin Powder",
+      "color": "orange",
+      "hex": "#E67300",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Orange color, vitamins",
+      "notes": "Creates warm orange tone, fades slightly over time"
+    },
+    {
+      "name": "Moroccan Orange Clay",
+      "color": "orange",
+      "hex": "#D4895B",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Terracotta orange, gentle exfoliation",
+      "notes": "Creates earthy orange-brown tone"
+    },
+    {
+      "name": "Paprika Powder",
+      "color": "orange-red",
+      "hex": "#C44536",
+      "usage_rate": "1/2-1 tsp per pound of oils",
+      "benefits": "Warm orange-red color",
+      "notes": "Can be spicy on skin, test first"
+    },
+    {
+      "name": "Carrot Powder",
+      "color": "orange",
+      "hex": "#ED9121",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Orange color, beta-carotene",
+      "notes": "Creates soft orange tone"
+    },
+    {
+      "name": "Ginger Powder",
+      "color": "tan-yellow",
+      "hex": "#D4A574",
+      "usage_rate": "1/2-1 tsp per pound of oils",
+      "benefits": "Warm tan-yellow color, warming on skin, anti-inflammatory",
+      "notes": "Creates soft golden-tan tone. Can be slightly warming/tingly on skin. Aromatic"
+    },
+    {
+      "name": "Sea Buckthorn Powder",
+      "color": "orange",
+      "hex": "#FF8C00",
+      "usage_rate": "1/2-1 tsp per pound of oils",
+      "benefits": "Vibrant orange, vitamin-rich, skin healing",
+      "notes": "Creates bright orange color. Very potent - start with less"
+    },
+    {
+      "name": "Rose Clay",
+      "color": "pink",
+      "hex": "#E8B4B8",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Soft pink, gentle on skin",
+      "notes": "Creates delicate pink tone, mild exfoliation"
+    },
+    {
+      "name": "Rose Petals Powder",
+      "color": "pink-tan",
+      "hex": "#E8B4B8",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Soft pink tone, romantic texture, gentle",
+      "notes": "Creates light pink-tan color with speckles. Romantic appearance"
+    },
+    {
+      "name": "Raspberry Powder",
+      "color": "pink-red",
+      "hex": "#E30B5C",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Vibrant pink-red color, fruity scent, antioxidants",
+      "notes": "Creates bright raspberry pink. Color may fade slightly over time"
+    },
+    {
+      "name": "Hibiscus Powder",
+      "color": "pink-red",
+      "hex": "#D84B6D",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Deep pink to red, antioxidants, tart scent",
+      "notes": "Creates vibrant pink-red. Strong color payoff. May morph over time"
+    },
+    {
+      "name": "Brazilian Purple Clay",
+      "color": "purple",
+      "hex": "#8B7E8A",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Lavender-purple, detoxifying",
+      "notes": "Creates soft purple-gray tone"
+    },
+    {
+      "name": "Butterfly Pea Flower Powder",
+      "color": "blue-purple",
+      "hex": "#6B7FD7",
+      "usage_rate": "1/2-1 tsp per pound of oils",
+      "benefits": "Blue-purple color, pH sensitive (changes color)",
+      "notes": "Creates blue-purple. Color shifts with pH changes. May morph to gray-green"
+    },
+    {
+      "name": "Elderberry Powder",
+      "color": "purple",
+      "hex": "#6A5ACD",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Deep purple color, antioxidants",
+      "notes": "Creates rich purple tone. May fade to gray-purple over time"
+    },
+    {
+      "name": "Blueberry Powder",
+      "color": "purple-blue",
+      "hex": "#7B68A6",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Purple-blue color, antioxidants",
+      "notes": "Creates soft purple-blue tone. May morph or fade"
+    },
+    {
+      "name": "Blackberry Powder",
+      "color": "purple",
+      "hex": "#614051",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Deep purple color, fruity scent",
+      "notes": "Creates purple-burgundy tone. May darken over time"
+    },
+    {
+      "name": "Acai Berry Powder",
+      "color": "purple",
+      "hex": "#5E4A56",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Deep purple, superfood antioxidants",
+      "notes": "Creates dark purple-gray. Very potent antioxidant properties"
+    },
+    {
+      "name": "Alkanet Root Powder",
+      "color": "purple",
+      "hex": "#8E4585",
+      "usage_rate": "Infuse in oil: 1 tbsp per cup of oil",
+      "benefits": "Purple to burgundy color",
+      "notes": "Must infuse in oil first, color morphs over time"
+    },
+    {
+      "name": "Madder Root Powder",
+      "color": "red-pink",
+      "hex": "#C44569",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Pink to coral-red color",
+      "notes": "Creates warm pink-red tones"
+    },
+    {
+      "name": "Beetroot Powder",
+      "color": "pink-red",
+      "hex": "#D4638C",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Pink to red color, antioxidants",
+      "notes": "Can fade over time, best in HP soap"
+    },
+    {
+      "name": "Cocoa Powder",
+      "color": "brown",
+      "hex": "#6F4E37",
+      "usage_rate": "1-3 tsp per pound of oils",
+      "benefits": "Chocolate brown, smells like chocolate",
+      "notes": "Creates rich brown color, may accelerate trace"
+    },
+    {
+      "name": "Cinnamon Powder",
+      "color": "brown",
+      "hex": "#8B4513",
+      "usage_rate": "1/2-1 tsp per pound of oils",
+      "benefits": "Warm brown, spicy scent",
+      "notes": "Can irritate skin in large amounts, use carefully"
+    },
+    {
+      "name": "Coffee Grounds",
+      "color": "brown",
+      "hex": "#4A3C31",
+      "usage_rate": "1-2 tbsp per pound of oils",
+      "benefits": "Brown with texture, exfoliating, deodorizing",
+      "notes": "Adds brown flecks and coffee scent"
+    },
+    {
+      "name": "Walnut Hull Powder",
+      "color": "brown",
+      "hex": "#5C4033",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Rich brown color, gentle exfoliation",
+      "notes": "Creates deep brown tones"
+    },
+    {
+      "name": "Activated Charcoal",
+      "color": "black",
+      "hex": "#2C2C2C",
+      "usage_rate": "1/4-1 tsp per pound of oils",
+      "benefits": "Black color, detoxifying, draws out impurities",
+      "notes": "Start with less, very potent. Can cause lather to gray"
+    },
+    {
+      "name": "Black Oxide",
+      "color": "black",
+      "hex": "#1A1A1A",
+      "usage_rate": "1/8-1/4 tsp per pound of oils",
+      "benefits": "True black color",
+      "notes": "Lab-made but soap-safe, very concentrated"
+    },
+    {
+      "name": "Bentonite Clay",
+      "color": "tan-gray",
+      "hex": "#C9B99B",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Creamy beige-tan, detoxifying, adds slip",
+      "notes": "Creates neutral tan tone, good for sensitive skin"
+    },
+    {
+      "name": "Rhassoul Clay",
+      "color": "brown-red",
+      "hex": "#9E6B4D",
+      "usage_rate": "1-2 tsp per pound of oils",
+      "benefits": "Reddish-brown, mineral-rich",
+      "notes": "Creates warm earthy tones"
+    }
+  ],
+  "color_spectrum": [
+    {"position": 0, "name": "White", "hex": "#F5F5F5", "colorants": ["White Kaolin Clay", "Titanium Dioxide", "Marshmallow Root Powder"]},
+    {"position": 10, "name": "Cream/Beige", "hex": "#F5E6D3", "colorants": ["Bentonite Clay", "Ginger Powder"]},
+    {"position": 20, "name": "Light Yellow", "hex": "#FFF4A3", "colorants": ["Calendula Powder", "Saffron Threads"]},
+    {"position": 30, "name": "Yellow", "hex": "#FDB813", "colorants": ["Turmeric Powder", "Saffron Threads"]},
+    {"position": 40, "name": "Orange", "hex": "#E67300", "colorants": ["Pumpkin Powder", "Carrot Powder", "Sea Buckthorn Powder", "Moroccan Orange Clay"]},
+    {"position": 50, "name": "Red-Orange", "hex": "#C44536", "colorants": ["Paprika Powder", "Madder Root Powder", "Hibiscus Powder"]},
+    {"position": 60, "name": "Pink", "hex": "#E8B4B8", "colorants": ["Rose Clay", "Rose Petals Powder", "Raspberry Powder", "Beetroot Powder", "Hibiscus Powder"]},
+    {"position": 70, "name": "Purple", "hex": "#8E4585", "colorants": ["Brazilian Purple Clay", "Alkanet Root Powder", "Elderberry Powder", "Butterfly Pea Flower Powder", "Acai Berry Powder"]},
+    {"position": 80, "name": "Blue", "hex": "#5B9BD5", "colorants": ["Blue Spirulina", "Indigo Powder", "Butterfly Pea Flower Powder"]},
+    {"position": 90, "name": "Green", "hex": "#7CB342", "colorants": ["Spirulina Powder", "Chlorella Powder", "Matcha Powder", "Wheatgrass Powder", "French Green Clay"]},
+    {"position": 100, "name": "Brown", "hex": "#6F4E37", "colorants": ["Cocoa Powder", "Coffee Grounds", "Walnut Hull Powder"]},
+    {"position": 110, "name": "Black", "hex": "#2C2C2C", "colorants": ["Activated Charcoal", "Black Oxide"]}
+  ]
+}

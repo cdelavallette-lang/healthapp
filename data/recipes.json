@@ -1,0 +1,80 @@
+{
+  "recipes": [
+    {
+      "name": "basic Lard Soap",
+      "oils": {
+        "Coconut Oil": 283.495,
+        "Lard": 311.8445,
+        "Olive Oil": 340.19399999999996
+      },
+      "superfat": 5.0,
+      "lye_concentration": 33.0,
+      "fragrance_percent": 3.0,
+      "notes": "",
+      "modifiers": {},
+      "created_date": "2025-12-26T14:31:11.759712",
+      "modified_date": "2025-12-26T14:31:11.759712",
+      "lye_amount": 132.45,
+      "water_amount": 268.91,
+      "fragrance_amount": 28.07,
+      "lye_adjustment": 0.0,
+      "properties": {
+        "hardness": 46.1,
+        "cleansing": 20.3,
+        "conditioning": 49.5,
+        "bubbly": 20.3,
+        "creamy": 25.8,
+        "iodine": 53.9,
+        "ins": 164.2
+      },
+      "fatty_acids": {
+        "lauric": 14.5,
+        "myristic": 6.1,
+        "palmitic": 15.1,
+        "stearic": 6.7,
+        "ricinoleic": 0.0,
+        "oleic": 44.6,
+        "linoleic": 7.6,
+        "linolenic": 0.7
+      }
+    },
+    {
+      "name": "basic lard",
+      "oils": {
+        "Coconut Oil": 283.495,
+        "Lard": 311.8445,
+        "Olive Oil": 340.19399999999996
+      },
+      "superfat": 5.0,
+      "lye_concentration": 33.0,
+      "fragrance_percent": 3.0,
+      "notes": "",
+      "modifiers": {},
+      "created_date": "2025-12-26T14:37:29.193297",
+      "modified_date": "2025-12-26T14:37:29.193297",
+      "lye_amount": 132.45,
+      "water_amount": 268.91,
+      "fragrance_amount": 28.07,
+      "lye_adjustment": 0.0,
+      "properties": {
+        "hardness": 46.1,
+        "cleansing": 20.3,
+        "conditioning": 49.5,
+        "bubbly": 20.3,
+        "creamy": 25.8,
+        "iodine": 53.9,
+        "ins": 164.2
+      },
+      "fatty_acids": {
+        "lauric": 14.5,
+        "myristic": 6.1,
+        "palmitic": 15.1,
+        "stearic": 6.7,
+        "ricinoleic": 0.0,
+        "oleic": 44.6,
+        "linoleic": 7.6,
+        "linolenic": 0.7
+      }
+    }
+  ]
+}

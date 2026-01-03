@@ -1,0 +1,164 @@
+{
+  "modifiers": [
+    {
+      "name": "Citric Acid",
+      "category": "chelating_agent",
+      "description": "Lowers pH, chelates minerals in hard water, improves lather. Requires extra lye.",
+      "typical_usage_percent": 1.0,
+      "min_percent": 0.5,
+      "max_percent": 3.0,
+      "lye_adjustment_factor": 0.6,
+      "lye_adjustment_note": "Add 6g extra NaOH per 10g citric acid",
+      "effects": {
+        "color": "minimal - may slightly lighten natural colorants",
+        "scent": "minimal - may enhance citrus notes",
+        "lather": "improves lather in hard water",
+        "hardness": "neutral",
+        "skin_feel": "makes soap milder"
+      }
+    },
+    {
+      "name": "Sodium Lactate",
+      "category": "hardener",
+      "description": "Hardening agent that helps soap unmold faster and last longer",
+      "typical_usage_percent": 2.0,
+      "min_percent": 1.0,
+      "max_percent": 3.0,
+      "usage_rate_type": "percent_of_oils",
+      "effects": {
+        "color": "no effect",
+        "scent": "no effect",
+        "lather": "slight improvement",
+        "hardness": "increases hardness significantly",
+        "skin_feel": "makes soap smoother"
+      }
+    },
+    {
+      "name": "Sugar",
+      "category": "lather_booster",
+      "description": "Increases lather and bubble formation",
+      "typical_usage_percent": 3.0,
+      "min_percent": 1.0,
+      "max_percent": 5.0,
+      "usage_rate_type": "percent_of_oils",
+      "dissolve_in": "lye_water",
+      "effects": {
+        "color": "may cause slight darkening or caramelization",
+        "scent": "no effect",
+        "lather": "significantly increases bubbles",
+        "hardness": "no effect",
+        "skin_feel": "creates creamier lather"
+      }
+    },
+    {
+      "name": "Salt (Sodium Chloride)",
+      "category": "hardener",
+      "description": "Creates harder bar, reduces lather. Good for salt bars at 50-100% of oil weight",
+      "typical_usage_percent": 3.0,
+      "min_percent": 1.0,
+      "max_percent": 100.0,
+      "usage_rate_type": "percent_of_oils",
+      "effects": {
+        "color": "no effect",
+        "scent": "no effect",
+        "lather": "reduces lather at high amounts",
+        "hardness": "significantly increases hardness",
+        "skin_feel": "can be drying at high amounts"
+      }
+    },
+    {
+      "name": "Kaolin Clay",
+      "category": "additive",
+      "description": "Adds slip to lather, anchors fragrance, provides mild cleansing",
+      "typical_usage_percent": 1.0,
+      "min_percent": 0.5,
+      "max_percent": 2.0,
+      "usage_rate_type": "tablespoons_per_pound",
+      "effects": {
+        "color": "adds white color, can lighten other colors",
+        "scent": "helps anchor/retain fragrance",
+        "lather": "adds silky slip to lather",
+        "hardness": "slight increase",
+        "skin_feel": "makes lather silky"
+      }
+    },
+    {
+      "name": "Bentonite Clay",
+      "category": "additive",
+      "description": "Detoxifying clay, adds slip, good for oily skin",
+      "typical_usage_percent": 1.0,
+      "min_percent": 0.5,
+      "max_percent": 2.0,
+      "usage_rate_type": "tablespoons_per_pound",
+      "effects": {
+        "color": "adds grey-green color",
+        "scent": "may absorb some fragrance",
+        "lather": "adds creamy slip",
+        "hardness": "slight increase",
+        "skin_feel": "detoxifying, good for oily skin"
+      }
+    },
+    {
+      "name": "Colloidal Oatmeal",
+      "category": "additive",
+      "description": "Soothing for sensitive skin, adds gentle exfoliation",
+      "typical_usage_percent": 1.0,
+      "min_percent": 0.5,
+      "max_percent": 3.0,
+      "usage_rate_type": "tablespoons_per_pound",
+      "effects": {
+        "color": "adds tan/beige color with specks",
+        "scent": "mild oat scent (may compete with fragrance)",
+        "lather": "reduces lather slightly",
+        "hardness": "no significant effect",
+        "skin_feel": "soothing, slightly exfoliating"
+      }
+    },
+    {
+      "name": "Silk Amino Acids",
+      "category": "luxury_additive",
+      "description": "Adds luxury feel and slip to lather, protein boost",
+      "typical_usage_percent": 0.5,
+      "min_percent": 0.25,
+      "max_percent": 2.0,
+      "usage_rate_type": "percent_of_oils",
+      "effects": {
+        "color": "no effect",
+        "scent": "no effect",
+        "lather": "increases silkiness and slip",
+        "hardness": "no effect",
+        "skin_feel": "luxurious, silky feel"
+      }
+    },
+    {
+      "name": "Tussah Silk Fibers",
+      "category": "luxury_additive",
+      "description": "Natural silk fibers add sheen and luxury lather",
+      "typical_usage_per_batch": "1 cocoon or 1 gram per batch",
+      "dissolve_in": "lye_water",
+      "effects": {
+        "color": "no effect",
+        "scent": "no effect",
+        "lather": "adds sheen and luxury feel",
+        "hardness": "no effect",
+        "skin_feel": "silky, luxurious"
+      }
+    },
+    {
+      "name": "Vitamin E Oil",
+      "category": "antioxidant",
+      "description": "Antioxidant that extends shelf life and is good for skin",
+      "typical_usage_percent": 0.5,
+      "min_percent": 0.1,
+      "max_percent": 1.0,
+      "usage_rate_type": "percent_of_oils",
+      "effects": {
+        "color": "no effect",
+        "scent": "no effect",
+        "lather": "no effect",
+        "hardness": "no effect",
+        "skin_feel": "moisturizing, extends shelf life"
+      }
+    }
+  ]
+}

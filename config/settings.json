@@ -1,0 +1,15 @@
+{
+  "default_superfat": 5,
+  "default_lye_concentration": 33,
+  "default_fragrance_percentage": 3,
+  "units": "ounces",
+  "recommended_ranges": {
+    "hardness": [29, 54],
+    "cleansing": [12, 22],
+    "conditioning": [44, 69],
+    "bubbly": [14, 46],
+    "creamy": [16, 48],
+    "iodine": [41, 70],
+    "ins": [136, 165]
+  }
+}
